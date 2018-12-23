@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            The authoritative guide to blockchain development(번역) | 
+        
+        Hojong blog
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Jong-Ho Jeong">
+    <meta name="description" itemprop="description" content=" Haseeb Qureshi님의 The authoritative guide to blockchain development를 번역한 글입니다. 오역 및 의역이 있을 수 있습니다. 고유명사가 많아서 원문과 함께 보시는걸 추천합니다.">
+    <meta name="keywords" content="null,translate,blockchain">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Hojong blog">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://ho1234c.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="The authoritative guide to blockchain development(번역) | Hojong blog">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content=" Haseeb Qureshi님의 The authoritative guide to blockchain development를 번역한 글입니다. 오역 및 의역이 있을 수 있습니다. 고유명사가 많아서 원문과 함께 보시는걸 추천합니다.">
+    <meta property="og:article:tag" content="translate"> <meta property="og:article:tag" content="blockchain"> 
+
+    
+        <meta property="article:published_time" content="Feb 02, 2018" />
+        <meta property="article:modified_time" content="Dec 09, 2018" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="The authoritative guide to blockchain development(번역) | Hojong blog">
+    <meta name="twitter:description" content=" Haseeb Qureshi님의 The authoritative guide to blockchain development를 번역한 글입니다. 오역 및 의역이 있을 수 있습니다. 고유명사가 많아서 원문과 함께 보시는걸 추천합니다.">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://ho1234c.github.io" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://ho1234c.github.io/2018/02/02/The-authoritative-guide-to-blockchain-development/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hojong blog",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jong-Ho Jeong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": ""
+    },
+    "headline": "The authoritative guide to blockchain development(번역)",
+    "url": "http://ho1234c.github.io/2018/02/02/The-authoritative-guide-to-blockchain-development/index.html",
+    "datePublished": "Feb 02, 2018",
+    "dateModified": "Dec 09, 2018",
+    "description": " Haseeb Qureshi님의 The authoritative guide to blockchain development를 번역한 글입니다. 오역 및 의역이 있을 수 있습니다. 고유명사가 많아서 원문과 함께 보시는걸 추천합니다.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://ho1234c.github.io"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?56ieHY/lfHwpOFYGS9lMXw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#왜-블록체인-개발을-배워야하나"><span class="post-toc-number">1.</span> <span class="post-toc-text">왜 블록체인 개발을 배워야하나?</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#기본지식"><span class="post-toc-number">2.</span> <span class="post-toc-text">기본지식</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#컴퓨터공학-Computer-science"><span class="post-toc-number">3.</span> <span class="post-toc-text">컴퓨터공학 (Computer science)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#자료구조-Data-structures"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">자료구조 (Data structures)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#암호학-Cryptography"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">암호학 (Cryptography)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#분산시스템-Distributed-systems"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">분산시스템 (Distributed systems)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#네트워킹-Networking"><span class="post-toc-number">4.</span> <span class="post-toc-text">네트워킹 (Networking)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#경제학-Economics"><span class="post-toc-number">5.</span> <span class="post-toc-text">경제학 (Economics)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#게임이론-Game-theory"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">게임이론 (Game theory)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#거시경제학-Macroeconomics"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">거시경제학 (Macroeconomics)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#미시경제학-Microeconomics"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">미시경제학 (Microeconomics)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#비트코인의-이론적기반"><span class="post-toc-number">6.</span> <span class="post-toc-text">비트코인의 이론적기반</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#직접-블록체인-만들기"><span class="post-toc-number">7.</span> <span class="post-toc-text">직접 블록체인 만들기</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                The authoritative guide to blockchain development(번역)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Jong-Ho Jeong</strong>
+        <span>Feb 02, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/blockchain/">blockchain</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/translate/">translate</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ho1234c.github.io/2018/02/02/The-authoritative-guide-to-blockchain-development/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ho1234c.github.io/2018/02/02/The-authoritative-guide-to-blockchain-development/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><a href="https://medium.freecodecamp.org/the-authoritative-guide-to-blockchain-development-855ab65b58bc" target="_blank"> Haseeb Qureshi님의 The authoritative guide to blockchain development</a>를 번역한 글입니다. 오역 및 의역이 있을 수 있습니다. 고유명사가 많아서 원문과 함께 보시는걸 추천합니다.</p>
+<a id="more"></a> 
+<style>
+
+img{ 
+  display: block;
+  margin : 0 auto;
+}
+</style>
+
+
+
+<hr>
+<p>암호화폐, ICO들, 마법같은 인터넷상의 돈– 매우 흥미로운일이고, 당신같은 개발자들은 이것에 빠지고싶을겁니다. 어디서부터 시작해야할까요?</p>
+<p>우선 당신이 이 분야에 흥미를 가져서 기쁩니다. 저 역시 마찬가지 입니다. 하지만 당신은 아마 어디서 시작해야할지 막막할것이라고 생각합니다. 블록체인은 맹렬히 움직이고 있지만 이것을 배울 수 있는 곳은 확실치않습니다.</p>
+<p>풀타임 블록체인을 위해 Airbnb를 나오고나서 이를 위해 어떻게 해야하는지 묻는분들이 많습니다. 이 믿을만한(그리고 당연히 불완전한) 가이드를 읽어보세요.</p>
+<p>이 가이드는 열가지 파트로 진행됩니다.</p>
+<p>1.왜 블록체인 개발을 배워야하나?</p>
+<p>2.기본지식</p>
+<p>3.비트코인의 이론적기반</p>
+<p>4.직접 블록체인 만들기</p>
+<p>5.이더리움과 스마트 컨트랙트 프로그래밍</p>
+<p>6.스마트 컨트랙트 보안</p>
+<p>7.훈련에서 벗어나기</p>
+<p>8.프로젝트 빌딩하기</p>
+<p>9.블록체인 커뮤니티 찾기</p>
+<p>10.직업얻기</p>
+<h2 id="왜-블록체인-개발을-배워야하나"><a href="#왜-블록체인-개발을-배워야하나" class="headerlink" title="왜 블록체인 개발을 배워야하나?"></a>왜 블록체인 개발을 배워야하나?</h2><p>이 질문에 답하기 전에 한가지 주의점이 있습니다. 블록체인은 지금 너무 과대평가되어있습니다. 가격은 지속될 수 없으며 추락(crash)은 분명 찾아옵니다. 이는 모두 일어났던적이 있고 다시 일어날겁니다. 하지만 당신이 이 분야에서 오래일하면 이를 대수롭지 않게 여기는 방법을 배우게될겁니다. Emin Gun Sirer의 말을 빌리자면– 가격은 암호화폐의 가장 흥미로운 부분입니다. 블록체인은 매우 중요한 기술이며 분명 세상을 바꿀겁니다.</p>
+<p>당신이 확신할 수 없다면 나는 여기에 발을 들이라고 말 할수 없습니다. 하지만 당신에게 내가 여기에 빠진 다섯가지 이유를 말씀드리겠습니다.</p>
+<p>1.여전히 이릅니다.</p>
+<p>비트코인은 10년전에 나왔지만 그 발전률은 지난 2년간, 특히 2015년의 이더리움이 최고조였습니다. 대부분의 새로운 회사와 아이디어들은 이더리움위에 세워졌고 이는 여전히 미성숙합니다.</p>
+<p>당신이 지금시작하더라도 몇년안에 세계적인 전문가가 될 수 있습니다. 대부분의 사람들은 이 일을 오래하지 않았기 때문에 따라잡기 어렵지 않습니다. 지금 시작하는것은 2000년대 후반에 연구를 시작한 딥러닝전문가의 사례와 유사합니다.</p>
+<p>2.이 분야엔 아직 강력한 재능의 벽이 없습니다.</p>
+<p>대학교의 학생들은 대부분 머신러닝, 웹프로그래밍, 혹은 게임프로그래밍에 초점을 맞출겁니다. 물론 블록체인이 대중적으로 많이 바뀌긴했지만 여전히 당신의 경력을 투자하기에 충분한 주제입니다.</p>
+<p>초기의 블록체인은 매우 특별한 사람들만을 위한 것이었습니다. 하지만 최근엔 바뀌기 시작했습니다. 호기심많고 개방적인 개발자라면 이 분야에 큰 가치를 가져올겁니다.</p>
+<p>3.학계밖에서 많은혁신이 일어나고 있습니다.</p>
+<p>Satoshi Nakamoto는 우리가 아는것 같은 학문적인 사람이 아니었습니다. 아직 블록체인에 관한 학문을 제공하는 기관이나 학교는 없습니다. 대부분의 혁신이 열성팬, 기업, 개인연구에서 비롯되고 있습니다. 당신이 알아야할 대부분의 것이 백서(white papers), 블로그의 포스트, 공개슬랙채널, 그리고 오픈소스 소프트웨어속에 있습니다. 뛰어들기만하면 됩니다.</p>
+<p>4.인재에 대한 수요가 턱없이 부족합니다.</p>
+<p>이 분야의 개발자가 충분치않아서 빠르게 학습할수 없습니다. 모든 사람들이 블록체인개발자를 고용하기 위해 경쟁하고 있으며, 프로젝트들은 인재들이 부족합니다. 많은 최고의 기업들은 너무 많은 기회가 있기때문에 직원들에게 충분한 급여를 지불하고 있지 않습니다. 기술을 가지고 있다면 직업을 구하기 쉬워질겁니다.</p>
+<p>5.암호화폐는 끝내줍니다. (really damn cool)</p>
+<p>비밀리에 보호되는 분산자금 같은걸 어디서 또 만들 수 있을까요? 지금 이분야는 매우 황량합니다– 이는 좋은것이 오기도, 나쁜것이 오기도합니다. 이 분야는 더욱 투명성을 사용할 수 있고 곧 규제가될것입니다. 하지만 의심할여지없이 암호화폐는 지금 연구할 수 있는 가장 혁식적인 주제입니다.</p>
+<p>Naval Ravikan는 <a href="https://www.pscp.tv/w/1eaKbqrWloRxX" target="_blank" rel="external">최근 인터뷰</a>에서 이렇게 이야기했습니다: 성공의 비결을 사회가 원하지만 스스로 얻는 방법을 모르는것을 제공하는 것입니다. 그래서 학교에 갈 수 없습니다. 당신이 할 수 있다면 세상은 이미 그것을 안정적으로 공급하고 있을겁니다.</p>
+<p>그러니 아무도 만드는 방법을 모르는 무언가를 만드세요. 블록체인이 지금당장은 새롭고 알아야할게 너무 많습니다. 분산기술의 미래를 세우는데 성공한다면 세상은 당신에게 훌륭하게 보상할겁니다.</p>
+<p>하기도 전에 포기해야 할 이유가 있을까요?</p>
+<h2 id="기본지식"><a href="#기본지식" class="headerlink" title="기본지식"></a>기본지식</h2><p>저는 더욱 깊이 공부하기전에 기초를 튼튼히하시길 추천합니다. 블록체인은 컴퓨터공항, 암호학, 경제학연구를 기반으로 만들어져있습니다. Satoshi Nakamoto는 변절자(renegade)이긴했지만 그는 선행한 역사를 잘 알고 있었습니다. 블록체인이 왜 동작하는지 이해하기위해선 그것들의 블록–블록체인전에 무엇이 있었는지, 왜 블록체인이 작동하지 않는지를 이해해야합니다.</p>
+<p>아래는 필요한 기본지식들을 중요도의 순서로 나열한것입니다.</p>
+<p>이것은 시작점일뿐이며 아마 많은 토픽들이 필요할겁니다.</p>
+<h2 id="컴퓨터공학-Computer-science"><a href="#컴퓨터공학-Computer-science" class="headerlink" title="컴퓨터공학 (Computer science)"></a>컴퓨터공학 (Computer science)</h2><h3 id="자료구조-Data-structures"><a href="#자료구조-Data-structures" class="headerlink" title="자료구조 (Data structures)"></a>자료구조 (Data structures)</h3><p>주요 자료구조의 특징 및 복잡성에대해 잘 알고있어야 합니다. <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank" rel="external">연결리스트(linked lists)</a>, <a href="https://en.wikipedia.org/wiki/Binary_search_tree" target="_blank" rel="external">이진검색트리(binary search trees)</a>,<a href="https://en.wikipedia.org/wiki/Hash_table" target="_blank" rel="external">해쉬맵(hash maps)</a>, <a href="https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29" target="_blank" rel="external">그래프(graphs)</a>(특히 블록체인에서 두드러지게 나타나는 <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph" target="_blank" rel="external">방향순환그래프</a>). 이것들은 동작방법과 속성을 이해하는데 도움이됩니다.</p>
+<h3 id="암호학-Cryptography"><a href="#암호학-Cryptography" class="headerlink" title="암호학 (Cryptography)"></a>암호학 (Cryptography)</h3><p>암호학은 암호화폐라는 이름의 근간을이룹니다. 모든 암호화폐는 인증과 구분을위해 <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank" rel="external">공개/비공개 키 암호화방식</a>을 사용합니다. <a href="https://www.youtube.com/watch?v=vgTtHV04xRI" target="_blank" rel="external">RSA</a>에 대해 공부하고(배우기쉽고 정교한 수학지식을 필요로하지않습니다) <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/" target="_blank" rel="external">ECDSA</a>에 대해 공부해보길 추천합니다. 타원곡선암호화(Elliptic curve cryptography)는 더 추상적인 수학이 필요합니다. 모든 세부적인것들을 이해할 필요는 없지만 암호학이 비트코인을 포함한 대부분의 암호화폐에 사용됨을 알고있어야합니다.</p>
+<p>또 암호학에서의 중요한 기반지식으로는 <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function" target="_blank" rel="external">암호해쉬함수(cryptographic hash function)</a>가 있습니다. <a href="https://en.wikipedia.org/wiki/Commitment_scheme" target="_blank" rel="external">commitment schemes</a>와 <a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank" rel="external">머클트리(Merkle trees)</a>의 블럭을 구성하는데 사용됩니다.</p>
+<h3 id="분산시스템-Distributed-systems"><a href="#분산시스템-Distributed-systems" class="headerlink" title="분산시스템 (Distributed systems)"></a>분산시스템 (Distributed systems)</h3><p>분산시스템에는 여러가지 좋은 텍스트북이 있지만 방대하고 어렵습니다. 분산시스템은 분명 블록체인을 배우는데 필수적이기 때문에 블록체인을 다루기전에 기초를 알아야합니다.</p>
+<p>우리는 더이상 하나의 기계에 살지않습니다. <a href="https://en.wikipedia.org/wiki/Consistency_model" target="_blank" rel="external">동시(consistency )</a>와 <a href="https://en.wikipedia.org/wiki/Consensus_%28computer_science%29" target="_blank" rel="external">일치(consensus)</a>에 대한 추론에서부터 시작해야합니다. <a href="https://en.wikipedia.org/wiki/Linearizability" target="_blank" rel="external">선형(linearizable)모델</a>과 <a href="https://en.wikipedia.org/wiki/Eventual_consistency" target="_blank" rel="external">점차적 단계(eventual consistency)모델</a>의 차이를 알아야합니다. 또한 <a href="https://en.wikipedia.org/wiki/Paxos_%28computer_science%29" target="_blank" rel="external">Paxos</a>나 <a href="https://en.wikipedia.org/wiki/Raft_%28computer_science%29" target="_blank" rel="external">RAFT</a>와 같은 일치알고리즘(consensus algorithm) <a href="https://en.wikipedia.org/wiki/Fault_tolerance" target="_blank" rel="external">장애허용시스템(fault-tolerant)</a>의 보장을 배워야합니다. <a href="https://www.youtube.com/watch?v=BRvj8PykSc4" target="_blank" rel="external">분산시스템에서 시간추론의 어려움에 대해 알아야합니다.</a> <a href="http://www.bailis.org/blog/safety-and-liveness-eventual-consistency-is-not-safe/" target="_blank" rel="external">안정성과 실시간성</a>의 트레이드오프를 이해해야합니다.</p>
+<p>이런 배경지식이 있다면 이제 블록체인의 주요 보안이슈인 <a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance" target="_blank" rel="external">비잔티움 장애 허용(Byzantine fault-tolerant consensus)</a>을 이해할 수 있습니다. 그리고 비잔티움 장애 허용(Byzantine fault-tolerant consensus)의 내에서 확장가능한 첫 알고리즘인 <a href="https://blog.acolyer.org/2015/05/18/practical-byzantine-fault-tolerance/" target="_blank" rel="external">PBFT</a>를 배울수 있습니다. PBFT는 증명되지 않은 블록체인 동시성알고리즘의 기초입니다. 다시한번 말씀드리면 당신은 PBFT가 왜 맞는지와 같은 자세한 부분을 이해할 필요가 없습니다. 일반적인 아이디어와 안전보장을 이해하는 정도면 됩니다.</p>
+<p>또한 <a href="https://en.wikipedia.org/wiki/Distributed_database" target="_blank" rel="external">전통적인방식의 분산데이터베이스</a>를 이해하는것은 매우 유용합니다. (결국 블록체인은 데이터베이스이기 때문입니다) (<a href="https://en.wikipedia.org/wiki/Consistent_hashing" target="_blank" rel="external">일관 해쉬(consistent hashing)</a>를 통한) <a href="https://en.wikipedia.org/wiki/Shard_%28database_architecture%29" target="_blank" rel="external">sharding</a>, <a href="https://en.wikipedia.org/wiki/Replication_%28computing%29" target="_blank" rel="external">leader-follower replication</a>, <a href="https://en.wikipedia.org/wiki/Quorum_%28distributed_computing%29" target="_blank" rel="external">quorum-based commits</a>에 대해 학습하세요. 그리고 <a href="https://en.wikipedia.org/wiki/Chord_%28peer-to-peer%29" target="_blank" rel="external">Chord</a>, <a href="https://en.wikipedia.org/wiki/Kademlia" target="_blank" rel="external">Kademlia</a>와 같은 <a href="https://en.wikipedia.org/wiki/Distributed_hash_table" target="_blank" rel="external">분산해시테이블(distributed hash tables (DHTs))</a>를 살펴보세요.</p>
+<h2 id="네트워킹-Networking"><a href="#네트워킹-Networking" class="headerlink" title="네트워킹 (Networking)"></a>네트워킹 (Networking)</h2><p>블록체인의 분산성은 피어투피어(peer-to-peer)네트워크에 기반합니다. 따라서 과거 P2P네트워크와 직접적 관련이 있습니다.</p>
+<p>블록체인 커뮤니티모델을 이해하려면 컴퓨터네트워킹의 기초인 <a href="https://www.diffen.com/difference/TCP_vs_UDP" target="_blank" rel="external">TCP와 UDP</a>, <a href="https://en.wikipedia.org/wiki/Network_packet" target="_blank" rel="external">IP패킷의 모양과 패킷모델</a>에 대해 이해해야합니다. 그리고 <a href="https://en.wikipedia.org/wiki/Routing" target="_blank" rel="external">인터넷라우팅</a>이 어떻게 동작하는지도 대충 알아야합니다.</p>
+<p>공개된 블록체인은 보통 <a href="https://en.wikipedia.org/wiki/Flooding_%28computer_networking%29" target="_blank" rel="external">flooding</a>을 이용한 <a href="https://en.wikipedia.org/wiki/Gossip_protocol" target="_blank" rel="external">gossip protocols</a>를 통해 전파됩니다. P2P네트워크 디자인의 역사를 <a href="http://www.springer.com/cda/content/document/cda_downloaddocument/9783642035135-c2.pdf?SGWID=0-0-45-855488-p173920223" target="_blank" rel="external">Napster-Gnutella</a>, <a href="https://en.wikipedia.org/wiki/BitTorrent" target="_blank" rel="external">BitTorrent</a>, <a href="https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29" target="_blank" rel="external">Tor</a>에서부터 알아두는게 유익합니다. 블록체인은 그 자체로 분야이지만 네트워크와 그것들이 어떻게 디자인되어있는지에 근간합니다.</p>
+<h2 id="경제학-Economics"><a href="#경제학-Economics" class="headerlink" title="경제학 (Economics)"></a>경제학 (Economics)</h2><p>암호화폐는 본질적으로 다양한 학문이 결합되어있는 형태입니다. 이것이 이 분야가 매혹적이고 급진적인 이유입니다. 컴퓨터공학과 더불어 암호학, 네트워킹 모두 경제학과 엮여있습니다. 암호화폐는 경제구조에서 파생된 많은 보안요소를 갖습니다.cryptoeconomics라는 용어로 일컫습니다. 이와 같은 이유로 경제학은 암호화폐의 이해에서 필수적입니다.</p>
+<h3 id="게임이론-Game-theory"><a href="#게임이론-Game-theory" class="headerlink" title="게임이론 (Game theory)"></a>게임이론 (Game theory)</h3><p>암호화폐와 관련된 경제학중 가장 중요한건 <a href="https://en.wikipedia.org/wiki/Game_theory" target="_blank" rel="external">게임이론(game theory)</a>, 즉 여러 에이전트간의 보상과 인센티브입니다. 매우 깊게 공부할 필요는 없습니다. 하지만 게임이론의 기본적인 툴과 그것들이 여러 게임에서 어떻게 사용되는지를 알아야합니다.</p>
+<p>암호화 경제분석에서 두드러지는 <a href="https://en.wikipedia.org/wiki/Nash_equilibrium" target="_blank" rel="external">Nash equilibria</a>, <a href="https://en.wikipedia.org/wiki/Focal_point_%28game_theory%29" target="_blank" rel="external">Schelling point</a>를 중심적으로 공부해야합니다.</p>
+<h3 id="거시경제학-Macroeconomics"><a href="#거시경제학-Macroeconomics" class="headerlink" title="거시경제학 (Macroeconomics)"></a>거시경제학 (Macroeconomics)</h3><p>암호화폐는 단순히 규약이 아니라 돈입니다. 따라서 (법칙이라고 한다면) <a href="https://en.wikipedia.org/wiki/Macroeconomics" target="_blank" rel="external">거시경제학(Macroeconomics)</a>의 법칙을 적용할수있습니다. 암호화폐는 다른 <a href="https://en.wikipedia.org/wiki/Monetary_policy" target="_blank" rel="external">통화정책(monetary policies,)</a>의 영향을 받으며 예측가능한 <a href="https://en.wikipedia.org/wiki/Inflation" target="_blank" rel="external">인플레이션(inflation)</a>과 <a href="https://en.wikipedia.org/wiki/Deflation" target="_blank" rel="external">디플레이션(deflation)</a>에 반응합니다. 이런 프로세스와 그것들이 소비와 저축에 미치는 영향을 이해해야합니다.</p>
+<h3 id="미시경제학-Microeconomics"><a href="#미시경제학-Microeconomics" class="headerlink" title="미시경제학 (Microeconomics)"></a>미시경제학 (Microeconomics)</h3><p>또한 암호화폐는 시장과 밀접한 연관이 있기때문에 <a href="https://en.wikipedia.org/wiki/Microeconomics" target="_blank" rel="external">미시경제학(microeconomics)</a>에 대한 이해가 필요합니다. <a href="https://en.wikipedia.org/wiki/Supply_and_demand" target="_blank" rel="external">공급곡선과 수요곡선</a>에 대한 강한 직관이 필요합니다. 경쟁과 <a href="https://en.wikipedia.org/wiki/Opportunity_cost" target="_blank" rel="external">기회비용</a>에 대해 추론할 수 있어야합니다.(암호화폐의 채굴에 자주사용됩니다) 많은 동전분배, 암호경제시스템에서 <a href="https://www.youtube.com/watch?v=4kWuxfVbIaU" target="_blank" rel="external">경매이론(auction theory)</a>이 두드러지게 나타납니다.</p>
+<p>아마 몇가지 주제는 이미 익숙할거라고 생각합니다. 그럴때는 과감히 건너뛰세요.</p>
+<p>좋습니다. 이제 당신은 기초가 어느정도 쌓였습니다.(혹은 그냥지나쳤을 수도 있습니다) 이론적인걸 확인했으니 블록체인 개발을 시작해봅시다.</p>
+<h2 id="비트코인의-이론적기반"><a href="#비트코인의-이론적기반" class="headerlink" title="비트코인의 이론적기반"></a>비트코인의 이론적기반</h2><p>2008년 10월, Satoshi Nakamoto는 분산 디지털 화폐 프로토콜을 설명한 문서를 발표했습니다. 그리고 이것을 비트코인이라고 불렀습니다. 블록체인이라는 거대한 아이디어를 이해하기전에 비트코인으로 시작해 Satoshi의 인사이트를 파악해야합니다.</p>
+<p>첫째로 작업증명(proof-of-work)과 포크선택규칙(fork choice rule)(Nakamoto consensus라고도 알려져있음)에 대해 직관을 세워보는것이 좋습니다. 여기서부터 시작해보세요.</p>
+<iframe width="700" height="394" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p>아이디어를 잘이해하기위해서 다른 비디오도 보시길 추천합니다.</p>
+<iframe width="700" height="394" src="https://www.youtube.com/embed/bBC-nXj3Ng4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p>좋습니다. 이제 여러분은 높은 수준의 직관을 구축했습니다. <a href="https://www.igvita.com/2014/05/05/minimum-viable-block-chain/" target="_blank" rel="external">이 기사</a>에서는 비트코인이 동작하는 핵심 구성요소에 대해 더 깊은 설명을 제공합니다.</p>
+<h2 id="직접-블록체인-만들기"><a href="#직접-블록체인-만들기" class="headerlink" title="직접 블록체인 만들기"></a>직접 블록체인 만들기</h2><p>여러분은 높은 수준의 직관을 가지고 있기때문에 이제 블록체인 기반의 작업증명(proof-of-work)을 구현해볼 시간입니다. 걱정하지마세요. 보기보다 쉽습니다. 여기 훌륭한 자료들이 있습니다.</p>
+<p>우선 제가 Ruby로 만드는 과정을 차례차례 설명한 비디오강의가 있습니다.(Ruby 프로그래머가 아니더라도 보시길 추천합니다)</p>
+<iframe width="700" height="525" src="https://www.youtube.com/embed/3aJI1ABdjQk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p><a href="https://github.com/Haseeb-Qureshi/lets-build-a-blockchain" target="_blank" rel="external">소스코드와 슬라이드</a></p>
+<p>다양한 언어로 작성된 <a href="https://github.com/openblockchains/awesome-blockchains" target="_blank" rel="external">블록체인 구현체</a>를 볼 수 있습니다. 만족할만큼 자신의 것으로 만드세요. 대부분 실용적입니다.</p>
+<p>그렇다면 이제 블록체인위에서 동작하는 간한단 결제 어플리케이션이 어떻게 구현되어있는지 이해해야합니다.(즉 비트코인) 그리고 당신은 이미 <a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="external">비트코인의 오리지널 논문</a>을 읽고 이해할 충분한 배경지식을 갖추고 있습니다.</p>
+<p>비트코인 채굴의 구조와 경제성을 이해하기위해 비트코인과 암호화폐 프린스턴 과정의 <a href="https://www.youtube.com/watch?v=jXerV3f5jN8" target="_blank" rel="external">비트코인 채굴에 대한 강의</a>를 보시기를 추천합니다.</p>
+<p>여기까지오셨다면 <a href="https://www.youtube.com/watch?v=gUwXCt1qkBU" target="_blank" rel="external">비트코인블록헤더</a>를 보고, 각 구성요소를 이해할수있을만큼 비트코인을 잘 이해하고 있어야합니다. 또한 비트코인블록탐색기를 통해 원시비트코인 트랜잭션을 살펴볼 수 있어야합니다.</p>
+<p>이제 비트코인과 암호화폐의 역사에 대해 공부할 타이밍입니다. UC 버클리에서 훌륭한 개요를 제공하고 있습니다. 아래비디오를 보세요.</p>
+<iframe width="700" height="525" src="https://www.youtube.com/embed/apYieuvnUaE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p>그 외 신뢰할만한 정보들:</p>
+<ul>
+<li><p><a href="https://queue.acm.org/detail.cfm?id=3136559" target="_blank" rel="external">비트코인의 학문적 선례</a></p>
+</li>
+<li><p>비트코인의 메커니즘: <a href="https://www.youtube.com/watch?v=q5GWwTgRIT4" target="_blank" rel="external">UTXO와 비트코인 스크립트</a>(비트코인 스크립트는 크게 중요하지 않고 그냥 뭔지만 알면됩니다)</p>
+</li>
+<li><p><a href="https://www.coindesk.com/short-guide-bitcoin-forks-explained/" target="_blank" rel="external">비트코인 포크를 위한 짧은 안내서</a></p>
+</li>
+<li><p><a href="https://en.bitcoin.it/wiki/Softfork" target="_blank" rel="external">소프트 포크와 채굴 신호효과</a></p>
+</li>
+<li><p><a href="https://en.bitcoin.it/wiki/Softfork" target="_blank" rel="external">이중지불, 51%공격, 셀프채굴</a></p>
+</li>
+<li><p><a href="https://en.bitcoin.it/wiki/Softfork" target="_blank" rel="external">재실행 공격</a></p>
+</li>
+<li><p><a href="https://en.bitcoin.it/wiki/Softfork" target="_blank" rel="external">비트토인 확장성 문제</a>은 비트코인 생태계에서 논란의 큰 부분을 차지합니다. 사람들이 블록의 크기때문에 논쟁하는 이유를 알필요가 있습니다.</p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/SegWit" target="_blank" rel="external">증인분산, a.k.a SegWit(a.k.a. SegWit)</a>은 필수는 아니지만 많이 쓰입니다.</p>
+</li>
+<li><p><a href="https://lightning.network/" target="_blank" rel="external">라이트닝 네트워크</a>은 비트코인에서 스케일링을 해결하기 위한 중요한 솔루션중 하나인 동시에 다른 블록체인에도 적용됩니다.</p>
+</li>
+<li><p><a href="https://bitnodes.earn.com/" target="_blank" rel="external">비트코인 전체 노드</a>, <a href="https://bitcoinfees.earn.com/" target="_blank" rel="external">비트코인 수수료통계</a>, <a href="https://blockchain.info/charts" target="_blank" rel="external">차트</a>, <a href="https://coin.dance/stats" target="_blank" rel="external">차트</a>, <a href="https://bitcointicker.co/networkstats/" target="_blank" rel="external">또다른 차트</a></p>
+</li>
+<li><p><a href="https://digiconomist.net/bitcoin-energy-consumption" target="_blank" rel="external">비트코인의 에너지소비지수</a>(발행당시 비트코인 채굴은 페루 전체의 에너지만큼을 소비합니다)</p>
+</li>
+<li><p><a href="https://www.gwern.net/Bitcoin-is-Worse-is-Better" target="_blank" rel="external">Gwern의 비트코인의 단점에 대한 통찰있는 에세이</a></p>
+</li>
+<li><p>더 알고싶으시다면 <a href="https://lopp.net/bitcoin.html" target="_blank" rel="external">Jameson Lopp의 비트코인에 대한 풍부한 자료</a>를 확인해보세요</p>
+</li>
+</ul>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://ho1234c.github.io/2018/02/02/The-authoritative-guide-to-blockchain-development/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://ho1234c.github.io/2018/02/02/The-authoritative-guide-to-blockchain-development/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//ho1234c.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/10/15/travel - 1/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/01/01/2017ed-2018ing/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/2.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/cat.gif" alt="Jong-Ho Jeong's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        ho1234c@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:ho1234c@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="github.com/ho1234c" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Hojong blog
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//ho1234c.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            Angular.io - GUIED - ARCHITECTURE | 
+        
+        Hojong blog
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Jong-Ho Jeong">
+    <meta name="description" itemprop="description" content="이 글은 Angular.io의 Guied Architecture를 이해한대로 번역한 글입니다. 오역 및 의역이 있을 수 있습니다.">
+    <meta name="keywords" content="null,javascript,translate,angular,angularjs">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Hojong blog">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://ho1234c.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Angular.io - GUIED - ARCHITECTURE | Hojong blog">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="이 글은 Angular.io의 Guied Architecture를 이해한대로 번역한 글입니다. 오역 및 의역이 있을 수 있습니다.">
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="translate"> <meta property="og:article:tag" content="angular"> <meta property="og:article:tag" content="angularjs"> 
+
+    
+        <meta property="article:published_time" content="Mar 12, 2017" />
+        <meta property="article:modified_time" content="Dec 09, 2018" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Angular.io - GUIED - ARCHITECTURE | Hojong blog">
+    <meta name="twitter:description" content="이 글은 Angular.io의 Guied Architecture를 이해한대로 번역한 글입니다. 오역 및 의역이 있을 수 있습니다.">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://ho1234c.github.io" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://ho1234c.github.io/2017/03/12/2017-03-12-angular.io-architecture/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hojong blog",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jong-Ho Jeong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": ""
+    },
+    "headline": "Angular.io - GUIED - ARCHITECTURE",
+    "url": "http://ho1234c.github.io/2017/03/12/2017-03-12-angular.io-architecture/index.html",
+    "datePublished": "Mar 12, 2017",
+    "dateModified": "Dec 09, 2018",
+    "description": "이 글은 Angular.io의 Guied Architecture를 이해한대로 번역한 글입니다. 오역 및 의역이 있을 수 있습니다.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://ho1234c.github.io"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?56ieHY/lfHwpOFYGS9lMXw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Modules-모듈"><span class="post-toc-number">1.</span> <span class="post-toc-text">Modules (모듈)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Angular-modules-vs-JavaScript-modules"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Angular modules vs. JavaScript modules</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Angular-libraries"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Angular libraries</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Components-컴포넌트"><span class="post-toc-number">2.</span> <span class="post-toc-text">Components (컴포넌트)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Templates"><span class="post-toc-number">3.</span> <span class="post-toc-text">Templates</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Metadata-메타데이터"><span class="post-toc-number">4.</span> <span class="post-toc-text">Metadata (메타데이터)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Data-binding-데이터-바인딩"><span class="post-toc-number">5.</span> <span class="post-toc-text">Data binding (데이터 바인딩)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Directive-디렉티브"><span class="post-toc-number">6.</span> <span class="post-toc-text">Directive (디렉티브)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Services-서비스"><span class="post-toc-number">7.</span> <span class="post-toc-text">Services (서비스)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Dependency-injection-의존성-주입"><span class="post-toc-number">8.</span> <span class="post-toc-text">Dependency injection (의존성 주입)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Wrap-up"><span class="post-toc-number">9.</span> <span class="post-toc-text">Wrap up</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/thumbnails/2017-03-12-angular.io-architecture.png)">
+    
+            <p class="article-headline-p">
+                Angular.io - GUIED - ARCHITECTURE
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Jong-Ho Jeong</strong>
+        <span>Mar 12, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/angular/">angular</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/angularjs/">angularjs</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/translate/">translate</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ho1234c.github.io/2017/03/12/2017-03-12-angular.io-architecture/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ho1234c.github.io/2017/03/12/2017-03-12-angular.io-architecture/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>이 글은 <a href="https://angular.io/docs/ts/latest/guide/architecture.html" target="_blank">Angular.io의 Guied Architecture</a>를 이해한대로 번역한 글입니다. 오역 및 의역이 있을 수 있습니다.</p>
+<a id="more"></a> 
+<style>
+img{ 
+  display: block;
+  margin : 0 auto;
+}
+</style>
+
+
+
+<hr>
+<p>Angular는 HTML과 javascript혹은 javascript로 컴파일되는 typescript로 클라이언트 어플리케이션을<br>만들기 위한 프레임워크입니다.</p>
+<blockquote>
+<p>역주 - Angularjs라고 불리던 프레임워크가 버전업 되면서 Angular로 통칭하게 되었습니다.</p>
+</blockquote>
+<p>Angular는 몇몇의 코어 라이브러리들과 부수적인 라이브러리들로 구성됩니다.</p>
+<p>당신은 Angular의 마크업이 포함된 HTML템플릿을 작성하고 그것들을 조작하기 위해 컴포넌트 클래스를 추가합니다.<br>또한 어플리케이션로직은 서비스에서 처리합니다. 그리고 컴포넌트와 서비스는 모듈속에 넣습니다.</p>
+<p>그후, 부트스트래핑된 루트모듈을 실행합니다. Angular는 제공된 지침에 따라 당신의 어플리케이션의 컨텐츠를 브라우저에 보여주고 유저의 인터랙션에 응답합니다.</p>
+<p>물론 이것은 빙산의 일각입니다. 이 페이지에서 자세히 설명할 겁니다. 지금은 큰 그림에 집중해봅시다.</p>
+<p><img src="/images/2017-03-12-angular.io-architecture/overview2.png" alt="overview2"></p>
+<p>이 다이어그램은 Angular 어플리케이션을 크게 여덟가지로 구분합니다.</p>
+<ul>
+<li>Modules</li>
+<li>Components</li>
+<li>Templates</li>
+<li>Metadata</li>
+<li>Data binding</li>
+<li>Directives</li>
+<li>Services</li>
+<li>Dependency injection</li>
+</ul>
+<p>이것들에 대해 배워봅시다.</p>
+<p>이 페이지의 코드들은 이곳을 참고하세요 <a href="https://angular.io/resources/live-examples/architecture/ts/eplnkr.html" target="_blank"><br>live example</a> / <a href="https://angular.io/resources/zips/architecture/architecture.zip" target="_blank" rel="external">downloadable example</a></p>
+<h2 id="Modules-모듈"><a href="#Modules-모듈" class="headerlink" title="Modules (모듈)"></a>Modules (모듈)</h2><p><img src="/images/2017-03-12-angular.io-architecture/module.png" alt="module"></p>
+<p>Angular는 모듈 친화적이며 <em>Angular modules</em> 혹은 <em>ngModules</em>이라는 모듈시스템을 자체적으로 가지고 있습니다.<br>Angular modules은 매우 중요합니다. 이 페이지에서도 소개하지만 <a href="https://angular.io/docs/ts/latest/guide/ngmodule.html" target="_blank">여기</a>서 더 자세히 설명합니다.</p>
+<p>모든 Angular 앱은 최소한 <a href="https://angular.io/docs/ts/latest/guide/appmodule.html" target="_blank" rel="external">the root modules</a> 이라는 Angular modules을 하나씩은 가지고 있습니다. 보통 <strong>AppModule</strong>이라 부릅니다.</p>
+<p>작은 어플리케이션이라면 root modules하나만 존재하는 경우도 있지만, 일반적으로 많은 모듈들이 어플리케이션의 도메인, 워크플로우등의 기능들을 위해서 유기적으로 동작합니다.</p>
+<p>Angular module은 어떤 모듈이든 간에 <strong>@NgModule</strong> 데코레이터를 사용합니다.</p>
+<blockquote>
+<p>데코레이터는 javascript 클래스를 변형시키는 함수입니다. Angular는 메타데이터를 클래스에 적용시키기 위한 많은 데코레이터들을 가지고 있고<br>이는 그 클래스의 의미가 뭔지, 어떻게 동작하는지를 나타냅니다.<br><a href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841#.x5c2ndtx0" target="_blank">데코레이터에 대해 더 알아보기</a></p>
+</blockquote>
+<p><strong>NgModule</strong>은 모듈의 특성을 기술하는 하나의 메타데이터 객체를 취하는 함수입니다. 가장 중요한 특성은 다음과 같습니다.</p>
+<ul>
+<li><strong>declarations</strong> : 해당 모듈에 포함된 view 클래스. Angular는 components, directives, pipes라는 세가지 종류의 view class가 있습니다.</li>
+<li><strong>exports</strong> : declarations중에서 다른 모듈에서 사용할 모듈을 기술.</li>
+<li><strong>imports</strong> : 다른곳에서 export된 모듈 중 이 컴포넌트 템플릿에서 필요한 모듈을 기술.</li>
+<li><strong>providers</strong> : 글로벌 컬렉션을 위한 service의 생성자. 이는 앱 안의 어느 곳에서든 사용할 수 있습니다.</li>
+<li><strong>bootstrap</strong> : root component라고 하는, 모든 다른 앱 뷰에서 호스트 하는 메인 어플리케이션 뷰. </li>
+</ul>
+<p>다음은 간단한 root modules의 예 입니다.</p>
+<pre><code class="javascript">// src/app/app.module.ts
+import { NgModule }      from &#39;@angular/core&#39;;
+import { BrowserModule } from &#39;@angular/platform-browser&#39;;
+@NgModule({
+  imports:      [ BrowserModule ],
+  providers:    [ Logger ],
+  declarations: [ AppComponent ],
+  exports:      [ AppComponent ],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+</code></pre>
+<blockquote>
+<p>여기서 AppComponent의 export는 그냥 export를 하는 방법을 보여주기 위함입니다. 사실 여기서는 필요하지 않습니다. 다른 모듈들에서 root module을 import할 필요가 없기 때문에 root module이 export되는 것은 무의미합니다.</p>
+</blockquote>
+<p>root module을 bootstrapping해서 어플리케이션을 실행하세요. main.ts에서 AppModule을 bootstrapping하는<br>다음과 같은 형태가 될겁니다.</p>
+<pre><code class="javascript">// src/main.ts
+import { platformBrowserDynamic } from &#39;@angular/platform-browser-dynamic&#39;;
+import { AppModule } from &#39;./app/app.module&#39;;
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+</code></pre>
+<h3 id="Angular-modules-vs-JavaScript-modules"><a href="#Angular-modules-vs-JavaScript-modules" class="headerlink" title="Angular modules vs. JavaScript modules"></a>Angular modules vs. JavaScript modules</h3><p>@NgModule을 사용한 Angular module은 Angular의 기본적인 특성입니다.</p>
+<p>javascript또한 javascript 객체를 관리하기 위한 그 자체 모듈 시스템을 가지고 있습니다.<br>각각의 javascript 파일은 모듈이고 정의된 모든 객체는 모듈에 속합니다. 모듈은 export 키워드를 통해서<br>공개됩니다. 또한 import 키워드로 공개된 객체에 접근합니다.</p>
+<pre><code class="javascript">import { NgModule }     from &#39;@angular/core&#39;;
+import { AppComponent } from &#39;./app.component&#39;;
+</code></pre>
+<pre><code class="javascript">export class AppModule { }
+</code></pre>
+<blockquote>
+<p><a href="http://exploringjs.com/es6/ch_modules.html" target="_blank" rel="external">javascrirpt 모듈에 대해서 알아보기</a></p>
+</blockquote>
+<p>이 두가지는 상호보완적인 모듈시스템입니다. 두가지 모두 적절히 사용하세요.</p>
+<h3 id="Angular-libraries"><a href="#Angular-libraries" class="headerlink" title="Angular libraries"></a>Angular libraries</h3><p><img src="/images/2017-03-12-angular.io-architecture/library-module.png" alt="library-module"></p>
+<p>Angular 모듈은 javascript 모듈컬렉션으로 제공합니다. 라이브러리 모듈이라고 봐도 무방합니다.<br>각 모듈의 이름은 <strong>@angular</strong> 접두사로 시작합니다. npm을 통해서 설치할 수 있고 javascript의 import문으로 불러올 수 있습니다.</p>
+<p>예를들어 <strong>@angular/core</strong>의 <strong>Component</strong> 데코레이터를 불러오기 위해서는 다음과 같이 할 수 있습니다.</p>
+<pre><code class="javascript">import { Component } from &#39;@angular/core&#39;;
+</code></pre>
+<p>import문을 통해서 Angular라이브러리를 불러 올 수 있습니다.</p>
+<pre><code class="javascript">import { BrowserModule } from &#39;@angular/platform-browser&#39;;
+</code></pre>
+<p>그리고 root module에서 <strong>BrowserModule</strong>이 필요하다고 하면, 이를 <em>*@NgModule</em>에 추가합니다.</p>
+<p>이는 Angular와 javascript의 모듈시스템을 같이 이용한 예입니다.</p>
+<p>두 시스템 모두 import와 export라는 키워드를 공유하기 때문에 헷갈릴 수 있습니다. 하지만 많이 해보면 알게될겁니다.</p>
+<blockquote>
+<p><a href="https://angular.io/docs/ts/latest/guide/ngmodule.html" target="_blank" rel="external">Angular modules에 대해 알아보기</a></p>
+</blockquote>
+<h2 id="Components-컴포넌트"><a href="#Components-컴포넌트" class="headerlink" title="Components (컴포넌트)"></a>Components (컴포넌트)</h2><p><img src="/images/2017-03-12-angular.io-architecture/hero-component.png" alt="hero-component"></p>
+<p>컴포넌트는 view라고 하는 화면의 부분을 제어합니다. 예를 들어 다음의 view는 구성요소에 의해 제어됩니다.</p>
+<ul>
+<li>app root의 네비게이션 링크</li>
+<li>히어로들의 리스트</li>
+<li>히어로 에디터</li>
+</ul>
+<blockquote>
+<p>역주 : angular.io의 Guide에서 히어로 리스트를 작성하고 수정하는 앱의 예제 코드를 통해서 설명하고 있기 때문에 이런 예를 든 것 같습니다.</p>
+</blockquote>
+<p>당신은 클래스안에서 컴포넌트의 어플리케이션 로직(view에서 어떤일을 하는지)을 정의합니다. 클래스는 API 프로퍼티와 메소드를 통해 view와 상호작용합니다.</p>
+<p>예를들어 다음의 <strong>HeroListComponent</strong>는 서비스로부터 얻어온 히어로들의 배열을 반환하는 <strong>heros</strong>프로퍼티를 가지고 있습니다.<br>또한 <strong>HeroListComponent</strong>는 유저가 히어로 리스트를 클릭했을 때 <strong>selectedHero</strong>를 설정하는 selectHero() 메소드를 가지고 있습니다.</p>
+<pre><code class="javascript">// src/app/hero-list.component.ts (class)
+export class HeroListComponent implements OnInit {
+  heroes: Hero[];
+  selectedHero: Hero;
+
+  constructor(private service: HeroService) { }
+
+  ngOnInit() {
+    this.heroes = this.service.getHeroes();
+  }
+
+  selectHero(hero: Hero) { this.selectedHero = hero; }
+}
+</code></pre>
+<p>Angular는 사용자의 움직임에 따라 컴포넌트들을 생성, 수정, 제거합니다. 당신의 앱은 위에서 <strong>ngOnInit()</strong>이 선언 된 것처럼 <a href="https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html" target="_blank">라이프사이클 훅</a>을 통해서 특정 액션을 취할 수 있습니다.</p>
+<h2 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h2><p><img src="/images/2017-03-12-angular.io-architecture/template.png" alt="template"></p>
+<p>당신은 템플릿으로 컴포넌트 뷰를 정의합니다. 템플릿은 컴포넌트를 어떻게 렌더링할지 Angular에게 알려주는 HTML폼 입니다.</p>
+<p>템플릿은 몇가지를 제외하곤 기존의 HTML과 거의 흡사합니다. 다음은 <strong>HeroListComponent</strong>를 위한 템플릿입니다.</p>
+<pre><code class="html">&lt;!-- src/app/hero-list.component.html --&gt;
+&lt;h2&gt;Hero List&lt;/h2&gt;
+&lt;p&gt;&lt;i&gt;Pick a hero from the list&lt;/i&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li *ngFor=&quot;let hero of heroes&quot; (click)=&quot;selectHero(hero)&quot;&gt;
+    {{hero.name}}
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hero-detail *ngIf=&quot;selectedHero&quot; [hero]=&quot;selectedHero&quot;&gt;&lt;/hero-detail&gt;
+</code></pre>
+<p><code>&lt;h2&gt;</code>나 <code>&lt;p&gt;</code> 같은 엘리먼트들은 기존의 HTML과 같지만  {{hero.name}} , <strong>*ngFor</strong>, <strong>(click)</strong>, <strong>[hero]</strong>, <code>&lt;hero-detail&gt;</code> 은<br><a href="https://angular.io/docs/ts/latest/guide/template-syntax.html" target="_blank">Angular의 템플릿 문법</a>을 사용합니다.</p>
+<p>마지막줄의 <code>&lt;hero-detail&gt;</code> 는 <strong>HeroDetailComponent</strong>에서 만든 커스텀엘리먼트입니다.</p>
+<p><strong>HeroDetailComponent</strong>는 <strong>HeroListComponent</strong>와는 약간 다른 컴포넌트 입니다. <strong>HeroDetailComponent</strong>(코드상엔 안보이지만)는 유저가 선택한 히어로를 <strong>HeroListComponent</strong>에 표시해줍니다. <strong>HeroDetailComponent</strong>는 <strong>HeroListComponent</strong>의 자식 컴포넌트입니다.</p>
+<p><code>&lt;hero-detail&gt;</code>이 기존의 HTML사이에 얼마나 잘 녹아들어가 있는지 보세요. 커스텀 컴포넌트는 기존의 컴포넌트들과 같은 레이아웃으로 위화감 없이 공존합니다. </p>
+<p><img src="/images/2017-03-12-angular.io-architecture/component-tree.png" alt="component-tree"></p>
+<h2 id="Metadata-메타데이터"><a href="#Metadata-메타데이터" class="headerlink" title="Metadata (메타데이터)"></a>Metadata (메타데이터)</h2><p><img src="/images/2017-03-12-angular.io-architecture/metadata.png" alt="metadata"></p>
+<p>메타데이터는 Angular에게 클래스를 처리하는 방법을 알려줍니다.</p>
+<p>위에서 <strong>HeroListComponent</strong>의 코드를 보면 그냥 클래스라는것을 알 수 있습니다. Angular가 개입하고 있는 부분이 전혀 없습니다. 사실, <strong>HeroListComponent</strong>는 Angular에게 이 클래스가 컴포넌트임을 알려주기 전까지는 그냥 클래스에 불과합니다.</p>
+<p>Angular에게 <strong>HeroListComponent</strong>가 컴포넌트임을 알려주려면 메타데이터를 추가해줘야 합니다.</p>
+<p>typescript에서 데코레이터를 통해서 메타데이터를 추가할 수 있습니다. 아래는 <strong>HeroListComponent</strong>의 메타데이터입니다.</p>
+<pre><code class="javascript">// src/app/hero-list.component.ts (metadata)
+@Component({
+  moduleId: module.id,
+  selector:    &#39;hero-list&#39;,
+  templateUrl: &#39;./hero-list.component.html&#39;,
+  providers:  [ HeroService ]
+})
+export class HeroListComponent implements OnInit {
+/* . . . */
+}
+</code></pre>
+<p><strong>@Component</strong> 데코레이터는 바로 아래있는 클래스를 컴포넌트로 인지합니다.</p>
+<p><strong>@Component</strong> 데코레이터에는 Angular가 뷰를 만들고 표시하기 위해 필요한 정보를 담고있는 객체가 필요합니다.</p>
+<p>아래는 <strong>@Component</strong>를 구성하는 몇가지 요소들입니다.</p>
+<ul>
+<li><strong>moduleId</strong> : 마치 <strong>templateUrl</strong>처럼 모듈을 기준의 기본 주소(module.id)를 설정합니다.</li>
+<li><strong>selector</strong> : Angular가 부모 HTML에서 <code>`&lt;hero-list&gt;</code>의 인스턴스를 만들고 삽입할 수 있도록 하는 CSS선택자입니다.<br>예를 들어 HTML에서 <code>&lt;hero-list&gt;&lt;/hero-list&gt;</code>를 삽입하면 Angular는 거기에 <strong>HeroListComponent</strong>를 만들어줍니다.</li>
+<li><strong>templateUrl</strong> : 모듈을 기준으로한 HTML 템플릿의 상대주소입니다.</li>
+<li><strong>providers</strong> : 컴포넌트에 필요한 서비스들의 의존성을 주입하기 위한 배열 객체입니다. 예제에서 처럼 컴포넌트가 히어로 목록을 표시하기 위해 <strong>HeroService</strong>가 필요함을 Angular에게 알려주는 방법중 하나입니다.</li>
+</ul>
+<p><img src="/images/2017-03-12-angular.io-architecture/template-metadata-component.png" alt="template-metadata-component"></p>
+<p><strong>@Component</strong>의 메타데이터는 당신이 컴포넌트를 구성하기 위해 지정한 빌딩블럭을 어디서 가져올수 있는지 Angular에게 알려줍니다.</p>
+<p>템플릿, 메타데이터, 그리고 컴포넌트가 합쳐져서 뷰를 구성하게됩니다.</p>
+<p>다른 메타데이터 데코레이터도 비슷한 방식으로 적용시켜보세요. 자주 사용되는 데코레이터로는 <strong>@Injectable, @Input, @Output</strong>가 있습니다.</p>
+<p>아키텍처상에서 중요한것은 Angular가 무엇을 할지 알려주기위해 메타데이터를 추가해줘야 한다는 것입니다.</p>
+<h2 id="Data-binding-데이터-바인딩"><a href="#Data-binding-데이터-바인딩" class="headerlink" title="Data binding (데이터 바인딩)"></a>Data binding (데이터 바인딩)</h2><p>프레임워크가 없다면 당신은 유저의 액션이나 값의 업데이트를 반영하기 위해 데이터값을 HTML에 넣어줘야 할것입니다.</p>
+<p>푸쉬/풀 로직을 작성하는것은 지루하고 에러가 발생하기도 쉽습니다. jQuery를 사용해왔던 프로그래머라면 더욱 힘들었을겁니다.</p>
+<p><img src="/images/2017-03-12-angular.io-architecture/databinding.png" alt="databinding"></p>
+<p>Angular는 템플릿과 컴포넌트를 일치시키는 <strong>데이터 바인딩</strong>을 지원합니다. HTML템플릿에 바인딩 마크업을 추가하는것으로 Angular에게 어떻게 둘을 연결할 지를 알려줄수 있습니다.</p>
+<p>그림에서 처럼 데이터바인딩에는 네가지형태가 있습니다. 각각의 형태는 DOM으로 보내는것, DOM으로 부터 받는것, 혹은 양쪽의 방향성을 가지고 있습니다.</p>
+<p><strong>HeroListComponent</strong>예제에서는 세가지 형태가 들어있습니다.</p>
+<pre><code class="html">&lt;!-- src/app/hero-list.component.html (binding) --&gt;
+&lt;li&gt;{{hero.name}}&lt;/li&gt;
+&lt;hero-detail [hero]=&quot;selectedHero&quot;&gt;&lt;/hero-detail&gt;
+&lt;li (click)=&quot;selectHero(hero)&quot;&gt;&lt;/li&gt;
+</code></pre>
+<ul>
+<li><strong>{{hero.name}}</strong> <a href="https://angular.io/docs/ts/latest/guide/displaying-data.html#interpolation" target="_blank">interpolation</a>은 <code>&lt;li&gt;</code>엘리먼트 속에 <strong>hero.name</strong> 프로퍼티값을 보여줍니다.</li>
+<li><strong>[hero]</strong> <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#property-binding" target="_blank">property binding</a>은 <strong>selectedHero</strong>의 값을 부모 컴포넌트인 <strong>HeroListComponent</strong>에서 자식 컴포넌트인 <strong>HeroDetailComponent</strong>의 <strong>hero</strong> 프로퍼티로 전달합니다.</li>
+<li><strong>(click)</strong> <a href="https://angular.io/docs/ts/latest/guide/user-input.html#click" target="_blank">event binding</a>은 히어로 이름을 클릭했을 때 컴포넌트의 <strong>selectHero</strong> 메소드를 호출합니다.</li>
+</ul>
+<p><strong>양방향 데이터바인딩</strong>은 데이터바인딩의 네가지 방법중 네번째 형태입니다. <strong>ngModel</strong>디렉티브를 사용해서 하나의 표기법으로 프로퍼티를 결합하고 이벤트를 바인딩합니다. 아래 예제는 <strong>HeroDetailComponent</strong> 템플릿의 예제입니다.</p>
+<pre><code class="html">&lt;!-- src/app/hero-detail.component.html (ngModel) --&gt;
+&lt;input [(ngModel)]=&quot;hero.name&quot;&gt;
+</code></pre>
+<p><strong>양방향 데이터바인딩</strong>에서는 프로퍼티 바인딩과 마찬가지로 데이터 프로퍼티값이 컴포넌트에서 인풋박스로 흘러갑니다. 또한 유저의 값 변경은 반대로 컴포넌트로 흘러가서 최근의 값으로 프로퍼티를 리셋합니다.</p>
+<p>Angular의 모든 데이터 바인딩 프로세스는 자식 컴포넌트를 통해서 루트 컴포넌트로 javascript 이벤트 사이클 한번에 하나씩 처리됩니다.</p>
+<p><img src="/images/2017-03-12-angular.io-architecture/component-databinding.png" alt="component-databinding"></p>
+<p>데이터 바인딩은 템플릿과 컴포넌트의 커뮤니케이션에 중요한 역할을 합니다.</p>
+<p>또한 데이터 바인딩은 부모와 자식 컴포넌트 사이의 커뮤니케이션에서도 중요한 역할을 합니다.</p>
+<h2 id="Directive-디렉티브"><a href="#Directive-디렉티브" class="headerlink" title="Directive (디렉티브)"></a>Directive (디렉티브)</h2><p><img src="/images/2017-03-12-angular.io-architecture/directive.png" alt="component-databinding"></p>
+<p>Angular 템플릿은 유동적입니다. Angular는 디렉티브에 따라서 DOM을 변형시킵니다.</p>
+<p>디렉티브는 <strong>@Directive</strong> 데코레이터의 클래스입니다. 컴포넌트는 디렉티브와 템플릿의 조합입니다. <strong>@Component</strong>데코레이터는 사실 <strong>@Directive</strong> 데코레이터를 템플릿 형태로 확장한것입니다.</p>
+<blockquote>
+<p>컴포넌트가 디렉티브의 확장이긴 하지만 컴포넌트는 Angular 어플리케이션에서 중요한 구성요소이기 때문에 디렉티브와 구분됩니다.</p>
+</blockquote>
+<p>디렉티브는 속성(attribute) 디렉티브와 구조(structural) 디렉티브로 나뉩니다.</p>
+<p>디렉티브는 attribute처럼 엘리먼트의 태그안에서 쓰이거나 태그의 이름으로 쓰이기도 합니다. 또한 할당하거나 바인딩되는 대상으로 쓰이는 경우도 빈번합니다.</p>
+<p><strong>구조</strong> 디렉티브는 DOM의 엘리먼트를 추가하고, 지우고, 대체시켜서 레이아웃을 바꿉니다.</p>
+<p>예제에서는 두가지 내장 디렉티브를 사용합니다.</p>
+<pre><code class="html">&lt;!--src/app/hero-list.component.html (structural)--&gt;
+&lt;li *ngFor=&quot;let hero of heroes&quot;&gt;&lt;/li&gt;
+&lt;hero-detail *ngIf=&quot;selectedHero&quot;&gt;&lt;/hero-detail&gt;
+</code></pre>
+<ul>
+<li><strong>*ngFor</strong>은 Angular에게 heros 리스트에서 hero를 하나씩 <code>&lt;li&gt;</code>태그로 넣으라고 알려줍니다.</li>
+<li><strong>*ngIf</strong>는 <strong>seletedHero</strong>가 있을때만 <strong>HeroDetail</strong>컴포넌트를 포함시킵니다.</li>
+</ul>
+<p><strong>속성</strong> 디렉티브는 존재하는 엘리먼트의 외형 혹은 행동을 변화시킵니다. 템플릿에서는 일반적인 HTML attribute의 이름처럼 보입니다.</p>
+<p>양방향 데이터 바인딩으로 구현된 <strong>ngModel</strong>은 속성 디렉티브의 예제입니다. <strong>ngModel</strong>은 프로퍼티를 변화시키고 변경이벤트에 대응해서 존재하는 엘리먼트(보통 <code>&lt;input&gt;</code>태그)의 행동을 변화시킵니다.</p>
+<pre><code class="html">&lt;!--src/app/hero-detail.component.html (ngModel)--&gt;
+&lt;input [(ngModel)]=&quot;hero.name&quot;&gt;
+</code></pre>
+<p>Angular에는 레이아웃 구조를 바꾸거나(<strong>ngSwitch</strong>와 같은) DOM 엘리먼트, 컴포넌트를 수정하는(<strong>ngStyle</strong>,<strong>ngClass</strong>와 같은) 몇가지 디렉티브들을 가지고 있습니다.</p>
+<p>물론 커스텀 디렉티브를 만들수도 있습니다. <strong>HeroListComponent</strong>와 같은 컴포넌트가 커스텀 엘리먼트의 예제입니다.</p>
+<h2 id="Services-서비스"><a href="#Services-서비스" class="headerlink" title="Services (서비스)"></a>Services (서비스)</h2><p><img src="/images/2017-03-12-angular.io-architecture/service.png" alt="service"></p>
+<p>서비스는 당신의 앱에서 필요한 함수나 기능등 넓은 카테고리를 포괄합니다.</p>
+<p>거의 모든것이 서비스라고 할 수 있습니다. 일반적으로는 잘 정의 된 클래스를 가르킵니다. 특정한 일을 잘 수행해야만 합니다.</p>
+<p>예를들어 다음과 같습니다.</p>
+<ul>
+<li>logging service</li>
+<li>data service</li>
+<li>message bus</li>
+<li>tax calculator</li>
+<li>application configuration</li>
+</ul>
+<p>Angular는 서비스에대해 구체적으로 정의하지 않습니다. 클래스를 기본으로하는 서비스도 없을뿐만 아니라 서비스를 등록할 곳도 없습니다.</p>
+<p>하지만 서비스는 Angular 어플리케이션의 근간입니다. 컴포넌트의 큰 축이기도합니다.</p>
+<p>다음예제는 브라우저콘솔에 로그를 출력하는 서비스 클래스의 예제입니다.</p>
+<pre><code class="javascript">// src/app/logger.service.ts (class)
+export class Logger {
+  log(msg: any)   { console.log(msg); }
+  error(msg: any) { console.error(msg); }
+  warn(msg: any)  { console.warn(msg); }
+}
+</code></pre>
+<p>아래의 <strong>HeroService</strong>는 heros를 업데이트하는데 <strong>Promise</strong>를 사용합니다. <strong>HeroService</strong>는 <strong>Logger</strong>, 서버와의 커뮤니케이션을 위한 <strong>BackendService</strong>에 의존적입니다.</p>
+<pre><code class="javascript">// src/app/hero.service.ts (class)
+export class HeroService {
+  private heroes: Hero[] = [];
+
+  constructor(
+    private backend: BackendService,
+    private logger: Logger) { }
+
+  getHeroes() {
+    this.backend.getAll(Hero).then( (heroes: Hero[]) =&gt; {
+      this.logger.log(`Fetched ${heroes.length} heroes.`);
+      this.heroes.push(...heroes); // fill cache
+    });
+    return this.heroes;
+  }
+}
+</code></pre>
+<p>서비스는 어느곳에나 있습니다.</p>
+<p>컴포넌트는 서비스에 의존해야합니다. 컴포넌트는 서버에서 데이터를 가져오거나, 유저의 입력을 검증하거나, 콘솔에 직접  출력하는 등의 일을 하지 않습니다. 이런 작업들은 서비스에 위임합니다.</p>
+<p>컴포넌트의 역할은 유저에게 경험을 제공하는것 뿐입니다. 뷰(템플릿으로 렌더링 된)와 어플리케이션 로직(모델의 개념을 포함하기도 하는)을 중계하는 역할을 합니다.<br>훌륭한 컴포넌트는 데이터바인딩을 위해 프로퍼티와 메소드를 드러냅니다. 기타 다른 것들은 서비스에 위임합니다.</p>
+<p>Angular는 그들의 원칙을 강요하지않습니다. 3000줄짜리 쓸데없는 컴포넌트를 작성해도 괜찮습니다.</p>
+<p>Angular는 의존성주입을 통해서 어플리케이션 로직을 서비스에 반영하고 컴포넌트에서 서비스를 쉽게 사용할 수 있게 함으로서 이런 원칙을 지키는데 도움을 줍니다.</p>
+<h2 id="Dependency-injection-의존성-주입"><a href="#Dependency-injection-의존성-주입" class="headerlink" title="Dependency injection (의존성 주입)"></a>Dependency injection (의존성 주입)</h2><p><img src="/images/2017-03-12-angular.io-architecture/dependency-injection.png" alt="dependency-injection"></p>
+<p>의존성 주입은 클래스의 새로운 인스턴스에 필요한 의존성을 공급해주는 방법입니다. 대부분은 서비스를 주입해줍니다. Angular는 컴포넌트에 필요한 서비스들의 의존성을 주입해 줍니다.</p>
+<p>Angular는 생성자 파라미터를 통해서 컴포넌트에 어떤 서비스가 필요한지를 알 수 있습니다. 예를들어 당신의 <strong>HeroListComponent</strong>에  <strong>HeroService</strong>가 필요할 때는 다음처럼 합니다.</p>
+<pre><code class="javascript">// src/app/hero-list.component.ts (constructor)
+constructor(private service: HeroService) { }
+</code></pre>
+<p>Angular에서 컴포넌트를 만들 때, 컴포넌트에 필요한 서비스를 위해서 우선 <strong>injector</strong>를 호출합니다.</p>
+<p>injector는 이전에 만들어져있던 서비스의 컨테이너를 관리합니다. 요청된 서비스가 컨테이너에 포함되어있지 않은경우, injector는 해당 서비스를 만들어서 컨테이너에 추가한 후 Angular에 반환합니다. 그리고 모든 서비스에 대한 처리가 끝난 후에, 서비스들을 인수로 하는 컴포넌트의 생성자를 호출할 수 있습니다. 이것이 의존성주입입니다.</p>
+<p><strong>HeroService</strong>의 주입은 아래와 같은 프로세스를 거칩니다.</p>
+<p><img src="/images/2017-03-12-angular.io-architecture/injector-injects.png" alt="injector-injects"></p>
+<p>만약 injector가 <strong>HeroService</strong>를 가지고 있지 않다면 어떻게 될까요?</p>
+<p>즉, 미리 <strong>HeroService</strong>의 provider를 injector에 등록해놓아야 합니다. provider는 일반적으로 서비스 클래스 자체를 생성, 반환합니다.</p>
+<p>당신은 providers를 모듈이나 컴포넌트에 등록할 수 있습니다.</p>
+<p>보통, 같은 인스턴스의 서비스를 어디에서나 사용하기 위해서 루트모듈에 등록해 놓습니다.</p>
+<pre><code class="javascript">// src/app/app.module.ts (module providers)
+providers: [
+  BackendService,
+  HeroService,
+  Logger
+],
+</code></pre>
+<p>또는 컴포넌트레벨에서 <strong>@Component</strong> 메타데이터의 프로퍼티로 providers를 등록해 줄 수 있습니다.</p>
+<pre><code class="javascript">// src/app/hero-list.component.ts (component providers)
+@Component({
+  selector:    &#39;hero-list&#39;,
+  templateUrl: &#39;./hero-list.component.html&#39;,
+  providers:  [ HeroService ]
+})
+</code></pre>
+<p>컴포넌트레벨에서 서비스를 등록한다는 것은 컴포넌트의 새로운 인스턴스가 생성될 때 마다 새로운 서비스의 인스턴스가 생성된다는 것을 의미합니다.</p>
+<p>의존성 주입에서의 요점은</p>
+<ul>
+<li>의존성 주입은 Angular 프레임워크와 연결되어있고 어디서나 사용합니다.</li>
+<li>injector의 주요 메커니즘은<ul>
+<li>injector는 생성된 서비스 인스턴스의 컨테이너를 관리합니다.</li>
+<li>injector는 provider로 부터 새로운 인스턴스를 생성할 수 있습니다.</li>
+</ul>
+</li>
+<li>서비스를 생성하는 방법은 provider를 사용하는겁니다.</li>
+<li>injector에 provider를 등록합니다.</li>
+</ul>
+<h2 id="Wrap-up"><a href="#Wrap-up" class="headerlink" title="Wrap up"></a>Wrap up</h2><p>Angular의 기초가 되는 여덟가지를 배웠습니다.</p>
+<ul>
+<li>Modules</li>
+<li>Components</li>
+<li>Templates</li>
+<li>Metadata</li>
+<li>Data binding</li>
+<li>Directives</li>
+<li>Services</li>
+<li>Dependency injection</li>
+</ul>
+<p>이것들은 모든 Angular 어플리케이션을 위한 기반이 될겁니다. 하지만 이것이 당신이 알아야 할 전부는 아닙니다.</p>
+<p>아래는 Angular 어플리케이션을 위한 또 다른 중요한 것들의 목록입니다. 여기의 대부분은 도큐먼트에서 다룹니다.</p>
+<p><strong>Animation</strong>: Angular Animation 라이브러리로 CSS나 애니메이션에 대한 깊은 지식없이 컴포넌트 애니메이션을 구현합니다.</p>
+<p><strong>Change detection</strong>: Angular에서 컴포넌트의 프로퍼티가 변경되었을 때, 어떻게 화면을 업데이트하고 비동기를 인터셉트해서 바뀐것을 감지하는지에 대해 다룹니다.</p>
+<p><strong>Events</strong>: event 도큐먼트에서는 컴포넌트가 어떻게 이벤트를 발생시키고 감지하는지에 대해 다룹니다.</p>
+<p><strong>Forms</strong>: HTML을 기반으로한 유효성검사와 더티체킹 으로 복잡한 데이터폼을 다루는 시나리오를 도와줍니다.</p>
+<p><strong>HTTP</strong>: 데이터를 받아오거나 저장하기 위한 서버와의 커뮤니케이션과 HTTP 클라이언트의 서버사이드 액션입니다.</p>
+<p><strong>Lifecycle hooks</strong>: 라이프사이클 인터페이스를 통해서 컴포넌트가 생성되고 지워지는 순간을 활용합니다.</p>
+<p><strong>Pipes</strong>: 템플릿에서 값이 보여지는 방식을 통해 사용자경험을 향상시킵니다. <strong>currency</strong> pipe 표현식은 다음과 같습니다.</p>
+<pre><code class="js">price | currency:&#39;USD&#39;:true
+</code></pre>
+<p>이는 42.33 을 $42.33 과 같이 보여줍니다.</p>
+<p>Router: 클라이언트사이드에서 페이지를 탐색하고 브라우저에서 떠나지않게합니다.</p>
+<p>Testing: Angular와 인터랙션할 때 Angular Testing Platform을 이용해서 당신의 어플리케이션에서 유닛테스트를 진행합니다.</p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://ho1234c.github.io/2017/03/12/2017-03-12-angular.io-architecture/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://ho1234c.github.io/2017/03/12/2017-03-12-angular.io-architecture/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//ho1234c.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/07/11/javascript-inside/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/01/31/2017-01-31-docker-nodejs/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/2.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/cat.gif" alt="Jong-Ho Jeong's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        ho1234c@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:ho1234c@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="github.com/ho1234c" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Hojong blog
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//ho1234c.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

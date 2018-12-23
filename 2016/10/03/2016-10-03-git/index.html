@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            Git 시작하기 | 
+        
+        Hojong blog
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Jong-Ho Jeong">
+    <meta name="description" itemprop="description" content="Git에 대한 간단한 소개">
+    <meta name="keywords" content="null,git,vcs">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Hojong blog">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://ho1234c.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Git 시작하기 | Hojong blog">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="Git에 대한 간단한 소개">
+    <meta property="og:article:tag" content="git"> <meta property="og:article:tag" content="vcs"> 
+
+    
+        <meta property="article:published_time" content="Oct 03, 2016" />
+        <meta property="article:modified_time" content="Dec 09, 2018" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Git 시작하기 | Hojong blog">
+    <meta name="twitter:description" content="Git에 대한 간단한 소개">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://ho1234c.github.io" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://ho1234c.github.io/2016/10/03/2016-10-03-git/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hojong blog",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jong-Ho Jeong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": ""
+    },
+    "headline": "Git 시작하기",
+    "url": "http://ho1234c.github.io/2016/10/03/2016-10-03-git/index.html",
+    "datePublished": "Oct 03, 2016",
+    "dateModified": "Dec 09, 2018",
+    "description": "Git에 대한 간단한 소개",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://ho1234c.github.io"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?56ieHY/lfHwpOFYGS9lMXw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#버전관리"><span class="post-toc-number">1.</span> <span class="post-toc-text">버전관리</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Local-version-control-system"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Local version control system</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Centralized-version-control-system"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Centralized version control system</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Distributed-version-control-system"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Distributed version control system</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git-이란"><span class="post-toc-number">2.</span> <span class="post-toc-text">Git 이란..?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Git의-기본-용어"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Git의 기본 용어</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Branch"><span class="post-toc-number">3.</span> <span class="post-toc-text">Branch</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Merge"><span class="post-toc-number">4.</span> <span class="post-toc-text">Merge</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#주요-명령어"><span class="post-toc-number">5.</span> <span class="post-toc-text">주요 명령어</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#init"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">init</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#config"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">config</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#add"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">add</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#commit"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">commit</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#branch"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">branch</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#checkout"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">checkout</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#merge"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">merge</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#clone"><span class="post-toc-number">5.8.</span> <span class="post-toc-text">clone</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#push"><span class="post-toc-number">5.9.</span> <span class="post-toc-text">push</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#fetch"><span class="post-toc-number">5.10.</span> <span class="post-toc-text">fetch</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pull"><span class="post-toc-number">5.11.</span> <span class="post-toc-text">pull</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#log"><span class="post-toc-number">5.12.</span> <span class="post-toc-text">log</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/thumbnails/2016-10-03-git.jpg)">
+    
+            <p class="article-headline-p">
+                Git 시작하기
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Jong-Ho Jeong</strong>
+        <span>Oct 03, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/git/">git</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/vcs/">vcs</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ho1234c.github.io/2016/10/03/2016-10-03-git/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ho1234c.github.io/2016/10/03/2016-10-03-git/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Git에 대한 간단한 소개</p>
+<a id="more"></a> 
+<style>
+    img{
+        margin: 0 auto;
+        display: block;
+    }
+</style>
+
+<p>한주동안 오픈소스 컨트리뷰톤을 참여했다. 사전에 정해진 오픈소스 프로젝트중에 본인이 참여하고싶은 프로젝트를<br>선정해서 일주일동안 개발하는 행사이다. 나는 항상 오픈소스에 기여하는 사람들이 대단하다고 생각했고 나도 언젠가 기여해보고 싶었기 때문에 참여하게되었다.</p>
+<p>첫날 시작에 앞서 주최자분의 git에 대한 키노트가 있었는데, 이는 행사의 진행에 반드시 사용되기 때문이다. 오픈소스의 개발에 있어서는 특히 더 필수적이다.</p>
+<p>행사의 참석인원은 개발자들이 주를 이뤘지만 디자이너분들도 있었다. 또한 평소에 git을 사용하지 않는 분들도 있었기 때문에 오픈소스의 개발에 참여하기전에 익숙해질 필요가 있었다. 나 또한 프로젝트경험이 많지 않아서 평소에 개인 프로젝트를 저장하는 용도로만 사용하다가 이번에 제대로 협업에 사용한것같다.</p>
+<p><br></p>
+<h2 id="버전관리"><a href="#버전관리" class="headerlink" title="버전관리"></a>버전관리</h2><p>어떤 작업을 진행할 때 그 작업은 한번에 끝나지 않을 뿐만아니라 완성된 작업도 수정되기 일수이다. 그때마다 우리는 그 작업이 어떤상태인지<br>파일이름에 기록하곤한다. 예를들어 학교에서 조별과제를 하는데 작업을 끝내고 파일을 “조별과제_final”로 저장했다. 그런데 뭔가 변경사항이<br>생겨서 내용을 추가하고 다시 “조별과제_final(수정)”으로 저장한다. 그리고 과제가 끝났는데 교수님의 피드백으로 과제를 수정했다면 파일이름은 “조별과제_final(수정, 교수님피드백)” 이런식으로 될것이다.</p>
+<p>하지만 사람의 손으로 하는 이런 수동적인 방법은 의도하지 않은 상황이 생기기 마련이다. 실수로 같은 이름으로 파일을 덮어 씌우거나 다른 폴더에 저장하는등의 실수를 한다면 그 상황을 해결하기 위해 또 다른 시간과 노력이 든다.</p>
+<p>이런 상황은 디자인이나 문서작성은 물론 프로그래밍을 할 때도 빈번히 발생한다. 특히 프로그래밍을 할 때는 모듈의 수가 많아지고 의존성문제가 관여하면서 더 많은 수의 파일이 버전에 종속적이게 된다. 이 문제가 더욱 심화되는 것은 다수가 한가지 작업을 나눠서 할 때이다.</p>
+<p>언제, 누가, 왜 이 작업을 했는지 혼란스럽다. 따라서</p>
+<ul>
+<li>무언가 잘못되거나 오류가 발생했을 때 과거의 어떤 버전으로 돌아가기 위해서</li>
+<li>한가지 프로젝트를 여러사람이 진행 할 경우 최신의 상황을 동기화하기 위해서</li>
+<li>어떤 수정이나 추가가 왜 일어났는지 추적하기 위해서</li>
+</ul>
+<p>어떤방법으로든 버전관리는 프로젝트에 필수적이다.</p>
+<p>이러한 이유로 구축한 버전을 이용해서 프로젝트를 관리하는 시스템을 VCS(version control system)라고 하고 좀더 포괄적으로는 형상관리(configuration management)라고 한다.</p>
+<h3 id="Local-version-control-system"><a href="#Local-version-control-system" class="headerlink" title="Local version control system"></a>Local version control system</h3><p>파일을 다른 폴더에 복사해서 로컬에서 버전관리를 하는것.</p>
+<p><img src="/images/2016-10-03-git/1.png" alt="LVCS"></p>
+<h3 id="Centralized-version-control-system"><a href="#Centralized-version-control-system" class="headerlink" title="Centralized version control system"></a>Centralized version control system</h3><p>서버에 저장소가 있고 동기화 된 서버의 저장소에서 다수의 클라이언트가 원하는 파일들을 받아오는 방식.</p>
+<p><img src="/images/2016-10-03-git/2.png" alt="CVCS"></p>
+<h3 id="Distributed-version-control-system"><a href="#Distributed-version-control-system" class="headerlink" title="Distributed version control system"></a>Distributed version control system</h3><p>CVCS와 마찬가지로 서버에 저장소가 있지만 클라이언트에도 저장소가 있다. 클라이언트는 서버의 마지막 상태가 아니라 저장소를 통째로 복사해서 가지고 있는다. 다수의 원격 저장소를 가질 수 있다.</p>
+<p><img src="/images/2016-10-03-git/3.png" alt="DVCS"></p>
+<p><br><br></p>
+<h2 id="Git-이란"><a href="#Git-이란" class="headerlink" title="Git 이란..?"></a>Git 이란..?</h2><p>git은 리눅스로 유명한 리누스토발즈가 최초로 개발한 Distributed version control system (DVCS, 분산버전관리시스템)이다.<br>중앙집중식 버전관리시스템과 다르게 클라이언트 모두에게 저장소가 있다. 따라서 대부분의 명령어가 로컬에서 실행되어 속도가 빠르고 데이터를 유실할 염려가 없다. 또한 git은 변경사항을 스냅샷으로 기록하기 때문에 메모리 사용량이 적다. github라는 프로젝트 웹호스팅 서비스가 생기면서 도구이상의 문화로 자리잡았다.</p>
+<p><img src="/images/2016-10-03-git/4.png" alt="git"></p>
+<ul>
+<li>Working Directory<br>작업이 이루어지고있는 공간. git에서 해당하는 directory를 추적한다.</li>
+<li>Straging Area<br>곧 commit할 파일의 정보를 저장한다.</li>
+<li>Git Repository<br>git을 원하는 폴더에 초기화하면 이 폴더가 생기고 프로젝트의 정보가 저장되어있다.</li>
+</ul>
+<p>git을 사용하는 단계는 다음과 같다.</p>
+<ol>
+<li>working directory에서 작업</li>
+<li>원하는 파일만 staging area로 올림(스냅샷을 만든다)</li>
+<li>git repository로 commit</li>
+</ol>
+<h3 id="Git의-기본-용어"><a href="#Git의-기본-용어" class="headerlink" title="Git의 기본 용어"></a>Git의 기본 용어</h3><ul>
+<li>Add, Staging<br>  working directory의 파일을 commit을 위한 상태로 만들기 위해 staging area로 옮긴다.</li>
+<li>Commit<br>  git 저장소에 파일을 저장한다.</li>
+<li>Branch<br>  commit 개체 사이를 이동할 수 있는 일종의 포인터</li>
+<li>Pull, Push<br>  원격 저장소로부터 파일의 상태를 가져오거나(pull) 보냄(push)</li>
+<li>Checkout<br>  다른 branch로 이동. working directory의 파일이 변경된다.</li>
+</ul>
+<h2 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h2><p>git에서 가장 강력한 기능중 하나인 branch는 작업의 분기를 나눌 수 있게 해준다.</p>
+<p><img src="/images/2016-10-03-git/5.png" alt="branch1"></p>
+<p>git을 init 하면 기본적으로 master라는 branch(특별한 branch는 아니지만 관용적으로 master라는 이름을 바꾸지않고 놔둠)가 생성된다. 또한 현재 작업중인 로컬 branch를 나타내는 HEAD라는 포인터는 master를 가르킨다.</p>
+<p>이 때 branch를 생성하면 현재 작업하고 있는 마지막 commit을 기준으로 branch가 만들어진다.</p>
+<p><img src="/images/2016-10-03-git/6.png" alt="branch2"></p>
+<p>이 상태로 새로운 commit을 하면 현재의 branch인 master는 새로운 commit을 향하지만 나눠놓은 branch는 계속해서 branch를 만든 시점의 commit을 향하고 있다.</p>
+<p><img src="/images/2016-10-03-git/7.png" alt="branch2"></p>
+<h2 id="Merge"><a href="#Merge" class="headerlink" title="Merge"></a>Merge</h2><p>merge는 branch와 다른 branch를 합치는 것이다. merge가 사용되는 상황은 주로 다음과 같다.</p>
+<p>1.master 에서 가져온 feature branch에서 작업중.</p>
+<p><img src="/images/2016-10-03-git/8.png" alt="branch3"></p>
+<p>2.심각한 버그로 당장 해결해야만 하는 이슈가 발생해서 hotfix branch를 만든다.</p>
+<p><img src="/images/2016-10-03-git/9.png" alt="branch4"></p>
+<p>3.이슈를 해결한 hotfix branch와 master branch를 merge하고 필요없어진 hotfix branch는 지운다.</p>
+<p><img src="/images/2016-10-03-git/10.png" alt="branch5"></p>
+<p>4.작업하던 feature branch를 마저 작업하고 master branch로 merge. 이때 git에서는 C4와 C5둘만 합치는 것이아니라<br>둘의 공통조상인 C3까지 세개의 commit객체로 merge를 하고 새로 만들어진 commit으로 HEAD를 옮긴다.(3-way merge)</p>
+<p><img src="/images/2016-10-03-git/11.png" alt="branch6"></p>
+<p>만약 C4와 C5에서 공통된 부분을 수정했다면 충돌(Conflict)이 발생한다. 이때는 코드에 충돌이 일어난 부분이 표시되고 개발자는<br>해당부분을 수정해야 merge를 진행할 수 있다.</p>
+<h2 id="주요-명령어"><a href="#주요-명령어" class="headerlink" title="주요 명령어"></a>주요 명령어</h2><h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><pre><code class="git">git init
+</code></pre>
+<p>현재 디렉토리를 git repository로 만든다.</p>
+<h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><pre><code class="git">git config --global --list
+</code></pre>
+<p>현재 설정 정보를 조회</p>
+<pre><code class="git">git config --global user.name &#39;이름&#39;
+git config --global user.email &#39;이메일&#39;
+</code></pre>
+<p>이름과 이메일을 등록</p>
+<h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><pre><code class="git">git add 파일이름
+git add .
+git add -u
+git add -A
+git add -p
+</code></pre>
+<p>아직 추적하고 있지 않은 파일을 추적하게 하거나 working directory의 이미 추적하고 있는 파일을 스냅샷을 위해 staging area에 넣는다.<br>. 옵션은 working directory안에서 이미 추적하고 있거나 새로 생성된 파일을 모두 스테이징한다. -u는 이미 추적하고 있거나 지워진 파일을 모두 스테이징한다.<br>-A 옵션으로 두가지를 한번에 할 수 있다. -p옵션은 chunck별로 스테이징할지 말지를 결정할 수 있다.</p>
+<h3 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h3><pre><code class="git">git commit
+git commit -m &#39;하고싶은말&#39;
+git commit --amend
+</code></pre>
+<p>staging area의 상태를 git repository에 저장. 보통 comment와 함께 사용한다.<br>amend 옵션은 현재 branch의 마지막 commit을 새로운 commit으로 바꾼다. 주로 방금 commit한 것의 comment를 수정할 때 사용한다.</p>
+<h3 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h3><pre><code class="git">git branch 이름
+</code></pre>
+<p>새로운 branch를 생성</p>
+<pre><code class="git">git branch -d 이름
+</code></pre>
+<p>기존의 branch를 삭제</p>
+<pre><code class="git">git branch -m 기존이름 새이름
+</code></pre>
+<p>branch의 이름 변경</p>
+<h3 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h3><pre><code class="git">git checkout 브랜치이름
+</code></pre>
+<p>원하는 branch의 commit으로 working directory의 상태를 변경</p>
+<pre><code class="git">git checkout -b 브랜치이름
+</code></pre>
+<p>새로 branch를 만들면서 checkout</p>
+<h3 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h3><pre><code class="git">git merge 브랜치이름
+</code></pre>
+<p>HEAD가 가르키는 현재 branch에 다른 branch를 합침</p>
+<h3 id="clone"><a href="#clone" class="headerlink" title="clone"></a>clone</h3><pre><code class="git">git clone 저장소주소
+</code></pre>
+<p>새로 폴더를 만들고 remote 저장소를 복제해옴</p>
+<h3 id="push"><a href="#push" class="headerlink" title="push"></a>push</h3><pre><code class="git">git push 저장소
+</code></pre>
+<p>remote 저장소에 데이터를 업로드한다. 저장소를 명시하지 않으면 origin에 push한다.</p>
+<h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h3><pre><code class="git">git fetch 저장소
+</code></pre>
+<p>저장소의 데이터를 가져온다.</p>
+<h3 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h3><pre><code class="git">git pull 저장소
+</code></pre>
+<p>remote 저장소에서 데이터를 가져와서 merge한다. 저장소를 명시하지 않으면 origin에서 pull한다.</p>
+<h3 id="log"><a href="#log" class="headerlink" title="log"></a>log</h3><pre><code class="git">git log
+git log -숫자
+</code></pre>
+<p>commit history를 조회. -숫자 옵션으로 갯수를 지정할 수 있다.</p>
+<hr>
+<p>참고 사이트<br><a href="https://git-scm.com/book/ko/v2" target="_blank" rel="external">https://git-scm.com/book/ko/v2</a><br><a href="https://homes.cs.washington.edu/~mernst/advice/version-control.html" target="_blank" rel="external">https://homes.cs.washington.edu/~mernst/advice/version-control.html</a><br><a href="http://noritersand.tistory.com/86" target="_blank" rel="external">http://noritersand.tistory.com/86</a></p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://ho1234c.github.io/2016/10/03/2016-10-03-git/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://ho1234c.github.io/2016/10/03/2016-10-03-git/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//ho1234c.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/11/09/2016-11-09-design-korea-2016-review/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/09/12/2016-09-12-until_webpage_load/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/2.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/cat.gif" alt="Jong-Ho Jeong's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        ho1234c@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:ho1234c@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="github.com/ho1234c" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Hojong blog
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//ho1234c.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
