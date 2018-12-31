@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="en">
-    <head>
+    <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -66,25 +66,25 @@
     <meta property="og:url" content="http://ho1234c.github.io">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="JavaScript Modules Part1 A Beginner’s Guide | Hojong blog">
-    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="JavaScript Modules Part1 A Beginner’s Guide">
     <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="module"> <meta property="og:article:tag" content="translate"> 
 
     
-        <meta property="article:published_time" content="Aug 04, 2016" />
-        <meta property="article:modified_time" content="Dec 09, 2018" />
+        <meta property="article:published_time" content="Aug 04, 2016">
+        <meta property="article:modified_time" content="Dec 09, 2018">
     
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="JavaScript Modules Part1 A Beginner’s Guide | Hojong blog">
     <meta name="twitter:description" content="JavaScript Modules Part1 A Beginner’s Guide">
     <meta name="twitter:image" content="/img/favicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="http://ho1234c.github.io" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://ho1234c.github.io">
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ho1234c.github.io/2016/08/04/2016-08-04-javascript-modules/index.html" />
+        <link rel="canonical" href="http://ho1234c.github.io/2016/08/04/2016-08-04-javascript-modules/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -266,7 +266,7 @@
 <!-- Import Font -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
         <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
@@ -279,7 +279,7 @@
 
     <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism-darcula.css" type="text/css"></head>
 
 
     
@@ -320,8 +320,7 @@
     -->
 
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
@@ -379,7 +378,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar">
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -409,7 +408,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
         <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/module/">module</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/translate/">translate</a>
-    </ul>
+    </li></ul>
     
 
     <!-- Share -->
@@ -483,181 +482,181 @@
 <p><strong>모듈 패턴(module pattern)</strong><br>모듈 패턴은 클래스 컨셉에서 한 오브젝트속에서 public, private 메소드를 흉내는데 사용됩니다.(자바스크립트는 기본적으로 클래스를 지원하지않습니다.<small>//ES6에 생기죠.</small>)<br>Java나 Python같은 언어에서 클래스의 사용법과 비슷합니다. private 변수를 클로저 스코프속에서 캡슐화 하는 동시에 우리가 밖으로 내보내고싶은 public api를 만들 수 있게 합니다.</p>
 <p>모듈패턴을 만드는 몇가지 방법이 있습니다. 처음예제에서는 익명 클로저를 사용할겁니다. 이건 모든 코드를 익명함수에 넣음으로써 우리가 원하는걸 하게 해줍니다.(기억해야할것:자바스크립트에서 함수는 새로운 스코프를 만드는 유일한 방법입니다.)</p>
 <p><strong>예제 1: 익명 클로저(Anonymous closure)</strong></p>
-<pre><code class="js">(function () {
-  // 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.</span>
 
-  var myGrades = [93, 95, 88, 0, 55, 91];
+  <span class="token keyword">var</span> myGrades <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">93</span><span class="token punctuation">,</span> <span class="token number">95</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-  var average = function() {
-    var total = myGrades.reduce(function(accumulator, item) {
-      return accumulator + item}, 0);
+  <span class="token keyword">var</span> average <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> total <span class="token operator">=</span> myGrades<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> accumulator <span class="token operator">+</span> item<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      return &#39;Your average grade is &#39; + total / myGrades.length + &#39;.&#39;;
-  }
+      <span class="token keyword">return</span> <span class="token string">'Your average grade is '</span> <span class="token operator">+</span> total <span class="token operator">/</span> myGrades<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token string">'.'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  var failing = function(){
-    var failingGrades = myGrades.filter(function(item) {
-      return item &lt; 70;});
+  <span class="token keyword">var</span> failing <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> failingGrades <span class="token operator">=</span> myGrades<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> item <span class="token operator">&lt;</span> <span class="token number">70</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    return &#39;You failed &#39; + failingGrades.length + &#39; times.&#39;;
-  }
+    <span class="token keyword">return</span> <span class="token string">'You failed '</span> <span class="token operator">+</span> failingGrades<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token string">' times.'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  console.log(failing());
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">failing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-}());
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// ‘You failed 2 times.’
+<span class="token comment" spellcheck="true">// ‘You failed 2 times.’</span>
 </code></pre>
 <p>이 구조에서 익명함수는 자신의 영역 또는 “클로저”를 가지고 있습니다. 이건 부모 네임스페이스(전역)로부터 변수를 숨겨줍니다. 이 접근이 훌륭한것은 이 함수 속의 지역변수는 우연히 전역변수에 덮여씌여지는것 없이 전역변수에 접근할 수 있습니다. 다음처럼요:</p>
-<pre><code class="js">var global = &#39;Hello, I am a global variable :)&#39;;
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> global <span class="token operator">=</span> <span class="token string">'Hello, I am a global variable :)'</span><span class="token punctuation">;</span>
 
-(function () {
-  // 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.</span>
 
-  var myGrades = [93, 95, 88, 0, 55, 91];
+  <span class="token keyword">var</span> myGrades <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">93</span><span class="token punctuation">,</span> <span class="token number">95</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-  var average = function() {
-    var total = myGrades.reduce(function(accumulator, item) {
-      return accumulator + item}, 0);
+  <span class="token keyword">var</span> average <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> total <span class="token operator">=</span> myGrades<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> accumulator <span class="token operator">+</span> item<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    return &#39;Your average grade is &#39; + total / myGrades.length + &#39;.&#39;;
-  }
+    <span class="token keyword">return</span> <span class="token string">'Your average grade is '</span> <span class="token operator">+</span> total <span class="token operator">/</span> myGrades<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token string">'.'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  var failing = function(){
-    var failingGrades = myGrades.filter(function(item) {
-      return item &lt; 70;});
+  <span class="token keyword">var</span> failing <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> failingGrades <span class="token operator">=</span> myGrades<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> item <span class="token operator">&lt;</span> <span class="token number">70</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    return &#39;You failed &#39; + failingGrades.length + &#39; times.&#39;;
-  }
+    <span class="token keyword">return</span> <span class="token string">'You failed '</span> <span class="token operator">+</span> failingGrades<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token string">' times.'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  console.log(failing());
-  console.log(global);
-}());
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">failing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>global<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// &#39;You failed 2 times.&#39;
-// &#39;Hello, I am a global variable :)&#39;
+<span class="token comment" spellcheck="true">// 'You failed 2 times.'</span>
+<span class="token comment" spellcheck="true">// 'Hello, I am a global variable :)'</span>
 </code></pre>
 <p><strong>예제 2: Global import</strong></p>
 <p>또 다른 방법은 jQuery처럼 Global import를 하는 겁니다. 이건 매개변수로 전역변수를 전달하는 것을 제외하면 방금전의 익명 클로저와 유사합니다.</p>
-<pre><code class="js">(function (globalVariable) {
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>globalVariable<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-  // 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.
-  var privateFunction = function() {
-    console.log(&#39;Shhhh, this is private!&#39;);
-  }
+  <span class="token comment" spellcheck="true">// 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.</span>
+  <span class="token keyword">var</span> privateFunction <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Shhhh, this is private!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  // function() 블럭 속에 감춰진 메소드들 속에서 globalVariable의 인터페이스를 통해 아래 메소드들을 드러냄
+  <span class="token comment" spellcheck="true">// function() 블럭 속에 감춰진 메소드들 속에서 globalVariable의 인터페이스를 통해 아래 메소드들을 드러냄</span>
 
-  globalVariable.each = function(collection, iterator) {
-    if (Array.isArray(collection)) {
-      for (var i = 0; i &lt; collection.length; i++) {
-        iterator(collection[i], i, collection);
-      }
-    } else {
-      for (var key in collection) {
-        iterator(collection[key], key, collection);
-      }
-    }
-  };
+  globalVariable<span class="token punctuation">.</span>each <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> iterator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>collection<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> collection<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">iterator</span><span class="token punctuation">(</span>collection<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> collection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">iterator</span><span class="token punctuation">(</span>collection<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> key<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  globalVariable.filter = function(collection, test) {
-    var filtered = [];
-    globalVariable.each(collection, function(item) {
-      if (test(item)) {
-        filtered.push(item);
-      }
-    });
-    return filtered;
-  };
+  globalVariable<span class="token punctuation">.</span>filter <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> test<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> filtered <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    globalVariable<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">test</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        filtered<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> filtered<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  globalVariable.map = function(collection, iterator) {
-    var mapped = [];
-    globalUtils.each(collection, function(value, key, collection) {
-      mapped.push(iterator(value));
-    });
-    return mapped;
-  };
+  globalVariable<span class="token punctuation">.</span>map <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> iterator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> mapped <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    globalUtils<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> key<span class="token punctuation">,</span> collection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      mapped<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">iterator</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> mapped<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  globalVariable.reduce = function(collection, iterator, accumulator) {
-    var startingValueMissing = accumulator === undefined;
+  globalVariable<span class="token punctuation">.</span>reduce <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> iterator<span class="token punctuation">,</span> accumulator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> startingValueMissing <span class="token operator">=</span> accumulator <span class="token operator">===</span> undefined<span class="token punctuation">;</span>
 
-    globalVariable.each(collection, function(item) {
-      if(startingValueMissing) {
-        accumulator = item;
-        startingValueMissing = false;
-      } else {
-        accumulator = iterator(accumulator, item);
-      }
-    });
+    globalVariable<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>startingValueMissing<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        accumulator <span class="token operator">=</span> item<span class="token punctuation">;</span>
+        startingValueMissing <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        accumulator <span class="token operator">=</span> <span class="token function">iterator</span><span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    return accumulator;
+    <span class="token keyword">return</span> accumulator<span class="token punctuation">;</span>
 
-  };
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
- }(globalVariable));
+ <span class="token punctuation">}</span><span class="token punctuation">(</span>globalVariable<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>이 예제에서 globalVariable은 유일한 전역변수 입니다.<br>익명함수에 비해 이 방법이 가지는 장점은 전역변수를 미리 선언해서 다른사람들이 코드를 읽기 쉽게 만든다는 겁니다.</p>
 <p><strong>예제 3: 객체 인터페이스(Object interface)</strong><br>다음처럼, 독립적인(self-contained) 객체를 이용해서 모듈을 만드는 방법도 있습니다.</p>
-<pre><code class="js">var myGradesCalculate = (function () {
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> myGradesCalculate <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-  // 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.
-  var myGrades = [93, 95, 88, 0, 55, 91];
+  <span class="token comment" spellcheck="true">// 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.</span>
+  <span class="token keyword">var</span> myGrades <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">93</span><span class="token punctuation">,</span> <span class="token number">95</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-  // function() 블럭 속에 구현 된 메소드들 속에서 인터페이스를 통해 메소드들을 드러냄
+  <span class="token comment" spellcheck="true">// function() 블럭 속에 구현 된 메소드들 속에서 인터페이스를 통해 메소드들을 드러냄</span>
 
-  return {
-    average: function() {
-      var total = myGrades.reduce(function(accumulator, item) {
-        return accumulator + item;
-        }, 0);
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    average<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> total <span class="token operator">=</span> myGrades<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> accumulator <span class="token operator">+</span> item<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      return&#39;Your average grade is &#39; + total / myGrades.length + &#39;.&#39;;
-    },
+      <span class="token keyword">return</span><span class="token string">'Your average grade is '</span> <span class="token operator">+</span> total <span class="token operator">/</span> myGrades<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token string">'.'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    failing: function() {
-      var failingGrades = myGrades.filter(function(item) {
-          return item &lt; 70;
-        });
+    failing<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> failingGrades <span class="token operator">=</span> myGrades<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> item <span class="token operator">&lt;</span> <span class="token number">70</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      return &#39;You failed &#39; + failingGrades.length + &#39; times.&#39;;
-    }
-  }
-})();
+      <span class="token keyword">return</span> <span class="token string">'You failed '</span> <span class="token operator">+</span> failingGrades<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token string">' times.'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>보시다시피 이 방법은 어떤 변수 혹은 메소드가 private 일지 결정 할 수 있게 하고 우리가 드러내길 원하는 변수나<br>메소드는 리턴구문에 넣습니다.(예를들어 average &amp; failing)</p>
 <p><strong>예제 4: 공개 모듈패턴(Revealing module pattern)</strong><br>이 예제는 모든 메소드들을 명시적으로 드러내기 전까지 private를 유지한다는 점을 제외하고는 위에서의 접근과 매우 흡사합니다.</p>
-<pre><code class="js">var myGradesCalculate = (function () {
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> myGradesCalculate <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-  // 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.
-  var myGrades = [93, 95, 88, 0, 55, 91];
+  <span class="token comment" spellcheck="true">// 클로저 스코프안에 변수를 넣음으로써 private를 유지할 수 있습니다.</span>
+  <span class="token keyword">var</span> myGrades <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">93</span><span class="token punctuation">,</span> <span class="token number">95</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-  var average = function() {
-    var total = myGrades.reduce(function(accumulator, item) {
-      return accumulator + item;
-      }, 0);
+  <span class="token keyword">var</span> average <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> total <span class="token operator">=</span> myGrades<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> accumulator <span class="token operator">+</span> item<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    return&#39;Your average grade is &#39; + total / myGrades.length + &#39;.&#39;;
-  };
+    <span class="token keyword">return</span><span class="token string">'Your average grade is '</span> <span class="token operator">+</span> total <span class="token operator">/</span> myGrades<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token string">'.'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  var failing = function() {
-    var failingGrades = myGrades.filter(function(item) {
-        return item &lt; 70;
-      });
+  <span class="token keyword">var</span> failing <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> failingGrades <span class="token operator">=</span> myGrades<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> item <span class="token operator">&lt;</span> <span class="token number">70</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    return &#39;You failed &#39; + failingGrades.length + &#39; times.&#39;;
-  };
+    <span class="token keyword">return</span> <span class="token string">'You failed '</span> <span class="token operator">+</span> failingGrades<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token string">' times.'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  // Explicitly reveal public pointers to the private functions
-  // that we want to reveal publicly
+  <span class="token comment" spellcheck="true">// Explicitly reveal public pointers to the private functions</span>
+  <span class="token comment" spellcheck="true">// that we want to reveal publicly</span>
 
-  return {
-    average: average,
-    failing: failing
-  }
-})();
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    average<span class="token punctuation">:</span> average<span class="token punctuation">,</span>
+    failing<span class="token punctuation">:</span> failing
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-myGradesCalculate.failing(); // &#39;You failed 2 times.&#39;
-myGradesCalculate.average(); // &#39;Your average grade is 70.33333333333333.&#39;
+myGradesCalculate<span class="token punctuation">.</span><span class="token function">failing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 'You failed 2 times.'</span>
+myGradesCalculate<span class="token punctuation">.</span><span class="token function">average</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 'Your average grade is 70.33333333333333.'</span>
 </code></pre>
 <p>지금까지 많은걸 이해한것 처럼 보일 수 있습니다. 하지만 이건 모듈패턴의 빙산의 일각 입니다. 이건 제가 찾은 유용한 예제들 입니다.</p>
 <p><a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript" target="_blank">Learning JavaScript Design Patterns</a> by Addy Osmani: 인상적인 간결함 속에서 보물을 발견할 수 있음<br><a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html" target="_blank">Adequately Good by Ben Cherry</a> 모듈패턴에 익숙한 사람들을 위해 예제를 포함한 유용한 개요<br><a href="https://carldanley.com/js-module-pattern/" target="_blank">Blog of Carl Danley</a>모듈패턴의 개요 및 다른 자바스크립트 패턴들의 리소스</p>
@@ -671,25 +670,25 @@ myGradesCalculate.average(); // &#39;Your average grade is 70.33333333333333.&#3
 <p>CommonJS 모듈은 특정 객체를 exports 할 수 있고 그것들을 <em>require</em>를 통해 다른 프로그램에서 사용가능하게 한, 재사용가능한 자바스크립트 조각입니다.<br>만약 Nodejs에 익숙하다면 이 형식에 익숙할겁니다.</p>
 <p>CommonJS는 각각의 자바스크립트 파일을 그 자신의 유니크한 모듈 컨텍스트속에 저장합니다.(마치 클로저로 감싸는것 처럼) 이 스코프 속에서 우리는 모듈의 exports를 위해서 <em>module.exports</em>를, import를 위해서 <em>require</em>를 사용할 수 있습니다.</p>
 <p>CommonJS 모듈은 다음과 같은 형식일겁니다.</p>
-<pre><code class="js">function myModule() {
-  this.hello = function() {
-    return &#39;hello!&#39;;
-  }
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">myModule</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>hello <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'hello!'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  this.goodbye = function() {
-    return &#39;goodbye!&#39;;
-  }
-}
+  <span class="token keyword">this</span><span class="token punctuation">.</span>goodbye <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'goodbye!'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-module.exports = myModule;
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> myModule<span class="token punctuation">;</span>
 </code></pre>
 <p>우리는 특별한 객체 모듈을 사용할 수 있고 함수를 <em>module.exports</em>에 참조시킬 수 있습니다. 이것은 다른 파일에서 사용하기위해 무엇을 공개할건지 CommonJS 모듈시스템에 알려주는겁니다.</p>
 <p>누군가 위의 myModule을 사용하길 원한다면 아래와 같이 <em>require</em>를 통해 가능합니다.</p>
-<pre><code class="js">var myModule = require(&#39;myModule&#39;);
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> myModule <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'myModule'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-var myModuleInstance = new myModule();
-myModuleInstance.hello(); // &#39;hello!&#39;
-myModuleInstance.goodbye(); // &#39;goodbye!&#39;
+<span class="token keyword">var</span> myModuleInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">myModule</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myModuleInstance<span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 'hello!'</span>
+myModuleInstance<span class="token punctuation">.</span><span class="token function">goodbye</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 'goodbye!'</span>
 </code></pre>
 <p>좀전에 나왔던 모듈패턴에는 두가지 확실한 장점이 있습니다.</p>
 <ol>
@@ -701,54 +700,54 @@ myModuleInstance.goodbye(); // &#39;goodbye!&#39;
 <p>지금 서버에서 잘 작동한다고 해도 모듈을 디스크에서 읽는것보다 웹사이트에서 불러오는게 훨씬더 오래걸린다는 사실은 브라우저를 위한 자바스크립트 작성할때 우리를 힘들게합니다. 한가지 스크립트로 하나의 모듈을 로드하는한 자바스크립트의 쓰레드가 코드가 로드될때 까지 멈춰있기 때문에 로딩이 끝날 때 까지 브라우저가 멈춰있을겁니다. (Part2에서 모듈번들링에 대해 이야기하면서 어떻게 이 이슈에대해 다루는지 이야기할겁니다. 지금은 이것이 우리가 알아야할 전부입니다.)</p>
 <p><strong>AMD</strong><br>CommonJS는 모두 훌륭하지만 비동기적으로 모듈을 로드해야할 경우엔 어떤가요? 간단히 말해서 답은 AMD이거나 비동기적으로 모듈을 정의하는겁니다.</p>
 <p>AMD는 이런겁니다.</p>
-<pre><code class="js">define([&#39;myModule&#39;, &#39;myOtherModule&#39;], function(myModule, myOtherModule) {
-  console.log(myModule.hello());
-});
+<pre class=" language-js"><code class="language-js"><span class="token function">define</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'myModule'</span><span class="token punctuation">,</span> <span class="token string">'myOtherModule'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>myModule<span class="token punctuation">,</span> myOtherModule<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myModule<span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>여기서 define 함수는 이 모듈이 의존적인 모듈의 배열로 첫번째 매개변수를 받습니다. 이 의존성은 백그라운드에 로드됩니다.(non-blocking한 방식으로) 그리고 로드가 끝나면 define 함수는 가지고있던 콜백함수를 호출합니다.</p>
 <p>다음으로 콜백함수는 의존성이 있는 이 모듈들을 매개변수로 가져갑니다. 이 경우엔 myModule과 myOtherModule를 사용할 수 있게합니다. 의존성은 define 키워드를 사용해서 정의되어야 합니다.</p>
 <p>예를들어 myModule은 이와같을겁니다.</p>
-<pre><code class="js">
-define([], function() {
+<pre class=" language-js"><code class="language-js">
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-  return {
-    hello: function() {
-      console.log(&#39;hello&#39;);
-    },
-    goodbye: function() {
-      console.log(&#39;goodbye&#39;);
-    }
-  };
-});
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    hello<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    goodbye<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'goodbye'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>그래서 CommonJS와는 다르게 AMD는 brower-first한 비동기적 접근입니다.</p>
 <p>비동기와는 다르게 또다른 AMD의 장점은 CommonJS가 오직 객체만 지원하는 반면에 AMD는 객체, 함수, 생성자, 문자열, 제이슨과 같은 많은 타입들을 취할수 있다는 겁니다. 즉, AMD는 io, 파일시스템, 그리고 다른 CommonJS를 통해 사용가능한 서버사이드한것들과 호환되지 않는다. 그리고 <em>require</em>에 비해 문법이 좀 난잡(verbose)하다.</p>
 <p><strong>UMD</strong><br>AMD와 CommonJS를 모두 지원해야하는 프로젝트의경우, 아직 한가지가 남아있습니다. Universal Module Definition(UMD).</p>
 <p>UMD는 또다른 전역변수 정의를 지원하면서 위의 두가지를 필수로하는 방법입니다. 결과적으로 UMD는 server와 client둘다 잘 동작합니다.</p>
 <p>UMD는 아래처럼 동작합니다.</p>
-<pre><code class="js">(function (root, factory) {
-  if (typeof define === &#39;function&#39; &amp;&amp; define.amd) {
-      // AMD
-    define([&#39;myModule&#39;, &#39;myOtherModule&#39;], factory);
-  } else if (typeof exports === &#39;object&#39;) {
-      // CommonJS
-    module.exports = factory(require(&#39;myModule&#39;), require(&#39;myOtherModule&#39;));
-  } else {
-    // Browser globals (Note: root is window)
-    root.returnExports = factory(root.myModule, root.myOtherModule);
-  }
-}(this, function (myModule, myOtherModule) {
-  // Methods
-  function notHelloOrGoodbye(){}; // A private method
-  function hello(){}; // A public method because it&#39;s returned (see below)
-  function goodbye(){}; // A public method because it&#39;s returned (see below)
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>root<span class="token punctuation">,</span> factory<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> define <span class="token operator">===</span> <span class="token string">'function'</span> <span class="token operator">&amp;&amp;</span> define<span class="token punctuation">.</span>amd<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// AMD</span>
+    <span class="token function">define</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'myModule'</span><span class="token punctuation">,</span> <span class="token string">'myOtherModule'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> factory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> exports <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// CommonJS</span>
+    module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">factory</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'myModule'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'myOtherModule'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Browser globals (Note: root is window)</span>
+    root<span class="token punctuation">.</span>returnExports <span class="token operator">=</span> <span class="token function">factory</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>myModule<span class="token punctuation">,</span> root<span class="token punctuation">.</span>myOtherModule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>myModule<span class="token punctuation">,</span> myOtherModule<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// Methods</span>
+  <span class="token keyword">function</span> <span class="token function">notHelloOrGoodbye</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// A private method</span>
+  <span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// A public method because it's returned (see below)</span>
+  <span class="token keyword">function</span> <span class="token function">goodbye</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// A public method because it's returned (see below)</span>
 
-  // Exposed public methods
-  return {
-      hello: hello,
-      goodbye: goodbye
-  }
-}));
+  <span class="token comment" spellcheck="true">// Exposed public methods</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      hello<span class="token punctuation">:</span> hello<span class="token punctuation">,</span>
+      goodbye<span class="token punctuation">:</span> goodbye
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>더 많은 UMD의 형식을 보고싶다면 <a href="https://github.com/umdjs/umd" target="_blank">이 곳</a>을 참조하세요.</p>
 <p><strong>Native JS</strong><br>잘 따라오고 계신가요? 아직 한가지 모듈타입이 더 남았습니다.</p>
@@ -757,56 +756,56 @@ define([], function() {
 <p><a href="http://jsmodules.io/cjs.html" target="_blank">jsmodules.io</a><br><a href="http://exploringjs.com/es6/ch_modules.html" target="_blank">exploringjs.com</a><br></p>
 <p>ES6에서 대단한것은 CommonJS나 AMD의 두 세상을 동시에 제공하는 방법입니다. 간단하고 선언적인 문법, 비동기적 로딩에다가 더해서 의존성관리도 더 잘해줍니다. 아마 제가 가장좋아하는 ES6의 모듈기능은 읽기전용뷰의 exports에서 살아있다는 것입니다.(CommonJS에서는 imports할때, exports를 복사하기때문에 살아있지않습니다.)</p>
 <p>예를들면</p>
-<pre><code class="js">// lib/counter.js
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// lib/counter.js</span>
 
-var counter = 1;
+<span class="token keyword">var</span> counter <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 
-function increment() {
-  counter++;
-}
+<span class="token keyword">function</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  counter<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-function decrement() {
-  counter--;
-}
+<span class="token keyword">function</span> <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  counter<span class="token operator">--</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-module.exports = {
-  counter: counter,
-  increment: increment,
-  decrement: decrement
-};
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  counter<span class="token punctuation">:</span> counter<span class="token punctuation">,</span>
+  increment<span class="token punctuation">:</span> increment<span class="token punctuation">,</span>
+  decrement<span class="token punctuation">:</span> decrement
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 
-// src/main.js
+<span class="token comment" spellcheck="true">// src/main.js</span>
 
-var counter = require(&#39;../../lib/counter&#39;);
+<span class="token keyword">var</span> counter <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../lib/counter'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-counter.increment();
-console.log(counter.counter); // 1
+counter<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>counter<span class="token punctuation">.</span>counter<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
 </code></pre>
 <p>이 예제에서 기본적으로 두가지 모듈의 복사가 일어납니다. 하나는 export했을때, 두번째는 require 했을때.</p>
 <p>게다가 main.js의 복사본은 오리지널 모듈과 연결되어있지 않습니다. 이것이 counter가 여전히 1인 이유입니다.</p>
 <p>import한 counter 변수가 카피한 counter 변수와 연결 되어 있지 않기 때문입니다. 그래서 모듈에서 counter 변수를 증가시켜도 카피버전에서는 증가하지 않는것입니다. 카피버전의 counter를 증가시키려면 다음과 같이 할수 밖에 없습니다.</p>
-<pre><code class="js">counter.counter++;
-console.log(counter.counter); // 2
+<pre class=" language-js"><code class="language-js">counter<span class="token punctuation">.</span>counter<span class="token operator">++</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>counter<span class="token punctuation">.</span>counter<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
 </code></pre>
 <p>반면 ES6에서는 살아있는(live) 읽기전용 뷰 모듈을 생성할 수 있습니다.</p>
-<pre><code class="js">// lib/counter.js
-export let counter = 1;
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// lib/counter.js</span>
+<span class="token keyword">export</span> <span class="token keyword">let</span> counter <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 
-export function increment() {
-  counter++;
-}
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  counter<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-export function decrement() {
-  counter--;
-}
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  counter<span class="token operator">--</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-// src/main.js
-import * as counter from &#39;../../counter&#39;;
+<span class="token comment" spellcheck="true">// src/main.js</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> counter <span class="token keyword">from</span> <span class="token string">'../../counter'</span><span class="token punctuation">;</span>
 
-console.log(counter.counter); // 1
-counter.increment();
-console.log(counter.counter); // 2
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>counter<span class="token punctuation">.</span>counter<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
+counter<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>counter<span class="token punctuation">.</span>counter<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
 </code></pre>
 <p>멋지지않나요? 살아있는 읽기전용 뷰는 당신의 모듈을 기능적인 손실없이 더 작은 모듈로 나눌수 있게 합니다. 그리고 그걸 합치면 문제없이 동작합니다.</p>
 <hr>
@@ -968,8 +967,8 @@ console.log(counter.counter); // 2
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
-            </ul>
+                <a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
         </li>
         
     
@@ -986,8 +985,8 @@ console.log(counter.counter); // 2
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a>
-            </ul>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">4</span></a>
+            </li></ul>
         </li>
         
     

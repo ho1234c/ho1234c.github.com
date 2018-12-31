@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="en">
-    <head>
+    <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -66,25 +66,25 @@
     <meta property="og:url" content="http://ho1234c.github.io">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="webpack 시작하기 | Hojong blog">
-    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="webpack 기초">
     <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="webpack"> 
 
     
-        <meta property="article:published_time" content="Aug 08, 2016" />
-        <meta property="article:modified_time" content="Dec 09, 2018" />
+        <meta property="article:published_time" content="Aug 08, 2016">
+        <meta property="article:modified_time" content="Dec 09, 2018">
     
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="webpack 시작하기 | Hojong blog">
     <meta name="twitter:description" content="webpack 기초">
     <meta name="twitter:image" content="/img/favicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="http://ho1234c.github.io" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://ho1234c.github.io">
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ho1234c.github.io/2016/08/08/2016-08-08-webpack/index.html" />
+        <link rel="canonical" href="http://ho1234c.github.io/2016/08/08/2016-08-08-webpack/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -266,7 +266,7 @@
 <!-- Import Font -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
         <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
@@ -279,7 +279,7 @@
 
     <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism-darcula.css" type="text/css"></head>
 
 
     
@@ -320,8 +320,7 @@
     -->
 
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
@@ -370,7 +369,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar">
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -400,7 +399,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
         <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/webpack/">webpack</a>
-    </ul>
+    </li></ul>
     
 
     <!-- Share -->
@@ -460,7 +459,7 @@ img{ margin: 0 auto; display: block;}
 </style>
 
 <p><img src="https://avatars0.githubusercontent.com/webpack?&amp;s=256" alt="1"></p>
-<p>모듈 번들링에 대한 <a href="https://medium.freecodecamp.com/javascript-modules-part-2-module-bundling-5020383cf306#.w67ghql7u" target="_blank" rel="external">Preethi Kasireddy의 글</a> 을 읽어보면 모듈번들러의 필요성에 대해 알수있다. 또한 React를 공부하려고 찾아보면 일반적으로 기반을 만들 때 모듈번들러를 사용한다. 유명한 모듈번들러는 Browerify와 Webpack이 있는데 지금은 Webpack쪽으로 기울고 있는 추세 인것 같다. 프로젝트의 크기가 커질 수록 모듈에 대한 중요성은 커지기 때문에 익혀놓으면 도움이 될 것 같다.</p>
+<p>모듈 번들링에 대한 <a href="https://medium.freecodecamp.com/javascript-modules-part-2-module-bundling-5020383cf306#.w67ghql7u" target="_blank" rel="noopener">Preethi Kasireddy의 글</a> 을 읽어보면 모듈번들러의 필요성에 대해 알수있다. 또한 React를 공부하려고 찾아보면 일반적으로 기반을 만들 때 모듈번들러를 사용한다. 유명한 모듈번들러는 Browerify와 Webpack이 있는데 지금은 Webpack쪽으로 기울고 있는 추세 인것 같다. 프로젝트의 크기가 커질 수록 모듈에 대한 중요성은 커지기 때문에 익혀놓으면 도움이 될 것 같다.</p>
 <p>아쉽게도 공식 도큐먼트의 설명이 친절하지 않다. 다른 분들이 webpack에 대해 정리 및 비교해 놓은 글들이 도움이 많이 된다.</p>
 <h2 id="Webpack의-장점"><a href="#Webpack의-장점" class="headerlink" title="Webpack의 장점"></a>Webpack의 장점</h2><ol>
 <li><strong>다수의 js파일을 하나의 js파일로 합치고 minify해준다.</strong><br>한 페이지에서 다수의 js파일이 script태그에 포함된다는 것은 다수의 request를 보내야 한다는 것을 의미한다. 하나의 request로 모든 스크립트를 불러오면 그만큼 페이지의 접근시간에 이득이다. 또한 코드의 쓸모없는 부분을 제거해서 minify해준다.</li>
@@ -470,19 +469,19 @@ img{ margin: 0 auto; display: block;}
 <li><strong>npm 생태계를 그대로 이용할 수 있다.</strong><br>npm을 그대로 이용할 수 있는 장점이 있다.</li>
 </ol>
 <h2 id="설치하기"><a href="#설치하기" class="headerlink" title="설치하기"></a>설치하기</h2><p>npm을 통해 설치한다.</p>
-<pre><code class="bash">npm install -g webpack
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g webpack
 </code></pre>
 <h2 id="실행명령"><a href="#실행명령" class="headerlink" title="실행명령"></a>실행명령</h2><p>그냥 webpack명령어만 입력하면 알아서 설정파일을 찾아서 번들링해준다. 물론 직접 파일을 지정해 줄 수도 있다.<br>–watch 옵션을 주면 파일이 변경 되는 경우 자동으로 빌드해준다.</p>
-<pre><code class="bash">webpack
+<pre class=" language-bash"><code class="language-bash">webpack
 </code></pre>
 <h2 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h2><p>webpack의 설정파일이다. 이 파일에 필요한 기능들을 설정해준다.</p>
-<pre><code class="js">module.exports = {
-    entry: &#39;./module/entry.js&#39;,
-    output: {
-        path: __dirname,
-        filename: &#39;bundle.js&#39;
-    }
-}
+<pre class=" language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token punctuation">:</span> <span class="token string">'./module/entry.js'</span><span class="token punctuation">,</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> __dirname<span class="token punctuation">,</span>
+        filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>이 경우엔 module 폴더 속에 필요한 js파일들이 있다.</p>
 <ul>
@@ -491,101 +490,101 @@ img{ margin: 0 auto; display: block;}
 </ul>
 <h2 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h2><p>webpack의 강력한점은 로더를 설정할 수 있다는 것이다.</p>
 <p>예를 들자면 css는 물론이고 pre-compiler인 sass를 사용 할 수 있다.</p>
-<pre><code class="sh">npm install --save-dev style-loader css-loader sass-loader
+<pre class=" language-sh"><code class="language-sh">npm install --save-dev style-loader css-loader sass-loader
 </code></pre>
 <p>css-loader는 css파일을 그냥 로드해 주는 역할이고 style-loader는 파일에 style태그를 통해서 css파일을 포함시켜준다.</p>
 <p>(node 환경에서 사용하기 위해서는 node-sass 또한 설치해야한다.)</p>
-<pre><code class="js">module.exports = {
-    entry: &#39;./module/entry.js&#39;,
-    output: {
-        path: __dirname,
-        filename: &#39;bundle.js&#39;
-    },
-    module:{
-        loaders:[
-            {
-                test: /\.scss$/,
-                loaders: [ &#39;style&#39;, &#39;css&#39;, &#39;sass&#39; ]
-            }
-        ]
-    }
-};
+<pre class=" language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token punctuation">:</span> <span class="token string">'./module/entry.js'</span><span class="token punctuation">,</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> __dirname<span class="token punctuation">,</span>
+        filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    module<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        loaders<span class="token punctuation">:</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                test<span class="token punctuation">:</span> <span class="token regex">/\.scss$/</span><span class="token punctuation">,</span>
+                loaders<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">'style'</span><span class="token punctuation">,</span> <span class="token string">'css'</span><span class="token punctuation">,</span> <span class="token string">'sass'</span> <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
 <li>test : 정규식을 통해 로더가 필요한 파일의 패턴을 설정</li>
 <li>loaders : 어떤 로더를 사용할 건지</li>
 </ul>
 <p>jshint의 경우에는 인터프리팅 전에 로드되어야 하기 때문에<br>preLoaders 프로퍼티를 이용한다는 것 말고는 같은 방법으로 사용할 수 있다.</p>
-<pre><code class="bash">npm install --save-dev jshint-loader
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save-dev jshint-loader
 </code></pre>
-<pre><code class="js">module.exports = {
-    entry: &#39;./module/entry.js&#39;,
-    output: {
-        path: __dirname,
-        filename: &#39;bundle.js&#39;
-    },
-    module:{
-        preLoaders: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: &quot;jshint-loader&quot;
-            }
-        ],
-        loaders:[
-            {
-                test: /\.scss$/,
-                loaders: [ &#39;style&#39;, &#39;css&#39;, &#39;sass&#39; ]
-            }
-        ]
-    }
-};
+<pre class=" language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token punctuation">:</span> <span class="token string">'./module/entry.js'</span><span class="token punctuation">,</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> __dirname<span class="token punctuation">,</span>
+        filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    module<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        preLoaders<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+                exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+                loader<span class="token punctuation">:</span> <span class="token string">"jshint-loader"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        loaders<span class="token punctuation">:</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                test<span class="token punctuation">:</span> <span class="token regex">/\.scss$/</span><span class="token punctuation">,</span>
+                loaders<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">'style'</span><span class="token punctuation">,</span> <span class="token string">'css'</span><span class="token punctuation">,</span> <span class="token string">'sass'</span> <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p><img src="!--￼0--&gt;/public/post_img/2016-08-08-webpack/1.png" alt="1"></p>
 <h2 id="Global-setting"><a href="#Global-setting" class="headerlink" title="Global setting"></a>Global setting</h2><p>가끔 모듈이 번들링 되면서 global 변수의 scope문제가 발생하는 경우가 있는데, 미리 설정해야할 global 변수들은 webpack이 기본으로 제공하는 ProvidePlugin을 통해서 설정할 수 있다.</p>
-<pre><code class="js">module.exports = {
-    entry: &#39;./module/entry.js&#39;,
-    output: {
-        path: __dirname,
-        filename: &#39;bundle.js&#39;
-    },
-    module:{
-        preLoaders: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: &quot;jshint-loader&quot;
-            }
-        ],
-        loaders:[
-            {
-                test: /\.scss$/,
-                loaders: [ &#39;style&#39;, &#39;css&#39;, &#39;sass&#39; ]
-            }
-        ]
-    },
-    plugins: [
-        new webpack.ProvidePlugin({
-          &quot;window._&quot;: &quot;lodash&quot;
-          _: &#39;lodash&#39;,
-          $: &quot;jquery&quot;,
-          &quot;window.$&quot;: &quot;jquery&quot;,
-        })
-      ]
-};
+<pre class=" language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token punctuation">:</span> <span class="token string">'./module/entry.js'</span><span class="token punctuation">,</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> __dirname<span class="token punctuation">,</span>
+        filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    module<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        preLoaders<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+                exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+                loader<span class="token punctuation">:</span> <span class="token string">"jshint-loader"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        loaders<span class="token punctuation">:</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                test<span class="token punctuation">:</span> <span class="token regex">/\.scss$/</span><span class="token punctuation">,</span>
+                loaders<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">'style'</span><span class="token punctuation">,</span> <span class="token string">'css'</span><span class="token punctuation">,</span> <span class="token string">'sass'</span> <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>ProvidePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          <span class="token string">"window._"</span><span class="token punctuation">:</span> <span class="token string">"lodash"</span>
+          _<span class="token punctuation">:</span> <span class="token string">'lodash'</span><span class="token punctuation">,</span>
+          $<span class="token punctuation">:</span> <span class="token string">"jquery"</span><span class="token punctuation">,</span>
+          <span class="token string">"window.$"</span><span class="token punctuation">:</span> <span class="token string">"jquery"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="devtool"><a href="#devtool" class="headerlink" title="devtool"></a>devtool</h2><p>모듈이 번들링되면 가독성이 떨어지고 디버깅이 힘들다. 특히 React와 같은 라이브러리를 babel로 트랜스파일한 경우라면 더욱 그렇다. 하지만 devtool을 설정해 주면 보다 디버깅을 쉽게 할 수 있다. 보통 eval, source-map, inline-source-map가 주로 사용된다.<br><a href="https://webpack.github.io/docs/configuration.html#devtool" target="_blank">devtool 옵션</a><br><br><a href="http://blog.teamtreehouse.com/introduction-source-maps" target="_blank">source map에 대해서</a></p>
-<pre><code class="js">{
-    devtool: &quot;eval&quot;
-}
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span>
+    devtool<span class="token punctuation">:</span> <span class="token string">"eval"</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="error"><a href="#error" class="headerlink" title="error"></a>error</h2><p>build중 에러가 발생할 경우 간단하게 에러메시지를 띄워주는데, 더 자세한 에러를 볼 수 있다.</p>
 <pre><code>webpack --display-error-details
 </code></pre><h2 id="webpack-dev-server"><a href="#webpack-dev-server" class="headerlink" title="webpack dev server"></a>webpack dev server</h2><p>webpack을 사용할 때, 코드를 바꿀 때 마다 터미널에서 webpack을 입력해서 번들링을 하고 브라우저를 리프레시 해야한다. 하지만 webpack에서 제공하는 dev server를 이용해서 이런 수고를 덜 수 있다.</p>
-<pre><code class="sh">npm install -g webpack-dev-server
+<pre class=" language-sh"><code class="language-sh">npm install -g webpack-dev-server
 </code></pre>
 <p>webpack-dev-server 명령어를 통해서 localhost:8080을 띄울 수 있다. lnline 옵션과 hot 옵션을 통해서 프로젝트의 파일을 변경하면 자동으로 빌드를 해주는 HMR을 사용할 수 있다.</p>
-<pre><code class="sh">webpack-dev-server --inline --hot
+<pre class=" language-sh"><code class="language-sh">webpack-dev-server --inline --hot
 </code></pre>
 <p>매번 명령어를 치기가 귀찮다면 pakage.json의 scripts에 위의 명령어를 추가하면 된다.</p>
 <hr>
@@ -745,8 +744,8 @@ img{ margin: 0 auto; display: block;}
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
-            </ul>
+                <a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
         </li>
         
     
@@ -763,8 +762,8 @@ img{ margin: 0 auto; display: block;}
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a>
-            </ul>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">4</span></a>
+            </li></ul>
         </li>
         
     

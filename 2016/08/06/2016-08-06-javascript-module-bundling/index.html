@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="en">
-    <head>
+    <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -66,25 +66,25 @@
     <meta property="og:url" content="http://ho1234c.github.io">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="JavaScript Modules Part2 A Beginner’s Guide | Hojong blog">
-    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="JavaScript Modules Part2 A Beginner’s Guide">
     <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="module"> <meta property="og:article:tag" content="translate"> 
 
     
-        <meta property="article:published_time" content="Aug 06, 2016" />
-        <meta property="article:modified_time" content="Dec 09, 2018" />
+        <meta property="article:published_time" content="Aug 06, 2016">
+        <meta property="article:modified_time" content="Dec 09, 2018">
     
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="JavaScript Modules Part2 A Beginner’s Guide | Hojong blog">
     <meta name="twitter:description" content="JavaScript Modules Part2 A Beginner’s Guide">
     <meta name="twitter:image" content="/img/favicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="http://ho1234c.github.io" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://ho1234c.github.io">
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ho1234c.github.io/2016/08/06/2016-08-06-javascript-module-bundling/index.html" />
+        <link rel="canonical" href="http://ho1234c.github.io/2016/08/06/2016-08-06-javascript-module-bundling/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -266,7 +266,7 @@
 <!-- Import Font -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
         <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
@@ -279,7 +279,7 @@
 
     <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism-darcula.css" type="text/css"></head>
 
 
     
@@ -320,8 +320,7 @@
     -->
 
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
@@ -379,7 +378,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar">
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -409,7 +408,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
         <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/module/">module</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/translate/">translate</a>
-    </ul>
+    </li></ul>
     
 
     <!-- Share -->
@@ -478,14 +477,14 @@
 <p>모듈번들러는 모듈 번들링이나 로딩 외에도 코드가 바뀌거나 디버깅을 위해 소스맵을 실행했을 때 auto-recompiling해주는 기능도 제공합니다. 일반적인 모듈 번들링 메소드에 대해서 살펴봅니다.</p>
 <h3 id="CommonJS의-번들링"><a href="#CommonJS의-번들링" class="headerlink" title="CommonJS의 번들링"></a>CommonJS의 번들링</h3><p>Part1에서 봤던 것 처럼 CommonJS는 브라우저에 친숙하지 않은 걸 제외하고는 잘 동작합니다. 저는 이걸 위해 Browserify라는 모듈번들러를 소개합니다. Browserify는 브라우저를 위한 CommonJS 모듈을 컴파일해줍니다.</p>
 <p>예를들어서 이 main.js파일에 숫자들의 평균을 계산하는 모듈을 import했다고 가정해봅시다.</p>
-<pre><code class="js">var myDependency = require(‘myDependency’);
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> myDependency <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>‘myDependency’<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-var myGrades = [93, 95, 88, 0, 91];
+<span class="token keyword">var</span> myGrades <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">93</span><span class="token punctuation">,</span> <span class="token number">95</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-var myAverageGrade = myDependency.average(myGrades);
+<span class="token keyword">var</span> myAverageGrade <span class="token operator">=</span> myDependency<span class="token punctuation">.</span><span class="token function">average</span><span class="token punctuation">(</span>myGrades<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>이 경우에 한가지 의존성이 있습니다.(myDependency) 아래 커맨드로 Browserify는 main.js를 실행하는데 필요한 모든 모듈을 재귀적으로 bundle.js하나에 번들해줍니다.</p>
-<pre><code class="sh">browserify main.js -o bundle.js
+<pre class=" language-sh"><code class="language-sh">browserify main.js -o bundle.js
 </code></pre>
 <p>Browserify는 해당 프로젝트의 의존성을 파악하기 위해서 파싱된 <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank">AST</a>를 돌아다닙니다.<br>의존성의 구조를 파악하고 나면 올바른 순서의 하나의 파일로 번들해줍니다. 중요한 사실은 모든 소스코드들이 하나의 script태그, 즉 한번의 HTTP request만으로<br>다운로드 된다는 겁니다.</p>
 <p>마찬가지로 다수 파일에 여러 의존성이 있더라도 전체 파일을 Browserify에게 알려주기만 하면 마법이 펼쳐집니다. 최종적으로 Minify-JS같은 minify를 해야 할 파일이 준비됩니다.</p>
@@ -502,104 +501,104 @@ var myAverageGrade = myDependency.average(myGrades);
 <p>죽은 코드를 지우는것(dead code elimination)이 가끔은 UglifyJS와 ES6사이에서 정확히 같은 일을 수행 할수도 있고 아닐 수 도 있습니다. <a href="https://github.com/rollup/rollup" target="_blank">Rollup’s wiki</a>를 보시면 됩니다.</p>
 <p>ES6 모듈의 차이를 만드는 것은 죽은 코드 제거(dead code elimination)에 tree shaking이라는 다른 접근법을 사용하기 때문입니다. tree shaking은 죽은 코드 제거(dead code elimination)에 반대입니다. 번들이 필요하지 않은 코드를 제거하는 것이아니라, 번들이 필요한 프로그램만 포함시킵니다. 예제를 보세요:</p>
 <p>다음과 같은 기능을 가진 utils.js가 있다고 가정하고 이를 ES6문법으로 export하기 위해선 아래와 같습니다.</p>
-<pre><code class="js">export function each(collection, iterator) {
-  if (Array.isArray(collection)) {
-    for (var i = 0; i &lt; collection.length; i++) {
-      iterator(collection[i], i, collection);
-    }
-  } else {
-    for (var key in collection) {
-      iterator(collection[key], key, collection);
-    }
-  }
- }
+<pre class=" language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> iterator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>collection<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> collection<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">iterator</span><span class="token punctuation">(</span>collection<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> collection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">iterator</span><span class="token punctuation">(</span>collection<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> key<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
 
-export function filter(collection, test) {
-  var filtered = [];
-  each(collection, function(item) {
-    if (test(item)) {
-      filtered.push(item);
-    }
-  });
-  return filtered;
-}
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">filter</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> test<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> filtered <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">test</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      filtered<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> filtered<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-export function map(collection, iterator) {
-  var mapped = [];
-  each(collection, function(value, key, collection) {
-    mapped.push(iterator(value));
-  });
-  return mapped;
-}
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">map</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> iterator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> mapped <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> key<span class="token punctuation">,</span> collection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    mapped<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">iterator</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> mapped<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-export function reduce(collection, iterator, accumulator) {
-    var startingValueMissing = accumulator === undefined;
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">reduce</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> iterator<span class="token punctuation">,</span> accumulator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> startingValueMissing <span class="token operator">=</span> accumulator <span class="token operator">===</span> undefined<span class="token punctuation">;</span>
 
-    each(collection, function(item) {
-      if(startingValueMissing) {
-        accumulator = item;
-        startingValueMissing = false;
-      } else {
-        accumulator = iterator(accumulator, item);
-      }
-    });
+    <span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>startingValueMissing<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        accumulator <span class="token operator">=</span> item<span class="token punctuation">;</span>
+        startingValueMissing <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        accumulator <span class="token operator">=</span> <span class="token function">iterator</span><span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    return accumulator;
-}
+    <span class="token keyword">return</span> accumulator<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>다음으로 우리의 프로그램에서 어떤 기능이 필요한지 모른다고 해봅시다. 그러면 다음처럼 main.js의 모든 모듈을 import 할겁니다:</p>
-<pre><code class="js">import * as Utils from ‘./utils.js’;
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> Utils <span class="token keyword">from</span> ‘<span class="token punctuation">.</span><span class="token operator">/</span>utils<span class="token punctuation">.</span>js’<span class="token punctuation">;</span>
 </code></pre>
 <p>그리고 나중에 이처럼 함수들을 사용할겁니다.</p>
-<pre><code class="js">import * as Utils from ‘./utils.js’;
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> Utils <span class="token keyword">from</span> ‘<span class="token punctuation">.</span><span class="token operator">/</span>utils<span class="token punctuation">.</span>js’<span class="token punctuation">;</span>
 
-Utils.each([1, 2, 3], function(x) { console.log(x) });
+Utils<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>모듈이 로드 된 후에 main.js파일의 tree shaken버전은 다음과 같을겁니다.</p>
-<pre><code class="js">function each(collection, iterator) {
-  if (Array.isArray(collection)) {
-    for (var i = 0; i &lt; collection.length; i++) {
-      iterator(collection[i], i, collection);
-    }
-  } else {
-    for (var key in collection) {
-      iterator(collection[key], key, collection);
-    }
-  }
- };
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> iterator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>collection<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> collection<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">iterator</span><span class="token punctuation">(</span>collection<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> collection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">iterator</span><span class="token punctuation">(</span>collection<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> key<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-each([1, 2, 3], function(x) { console.log(x) });
+<span class="token function">each</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>우리가 사용한 each만 exports했다는 것을 주의깊게 봐야합니다.</p>
 <p>만약 filter함수를 each함수 대신 사용하기로 했다면 다음처럼 하면 됩니다.</p>
-<pre><code class="js">import * as Utils from ‘./utils.js’;
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> Utils <span class="token keyword">from</span> ‘<span class="token punctuation">.</span><span class="token operator">/</span>utils<span class="token punctuation">.</span>js’<span class="token punctuation">;</span>
 
-Utils.filter([1, 2, 3], function(x) { return x === 2 });
+Utils<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">===</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>tree shaken버전에서는 이렇게 보여질 겁니다.</p>
-<pre><code class="js">function each(collection, iterator) {
-  if (Array.isArray(collection)) {
-    for (var i = 0; i &lt; collection.length; i++) {
-      iterator(collection[i], i, collection);
-    }
-  } else {
-    for (var key in collection) {
-      iterator(collection[key], key, collection);
-    }
-  }
- };
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> iterator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>collection<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> collection<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">iterator</span><span class="token punctuation">(</span>collection<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> collection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">iterator</span><span class="token punctuation">(</span>collection<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> key<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-function filter(collection, test) {
-  var filtered = [];
-  each(collection, function(item) {
-    if (test(item)) {
-      filtered.push(item);
-    }
-  });
-  return filtered;
-};
+<span class="token keyword">function</span> <span class="token function">filter</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> test<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> filtered <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token function">each</span><span class="token punctuation">(</span>collection<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">test</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      filtered<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> filtered<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-filter([1, 2, 3], function(x) { return x === 2 });
+<span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">===</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>each와 filter가 둘다 포함되었다는 것을 주의깊에 봐야합니다. filter가 each를 사용해서 구현되어있기 때문에 두가지 모듈을 export해야 합니다.</p>
 <p>tree shaking을 좀더 잘 알기 위해서는 <a href="http://rollupjs.org/" target="_blank">http://rollupjs.org/</a>를 참고해 보세요.</p>
@@ -614,32 +613,32 @@ filter([1, 2, 3], function(x) { return x === 2 });
 <p>고맙게도 답은 “조만간”입니다.</p>
 <p>ECMAScript는 현재 <a href="https://github.com/ModuleLoader/es6-module-loader/" target="_blank">ECMAScript6 module loader API</a> 라고하는 해답을 위한 설명서를 가지고 있습니다. 간단히 말해서 프로그램입니다. Promise-based API는 동적으로 모듈을 로드하고 이후에 새로운 모듈을 다시 불러오지 않기 위해 그걸 캐싱해놓습니다.</p>
 <p>이렇게 생겼습니다.</p>
-<pre><code class="js">export class myModule {
-  constructor() {
-    console.log(&#39;Hello, I am a module&#39;);
-  }
+<pre class=" language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">myModule</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello, I am a module'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  hello() {
-    console.log(&#39;hello!&#39;);
-  }
+  <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hello!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  goodbye() {
-    console.log(&#39;goodbye!&#39;);
-  }
-}
+  <span class="token function">goodbye</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'goodbye!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<pre><code class="js">System.import(‘myModule’).then(function(myModule) {
-  new myModule.hello();
-});
+<pre class=" language-js"><code class="language-js">System<span class="token punctuation">.</span><span class="token keyword">import</span><span class="token punctuation">(</span>‘myModule’<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>myModule<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">new</span> <span class="token class-name">myModule<span class="token punctuation">.</span>hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// ‘Hello!, I am a module!’
+<span class="token comment" spellcheck="true">// ‘Hello!, I am a module!’</span>
 </code></pre>
 <p>script태그 속에 “type=module”을 정의해 줄 수 있습니다.</p>
-<pre><code class="js">&lt;script type=&quot;module&quot;&gt;
-  // loads the &#39;myModule&#39; export from &#39;mymodule.js&#39;
-  import { hello } from &#39;mymodule&#39;;
-  new Hello(); // &#39;Hello, I am a module!&#39;
-&lt;/script&gt;
+<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"module"</span><span class="token operator">></span>
+  <span class="token comment" spellcheck="true">// loads the 'myModule' export from 'mymodule.js'</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> hello <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'mymodule'</span><span class="token punctuation">;</span>
+  <span class="token keyword">new</span> <span class="token class-name">Hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 'Hello, I am a module!'</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 </code></pre>
 <p>아직 <a href="https://github.com/ModuleLoader/es6-module-loader/" target="_blank">module loader API Polyfill의 repo</a>를 꼭 읽어보시기를 권장합니다.</p>
 <p>추가적으로 테스트해보고 싶으시다면 ES6 Module Loader polyfill의 상단에 있는 <a href="https://github.com/systemjs/systemjs" target="_blank">System.js</a>를 check out하세요.<br>System.js는 브라우저와 Node에서 다양한 형식의 모듈(ES6 modules, AMD, CommonJS, global scripts)을 동적으로 로드해줍니다. 그리고 이전에 로드된 모듈을 다시 로드하지 않기 위해 module registry가 로드된 모듈을 관리합니다. 어떤 모듈형식이라도 로드해주고 ES6 모듈을 트랜스파일 해주는 것은 말할 필요도 없습니다!</p>
@@ -810,8 +809,8 @@ filter([1, 2, 3], function(x) { return x === 2 });
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
-            </ul>
+                <a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
         </li>
         
     
@@ -828,8 +827,8 @@ filter([1, 2, 3], function(x) { return x === 2 });
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a>
-            </ul>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">4</span></a>
+            </li></ul>
         </li>
         
     

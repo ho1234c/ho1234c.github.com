@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="en">
-    <head>
+    <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -66,25 +66,25 @@
     <meta property="og:url" content="http://ho1234c.github.io">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Git 시작하기 | Hojong blog">
-    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="Git에 대한 간단한 소개">
     <meta property="og:article:tag" content="git"> <meta property="og:article:tag" content="vcs"> 
 
     
-        <meta property="article:published_time" content="Oct 03, 2016" />
-        <meta property="article:modified_time" content="Dec 09, 2018" />
+        <meta property="article:published_time" content="Oct 03, 2016">
+        <meta property="article:modified_time" content="Dec 09, 2018">
     
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="Git 시작하기 | Hojong blog">
     <meta name="twitter:description" content="Git에 대한 간단한 소개">
     <meta name="twitter:image" content="/img/favicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="http://ho1234c.github.io" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://ho1234c.github.io">
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ho1234c.github.io/2016/10/03/2016-10-03-git/index.html" />
+        <link rel="canonical" href="http://ho1234c.github.io/2016/10/03/2016-10-03-git/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -266,7 +266,7 @@
 <!-- Import Font -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
         <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
@@ -279,7 +279,7 @@
 
     <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism-darcula.css" type="text/css"></head>
 
 
     
@@ -320,8 +320,7 @@
     -->
 
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
@@ -370,7 +369,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar">
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -400,7 +399,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
         <a class="post_tag-link" href="/tags/git/">git</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/vcs/">vcs</a>
-    </ul>
+    </li></ul>
     
 
     <!-- Share -->
@@ -522,64 +521,64 @@
 <p>4.작업하던 feature branch를 마저 작업하고 master branch로 merge. 이때 git에서는 C4와 C5둘만 합치는 것이아니라<br>둘의 공통조상인 C3까지 세개의 commit객체로 merge를 하고 새로 만들어진 commit으로 HEAD를 옮긴다.(3-way merge)</p>
 <p><img src="/images/2016-10-03-git/11.png" alt="branch6"></p>
 <p>만약 C4와 C5에서 공통된 부분을 수정했다면 충돌(Conflict)이 발생한다. 이때는 코드에 충돌이 일어난 부분이 표시되고 개발자는<br>해당부분을 수정해야 merge를 진행할 수 있다.</p>
-<h2 id="주요-명령어"><a href="#주요-명령어" class="headerlink" title="주요 명령어"></a>주요 명령어</h2><h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><pre><code class="git">git init
+<h2 id="주요-명령어"><a href="#주요-명령어" class="headerlink" title="주요 명령어"></a>주요 명령어</h2><h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><pre class=" language-git"><code class="language-git">git init
 </code></pre>
 <p>현재 디렉토리를 git repository로 만든다.</p>
-<h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><pre><code class="git">git config --global --list
+<h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><pre class=" language-git"><code class="language-git">git config --global --list
 </code></pre>
 <p>현재 설정 정보를 조회</p>
-<pre><code class="git">git config --global user.name &#39;이름&#39;
-git config --global user.email &#39;이메일&#39;
+<pre class=" language-git"><code class="language-git">git config --global user.name <span class="token string">'이름'</span>
+git config --global user.email <span class="token string">'이메일'</span>
 </code></pre>
 <p>이름과 이메일을 등록</p>
-<h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><pre><code class="git">git add 파일이름
+<h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><pre class=" language-git"><code class="language-git">git add 파일이름
 git add .
 git add -u
 git add -A
 git add -p
 </code></pre>
 <p>아직 추적하고 있지 않은 파일을 추적하게 하거나 working directory의 이미 추적하고 있는 파일을 스냅샷을 위해 staging area에 넣는다.<br>. 옵션은 working directory안에서 이미 추적하고 있거나 새로 생성된 파일을 모두 스테이징한다. -u는 이미 추적하고 있거나 지워진 파일을 모두 스테이징한다.<br>-A 옵션으로 두가지를 한번에 할 수 있다. -p옵션은 chunck별로 스테이징할지 말지를 결정할 수 있다.</p>
-<h3 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h3><pre><code class="git">git commit
-git commit -m &#39;하고싶은말&#39;
+<h3 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h3><pre class=" language-git"><code class="language-git">git commit
+git commit -m <span class="token string">'하고싶은말'</span>
 git commit --amend
 </code></pre>
 <p>staging area의 상태를 git repository에 저장. 보통 comment와 함께 사용한다.<br>amend 옵션은 현재 branch의 마지막 commit을 새로운 commit으로 바꾼다. 주로 방금 commit한 것의 comment를 수정할 때 사용한다.</p>
-<h3 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h3><pre><code class="git">git branch 이름
+<h3 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h3><pre class=" language-git"><code class="language-git">git branch 이름
 </code></pre>
 <p>새로운 branch를 생성</p>
-<pre><code class="git">git branch -d 이름
+<pre class=" language-git"><code class="language-git">git branch -d 이름
 </code></pre>
 <p>기존의 branch를 삭제</p>
-<pre><code class="git">git branch -m 기존이름 새이름
+<pre class=" language-git"><code class="language-git">git branch -m 기존이름 새이름
 </code></pre>
 <p>branch의 이름 변경</p>
-<h3 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h3><pre><code class="git">git checkout 브랜치이름
+<h3 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h3><pre class=" language-git"><code class="language-git">git checkout 브랜치이름
 </code></pre>
 <p>원하는 branch의 commit으로 working directory의 상태를 변경</p>
-<pre><code class="git">git checkout -b 브랜치이름
+<pre class=" language-git"><code class="language-git">git checkout -b 브랜치이름
 </code></pre>
 <p>새로 branch를 만들면서 checkout</p>
-<h3 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h3><pre><code class="git">git merge 브랜치이름
+<h3 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h3><pre class=" language-git"><code class="language-git">git merge 브랜치이름
 </code></pre>
 <p>HEAD가 가르키는 현재 branch에 다른 branch를 합침</p>
-<h3 id="clone"><a href="#clone" class="headerlink" title="clone"></a>clone</h3><pre><code class="git">git clone 저장소주소
+<h3 id="clone"><a href="#clone" class="headerlink" title="clone"></a>clone</h3><pre class=" language-git"><code class="language-git">git clone 저장소주소
 </code></pre>
 <p>새로 폴더를 만들고 remote 저장소를 복제해옴</p>
-<h3 id="push"><a href="#push" class="headerlink" title="push"></a>push</h3><pre><code class="git">git push 저장소
+<h3 id="push"><a href="#push" class="headerlink" title="push"></a>push</h3><pre class=" language-git"><code class="language-git">git push 저장소
 </code></pre>
 <p>remote 저장소에 데이터를 업로드한다. 저장소를 명시하지 않으면 origin에 push한다.</p>
-<h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h3><pre><code class="git">git fetch 저장소
+<h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h3><pre class=" language-git"><code class="language-git">git fetch 저장소
 </code></pre>
 <p>저장소의 데이터를 가져온다.</p>
-<h3 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h3><pre><code class="git">git pull 저장소
+<h3 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h3><pre class=" language-git"><code class="language-git">git pull 저장소
 </code></pre>
 <p>remote 저장소에서 데이터를 가져와서 merge한다. 저장소를 명시하지 않으면 origin에서 pull한다.</p>
-<h3 id="log"><a href="#log" class="headerlink" title="log"></a>log</h3><pre><code class="git">git log
+<h3 id="log"><a href="#log" class="headerlink" title="log"></a>log</h3><pre class=" language-git"><code class="language-git">git log
 git log -숫자
 </code></pre>
 <p>commit history를 조회. -숫자 옵션으로 갯수를 지정할 수 있다.</p>
 <hr>
-<p>참고 사이트<br><a href="https://git-scm.com/book/ko/v2" target="_blank" rel="external">https://git-scm.com/book/ko/v2</a><br><a href="https://homes.cs.washington.edu/~mernst/advice/version-control.html" target="_blank" rel="external">https://homes.cs.washington.edu/~mernst/advice/version-control.html</a><br><a href="http://noritersand.tistory.com/86" target="_blank" rel="external">http://noritersand.tistory.com/86</a></p>
+<p>참고 사이트<br><a href="https://git-scm.com/book/ko/v2" target="_blank" rel="noopener">https://git-scm.com/book/ko/v2</a><br><a href="https://homes.cs.washington.edu/~mernst/advice/version-control.html" target="_blank" rel="noopener">https://homes.cs.washington.edu/~mernst/advice/version-control.html</a><br><a href="http://noritersand.tistory.com/86" target="_blank" rel="noopener">http://noritersand.tistory.com/86</a></p>
 
     
 
@@ -734,8 +733,8 @@ git log -숫자
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
-            </ul>
+                <a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
         </li>
         
     
@@ -752,8 +751,8 @@ git log -숫자
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a>
-            </ul>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">4</span></a>
+            </li></ul>
         </li>
         
     
