@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="en">
-    <head><meta name="generator" content="Hexo 3.8.0">
+    <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -320,13 +320,14 @@
     -->
 
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Promise-생성"><span class="post-toc-number">1.</span> <span class="post-toc-text">Promise 생성</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Promise의-이행"><span class="post-toc-number">2.</span> <span class="post-toc-text">Promise의 이행</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Promise-all"><span class="post-toc-number">3.</span> <span class="post-toc-text">Promise.all</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">1.</span> <span class="post-toc-text">Promise 생성</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">2.</span> <span class="post-toc-text">Promise의 이행</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">3.</span> <span class="post-toc-text">Promise.all</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -369,7 +370,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar">
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -399,7 +400,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
         <a class="post_tag-link" href="/tags/callback/">callback</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/promise/">promise</a>
-    </li></ul>
+    </ul>
     
 
     <!-- Share -->
@@ -453,23 +454,25 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>javascript의 Promise란?<br><a id="more"></a> </p>
+        <p>javascript의 Promise란?</p>
+<a id="more"></a> 
 <style>
 img{ margin: 0 auto; display: block;}
 </style>
-
 <p>async, 비동기는 웹개발을 공부하다보면 필수적으로 접하게 되는 용어 중 하나이다. 비동기란 말 그대로 동기적이지 않다는 뜻이다. 요청한 작업이 언제 끝날지 모르고, 그동안 쓰레드는 다른일도 해야한다. 그 자리에서 결과가 나오지 않기 때문에 결과가 나왔음을 어떻게 알려줄것이지에 대한 해결책이 필요하다.</p>
 <p>이에 대한 해결책이 함수를 호출하는 것이다. 언젠가 등록해 놓은 함수를 호출하기로 약속하고, 어떤 작업이 끝나면 <strong>약속한 함수를 호출 하는 것을 통해서 이 작업이 끝났다는 것을 알려준다.</strong> 이런 방법을 비동기적이라고 하고 여기서 호출하는 함수를 콜백함수라고 한다.</p>
 <p>그런데 이런 비동기적인 방법으로 어떤 작업이 끝나서 콜백함수가 호출되었는데 여기서 얻은 값을 통해 또 다른 비동기함수를 호출한다면, 또한 이런 일이 몇겹으로 일어난다면 코드의 가독성이 매우 떨어지게 된다.</p>
-<pre class=" language-js"><code class="language-js"><span class="token function">myFunction1</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">myFunction2</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token function">myFunction3</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token operator">...</span>
-            <span class="token comment" spellcheck="true">// 가독성 저하</span>
-            <span class="token operator">...</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<pre class=" language-language-js"><code class="language-language-js">myFunction1(...args, function(){
+    myFunction2(...args, function(){
+        myFunction3(...args, function(){
+            ...
+            // 가독성 저하
+            ...
+        })
+    })
+})
+
+
 </code></pre>
 <p>이런 경우를 흔히 call back hell, 콜백지옥이라고 일컫는다. ES6에서는 지옥에서 살아남는데 도움이 되기 위해서 Promise라는 키워드를 도입한다.</p>
 <blockquote>
@@ -487,62 +490,70 @@ img{ margin: 0 auto; display: block;}
 <li>이행됨 (fulfilled)</li>
 <li>거부됨 (rejected)</li>
 </ul>
-<h2 id="Promise-생성"><a href="#Promise-생성" class="headerlink" title="Promise 생성"></a>Promise 생성</h2><p>Promise객체는 익명함수를 인자로 받아서 생성된다. 약속이 잘 지켜졌다면 resolve를, 그렇지 않다면 reject를 호출 한다.</p>
-<pre class=" language-js"><code class="language-js">myPromise <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>isValid<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>isValid<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'success'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span><span class="token punctuation">{</span>
-            <span class="token function">reject</span><span class="token punctuation">(</span><span class="token function">Error</span><span class="token punctuation">(</span><span class="token string">'fail'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
+<h2>Promise 생성</h2>
+<p>Promise객체는 익명함수를 인자로 받아서 생성된다. 약속이 잘 지켜졌다면 resolve를, 그렇지 않다면 reject를 호출 한다.</p>
+<pre class=" language-language-js"><code class="language-language-js">myPromise = function(isValid){
+    return new Promise(function(resolve, reject){
+        if(isValid){
+            resolve('success');
+        } else{
+            reject(Error('fail'))
+        }
+    })
+}
 </code></pre>
 <p>Promise 객체를 생성하면 우리가 한 약속은 대기중(pending)상태이고 후에 어떤 요인에 의해 이행되거나(fulfilled) 거부될것이다.(rejected)</p>
 <p>아래처럼 new 키워드를 통해서도 생성할 수 있다.</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> myPromise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 랜덤하게 성공</span>
-    <span class="token keyword">var</span> isValid <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">var myPromise = new Promise(function(resolve, reject){
+    // 랜덤하게 성공
+    var isValid = Math.round(Math.random());
 
-    <span class="token keyword">if</span><span class="token punctuation">(</span>isValid<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'success'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span><span class="token punctuation">{</span>
-        <span class="token function">reject</span><span class="token punctuation">(</span><span class="token function">Error</span><span class="token punctuation">(</span><span class="token string">'fail'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    if(isValid){
+        resolve('success');
+    } else{
+        reject(Error('fail'));
+    }
+})
 </code></pre>
 <p>이 경우엔 Promise객체를 생성하자마자 인자로 받은 익명함수를 실행할것이다. 또한 한번 할당된 myPromise는 유지되기 때문에 처음에 성공했다면 후의 호출에서도 계속 성공, 처음에 실패했다면 후의 호출에서도 계속 실패할 것이다.</p>
-<h2 id="Promise의-이행"><a href="#Promise의-이행" class="headerlink" title="Promise의 이행"></a>Promise의 이행</h2><p>앞의 예제처럼 Promise객체는 resolve되거나 reject 될 것이다. 이때 then과 catch를 사용할 수 있다.</p>
-<pre class=" language-js"><code class="language-js"><span class="token function">myPromise</span><span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">|</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>funcToResolve<span class="token punctuation">,</span> funcToReject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2>Promise의 이행</h2>
+<p>앞의 예제처럼 Promise객체는 resolve되거나 reject 될 것이다. 이때 then과 catch를 사용할 수 있다.</p>
+<pre class=" language-language-js"><code class="language-language-js">myPromise(true | false).then(funcToResolve, funcToReject);
 </code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token function">myPromise</span><span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">|</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>funcToResolve<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>funcToReject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">myPromise(true | false).then(funcToResolve).catch(funcToReject);
 </code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token function">myPromise</span><span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">|</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>funcToResolve<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>undefined<span class="token punctuation">,</span> funcToReject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">myPromise(true | false).then(funcToResolve).then(undefined, funcToReject);
 </code></pre>
 <p>위의 세가지 예제에서는 모두 myPromise가 이행된다면 funcToResolve가 호출 될것이고 거부되었다면 funcToReject가 호출될것이다. 그런데 첫번째 예제와 두번째 예제에는 한가지 차이가 있는데 첫번째 예제의 경우 funcToResolve에서 발생하는 에러를 핸들링할 수 없다는점이다.</p>
 <p>두번째 예제의 경우 funcToResolve에서 에러가 발생할 경우 catch를 통해서 잡을 수 있기 때문에 두번째방법을 주로 이용하는 것이 좋다.</p>
 <p>맨 아래의 예제에서 알 수 있듯이 then은 인자로 받은 함수를 통해 결정되는 Promise객체를 다시 반환한다. 따라서 <strong>계속해서 chaining이 가능하다.</strong></p>
 <p>이때 <strong>주의할 점은 undefined를 반환하지 말아야 한다는 것이다.</strong> 가장 많이 하는 실수는 아무것도 반환하지 않는것이다. 이런 경우 문제가 발생할 수 있다. 또한 then의 인자로 함수가아닌 타입의 값을 전달하게 되면 then(null)로 처리되기 때문에 반드시 함수타입을 전달해야 한다.</p>
-<h2 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all"></a>Promise.all</h2><p>Promise.all은 Promise객체의 배열을 파라미터로 받아서 하나라도 거부된 경우 거부를 반환한다.</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> myPromise1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    window<span class="token punctuation">.</span><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'myPromise1 result'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<h2>Promise.all</h2>
+<p>Promise.all은 Promise객체의 배열을 파라미터로 받아서 하나라도 거부된 경우 거부를 반환한다.</p>
+<pre class=" language-language-js"><code class="language-language-js">var myPromise1 = new Promise(function(resolve, reject){
+    window.setTimeout(function(){
+        resolve('myPromise1 result');
+    }, 1000)
+})
 
-<span class="token keyword">var</span> myPromise2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    window<span class="token punctuation">.</span><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'myPromise2 result'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
+var myPromise2 = new Promise(function(resolve, reject){
+    window.setTimeout(function(){
+        resolve('myPromise2 result');
+    }, 3000)
+})
 
-Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>myPromise1<span class="token punctuation">,</span> myPromise2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
+Promise.all([myPromise1, myPromise2]).then(function(result){
+    console.log(result);
+})
 
-<span class="token comment" spellcheck="true">// 3000ms 후에 ["myPromise1 result", "myPromise2 result"] 가 출력된다.</span>
+// 3000ms 후에 ["myPromise1 result", "myPromise2 result"] 가 출력된다.
+
 </code></pre>
-<p><br><br>아래 링크에서 더 자세한 내용을 볼수 있다.<br><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise</a><br><a href="http://www.html5rocks.com/ko/tutorials/es6/promises/" target="_blank">http://www.html5rocks.com/ko/tutorials/es6/promises/</a><br><a href="http://yubylab.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-Promise-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0" target="_blank">http://yubylab.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-Promise-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0</a><br></p>
+<br>
+아래 링크에서 더 자세한 내용을 볼수 있다.
+<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise</a>
+<a href="http://www.html5rocks.com/ko/tutorials/es6/promises/" target="_blank">http://www.html5rocks.com/ko/tutorials/es6/promises/</a>
+<a href="http://yubylab.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-Promise-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0" target="_blank">http://yubylab.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-Promise-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0</a><br>
 
     
 
@@ -697,8 +708,8 @@ Promise<span class="token punctuation">.</span><span class="token function">all<
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">September 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </ul>
         </li>
         
     
@@ -715,8 +726,8 @@ Promise<span class="token punctuation">.</span><span class="token function">all<
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
+            </ul>
         </li>
         
     

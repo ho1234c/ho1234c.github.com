@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="en">
-    <head><meta name="generator" content="Hexo 3.8.0">
+    <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -320,13 +320,14 @@
     -->
 
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RESTful의-특징"><span class="post-toc-number">1.</span> <span class="post-toc-text">RESTful의 특징</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">1.</span> <span class="post-toc-text">RESTful의 특징</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -378,7 +379,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar">
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -408,7 +409,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
         <a class="post_tag-link" href="/tags/principle/">principle</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/structure/">structure</a>
-    </li></ul>
+    </ul>
     
 
     <!-- Share -->
@@ -462,28 +463,42 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>RESTful 이란?<br><a id="more"></a></p>
+        <p>RESTful 이란?</p>
+<a id="more"></a>
 <p>MEAN스택으로 구현된 훌륭한 소스를 찾았는데, RESTful한 구조로 되어있었다. 코드를 살펴보면서 기본 구조인 RESTful에 대해서 공부하는 것이 코드를 이해하는데 도움이 될거라고 생각했다.</p>
 <p>RESTful은 지금 웹환경에서 필수적으로 알아야 할 용어인것 같다. 모든 서비스 아키텍처가 반드시 Restful해야 하는것은 아니지만 분명 어떤 서비스에는 좋은 선택이 된다.</p>
 <hr>
 <p>REST(REpresentational State Transfer)는 웹과 같은 환경을 설계하는 데있어서 아키텍쳐의 종류이다. 그 전까지의 웹 환경이 설계의 장점을 잘 살리지 못하고 있다고 판단한 Roy Fielding(http 저자중 한명)이 2000년 논문에서 소개했다. 하지만 최근들어(사실 이제 최근도 아니다) 클라이언트의 다양성이 증가하면서 주목받고 있다.</p>
 <p>이 전의 아키텍쳐에서는 클라이언트가 요청을 보낼 때 주로 POST method를 사용했다. 예를 들면</p>
-<pre class=" language-bash"><code class="language-bash">POST/url?method<span class="token operator">=</span>create
-POST/url?method<span class="token operator">=</span>insert
-GET/url?method<span class="token operator">=</span>update
+<pre class=" language-language-bash"><code class="language-language-bash">POST/url?method=create
+POST/url?method=insert
+GET/url?method=update
 </code></pre>
 <p>다음과 같은 URI구성은 REST라고 볼 수 없다. http method는 여러가지 종류가 있다. RESTful한 설계는 목적에 맞는 method를 적절히 사용한다.</p>
-<h2 id="RESTful의-특징"><a href="#RESTful의-특징" class="headerlink" title="RESTful의 특징"></a>RESTful의 특징</h2><p>RESTful에는 크게 여섯가지 특징이 있다.</p>
+<h2>RESTful의 특징</h2>
+<p>RESTful에는 크게 여섯가지 특징이 있다.</p>
 <ul>
-<li>Client-Server<br>RESTful의 가장 기본적이면서 당연한 특징으로, 클라이언트는 적절한 요청을 보내고 서버는 REST하게 클라이언트가 필요한 리소스를 제공한다는 것이다.</li>
-<li>Uniform interface(Platform Agnostic)<br>REST하게 설계되어있으면 플랫폼에 관계없이 사용할 수 있다. 운영체제에도 구애받지 않고 언어에도 구애받지 않는다. HTTP를 준수하는 플랫폼이라면<br>어디에서나 사용할 수 있다.</li>
-<li>Stateless<br>state, 즉 상태를 서버에 저장하지 않는다. 서버는 요청만 처리할 뿐 따로 클라이언트의 컨텍스트를 저장하지 않는다. 따라서 세션의 사용을 지양하게된다.<br>서버의 리소스사용이 줄어들고 구현을 단순화 할 수 있다.</li>
-<li>Cacheable<br>http표준을 사용하기 때문에 웹캐시를 사용할 수 있다. 리소스를 캐싱해서 서버의 트랜잭션을 줄일 수 있다.</li>
-<li>Layered System<br>서버와 클라이언트간에 미들웨어를 사용할 수 있다. 미들웨어는 요청과 응답을 방해하지 않는 선에서 서버와 클라이언트간에 유연성을 가지게 할 수 있다.</li>
-<li>Self-descriptiveness<br>RESTful의 가장 큰 특징이자 주목받게 된 이유이다. RESTful은 그 자체로 기술되어진다. 요청만 보고도 어떤 일을 하는지 파악할 수 있다.<br>직관적이어서 사람이 이해하기 쉽고 semantic하다.</li>
+<li>Client-Server<br>
+RESTful의 가장 기본적이면서 당연한 특징으로, 클라이언트는 적절한 요청을 보내고 서버는 REST하게 클라이언트가 필요한 리소스를 제공한다는 것이다.</li>
+<li>Uniform interface(Platform Agnostic)<br>
+REST하게 설계되어있으면 플랫폼에 관계없이 사용할 수 있다. 운영체제에도 구애받지 않고 언어에도 구애받지 않는다. HTTP를 준수하는 플랫폼이라면<br>
+어디에서나 사용할 수 있다.</li>
+<li>Stateless<br>
+state, 즉 상태를 서버에 저장하지 않는다. 서버는 요청만 처리할 뿐 따로 클라이언트의 컨텍스트를 저장하지 않는다. 따라서 세션의 사용을 지양하게된다.<br>
+서버의 리소스사용이 줄어들고 구현을 단순화 할 수 있다.</li>
+<li>Cacheable<br>
+http표준을 사용하기 때문에 웹캐시를 사용할 수 있다. 리소스를 캐싱해서 서버의 트랜잭션을 줄일 수 있다.</li>
+<li>Layered System<br>
+서버와 클라이언트간에 미들웨어를 사용할 수 있다. 미들웨어는 요청과 응답을 방해하지 않는 선에서 서버와 클라이언트간에 유연성을 가지게 할 수 있다.</li>
+<li>Self-descriptiveness<br>
+RESTful의 가장 큰 특징이자 주목받게 된 이유이다. RESTful은 그 자체로 기술되어진다. 요청만 보고도 어떤 일을 하는지 파악할 수 있다.<br>
+직관적이어서 사람이 이해하기 쉽고 semantic하다.</li>
 </ul>
 <hr>
-<p><em>참고사이트</em><br><a href="https://beyondj2ee.wordpress.com/2013/03/21/%EB%8B%B9%EC%8B%A0%EC%9D%98-api%EA%B0%80-restful-%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-5%EA%B0%80%EC%A7%80-%EC%A6%9D%EA%B1%B0/" target="_blank" rel="noopener">https://beyondj2ee.wordpress.com</a><br><a href="http://bcho.tistory.com/953" target="_blank" rel="noopener">http://bcho.tistory.com/953</a><br><a href="http://www.guru99.com/restful-web-services.html" target="_blank" rel="noopener">http://www.guru99.com/restful-web-services.html</a></p>
+<p><em>참고사이트</em><br>
+<a href="https://beyondj2ee.wordpress.com/2013/03/21/%EB%8B%B9%EC%8B%A0%EC%9D%98-api%EA%B0%80-restful-%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-5%EA%B0%80%EC%A7%80-%EC%A6%9D%EA%B1%B0/" target="_blank" rel="noopener">https://beyondj2ee.wordpress.com</a><br>
+<a href="http://bcho.tistory.com/953" target="_blank" rel="noopener">http://bcho.tistory.com/953</a><br>
+<a href="http://www.guru99.com/restful-web-services.html" target="_blank" rel="noopener">http://www.guru99.com/restful-web-services.html</a></p>
 
     
 
@@ -638,8 +653,8 @@ GET/url?method<span class="token operator">=</span>update
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">September 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </ul>
         </li>
         
     
@@ -656,8 +671,8 @@ GET/url?method<span class="token operator">=</span>update
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
+            </ul>
         </li>
         
     

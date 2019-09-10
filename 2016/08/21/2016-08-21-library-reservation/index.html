@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="en">
-    <head><meta name="generator" content="Hexo 3.8.0">
+    <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -320,13 +320,14 @@
     -->
 
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#What-is-purpose"><span class="post-toc-number">1.</span> <span class="post-toc-text">What is purpose?</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Analysis"><span class="post-toc-number">2.</span> <span class="post-toc-text">Analysis</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Seat-state-crawling"><span class="post-toc-number">3.</span> <span class="post-toc-text">Seat state crawling</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Send-request-for-reservation"><span class="post-toc-number">4.</span> <span class="post-toc-text">Send request for reservation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Confirm-reservation"><span class="post-toc-number">5.</span> <span class="post-toc-text">Confirm reservation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Run-regularly"><span class="post-toc-number">6.</span> <span class="post-toc-text">Run regularly</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#마치며…"><span class="post-toc-number">7.</span> <span class="post-toc-text">마치며…</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">1.</span> <span class="post-toc-text">What is purpose?</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">2.</span> <span class="post-toc-text">Analysis</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">3.</span> <span class="post-toc-text">Seat state crawling</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">4.</span> <span class="post-toc-text">Send request for reservation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">5.</span> <span class="post-toc-text">Confirm reservation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">6.</span> <span class="post-toc-text">Run regularly</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">7.</span> <span class="post-toc-text">마치며…</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -369,7 +370,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar">
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -399,7 +400,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
         <a class="post_tag-link" href="/tags/tutorial/">tutorial</a>
-    </li></ul>
+    </ul>
     
 
     <!-- Share -->
@@ -453,206 +454,220 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Python으로 도서관 자리 예약시스템 만들기<br><a id="more"></a> </p>
+        <p>Python으로 도서관 자리 예약시스템 만들기</p>
+<a id="more"></a> 
 <style>
 img{ margin: 0 auto; display: block;}
 </style>
-
 <p>나는 어릴 때 부터 도서관을 좋아해서 책을 읽거나 공부하러 자주 가곤하는데 최근에 집에서 가장 가까운 도서관이 증축공사로 인해 문을 닫아서 두번째로 가까운 거리에 있는 도서관에 다니게 되었다. 그런데 나와같은 사람이 많아서 그런지 사람이 엄청 많다. 아마 얼마남지 않은 수능과 공무원시험, 그리고 최근의 무더운 날씨가 주된 이유인 것 같다.</p>
 <p>책이 있는 자료실은 비교적 한산해서 아무때나 자유롭게 이용할 수 있는데, 열람실과 디지털 자료실은 내가 가는 시간대에 항상 사람이 많았다. 언젠가는 20분을 기다려도 자리가 나질 않아서 그냥 돌아온적도 있었다.</p>
 <p>그러다가 도서관 홈페이지에 들어가보니 현장 예약만 되는줄 알았는데 원격으로 좌석을 예약할 수 있는 서비스가 있는 걸 발견했다. 하지만 매일매일 들어가서 예약하는걸 항상 잊어버리고 무엇보다 매우 귀찮기 때문에 다음날 좌석을 자동으로 예약을 해주는 프로그램을 만들기로 했다.</p>
 <hr>
-<h2 id="What-is-purpose"><a href="#What-is-purpose" class="headerlink" title="What is purpose?"></a>What is purpose?</h2><p>나는 보통 도서관에서 랩탑을 이용하기 때문에 랩탑사용이 가능한 디지털자료실을 예약하도록 한다.</p>
+<h2>What is purpose?</h2>
+<p>나는 보통 도서관에서 랩탑을 이용하기 때문에 랩탑사용이 가능한 디지털자료실을 예약하도록 한다.</p>
 <p>디지털자료실에는 좌석의 종류가 있는데 그중 노트북 유저를 위한 코드가 있는 자리는 약 30석 정도가 있는것 같다. 하지만 다섯자리를 제외한 나머지는 예약할 수 없는, 그냥 자리가 비어 있으면 앉는 오픈형이다. 따라서 예약가능한 한자리를 예약해놓는 프로그램을 제작한다.</p>
-<h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><p>우선 서비스가 어떻게 구성되어있는지 봐야한다.</p>
+<h2>Analysis</h2>
+<p>우선 서비스가 어떻게 구성되어있는지 봐야한다.</p>
 <p><img src="/images/2016-08-18-library-reservation/1.png" alt="1"></p>
 <p>여기서 초록색 막대기가 있는 자리가 비어있는 자리이고 누르면 해당 좌석에 대해 예약할 수 있는 팝업이 뜬다.</p>
 <p><img src="/images/2016-08-18-library-reservation/2.png" alt="2"></p>
 <p>그리고 타임라인에서 예약할 시간대를 선택한 후 아이디와 비밀번호를 적고 예약하기 버튼을 누르면 예약이 완료된다.</p>
 <p>개발자도구를 통해서 자세히 보면 서버는 php로 구현되어있고 데이터만 보내주는 식이 아니라 렌더링 된 상태로 오는 것 같았다.</p>
 <p>빈 좌석을 누르면 팝업이 뜨는데, 좌석의 id와 팝업창에서 보여줄 시간대를 쿼리스트링으로 넘겨서 다시 응답을 받아 오고있다. 그리고 예약할 때 form을 포함해서 POST요청을 보낸다. field는 다음과 같다.</p>
-<pre class=" language-yaml"><code class="language-yaml">// form field
+<pre class=" language-language-yaml"><code class="language-language-yaml">// form field
 
-// 좌석별 id<span class="token punctuation">,</span> <span class="token key atrule">1~30</span> <span class="token punctuation">:</span> 인터넷 검색<span class="token punctuation">,</span> <span class="token key atrule">45~48</span> <span class="token punctuation">:</span> DVD<span class="token punctuation">,</span> <span class="token key atrule">52~53</span> <span class="token punctuation">:</span> 어학기<span class="token punctuation">,</span> <span class="token key atrule">67~71</span> <span class="token punctuation">:</span> 노트북
-<span class="token key atrule">seat_id</span><span class="token punctuation">:</span>
+// 좌석별 id, 1~30 : 인터넷 검색, 45~48 : DVD, 52~53 : 어학기, 67~71 : 노트북
+seat_id:
 
-// 9<span class="token punctuation">:</span>00 =<span class="token punctuation">></span> 19<span class="token punctuation">,</span> 21<span class="token punctuation">:</span>50 =<span class="token punctuation">></span> 96<span class="token punctuation">,</span> 10분 간격으로 예약가능<span class="token punctuation">,</span> 사람당 최대 예약시간은 3시간
-// 따라서 Hevar <span class="token punctuation">-</span> Hsvar &lt; 18
-<span class="token key atrule">Hsvar</span><span class="token punctuation">:</span>  // 시작시간
-<span class="token key atrule">Hevar</span><span class="token punctuation">:</span>  // 끝시간
+// 9:00 => 19, 21:50 => 96, 10분 간격으로 예약가능, 사람당 최대 예약시간은 3시간
+// 따라서 Hevar - Hsvar < 18
+Hsvar:  // 시작시간
+Hevar:  // 끝시간
 
-// 시작시간<span class="token punctuation">,</span> EtimeVar은 무조건 00으로 주고있음
-<span class="token key atrule">StimeVar</span><span class="token punctuation">:</span>
-<span class="token key atrule">EtimeVar</span><span class="token punctuation">:</span>
+// 시작시간, EtimeVar은 무조건 00으로 주고있음
+StimeVar:
+EtimeVar:
 
 // 무슨 파라메터인지 모르겠으나 안줘도 POST요청이 정상적으로 처리되는것을 확인.
-<span class="token key atrule">bars</span><span class="token punctuation">:</span>
-<span class="token key atrule">dayAct</span><span class="token punctuation">:</span>
+bars:
+dayAct:
 
-//아이디<span class="token punctuation">,</span> 패스워드
-<span class="token key atrule">Userid</span><span class="token punctuation">:</span>
-<span class="token key atrule">Userpw</span><span class="token punctuation">:</span>
+//아이디, 패스워드
+Userid:
+Userpw:
 </code></pre>
 <p>그래서 할일을 정리하면,</p>
 <ol>
-<li>빈 좌석을 찾는다.<ul>
+<li>빈 좌석을 찾는다.
+<ul>
 <li>동적크롤링이 필요한 상황이 아니기 때문에 가상브라우저를 사용하지 않아도 된다. 따라서 예전에 사용해 본적이 있는 bs4를 사용하도록 한다.</li>
 </ul>
 </li>
-<li>예약이 가능 한지 확인하고 예약요청을 보낸다.<ul>
+<li>예약이 가능 한지 확인하고 예약요청을 보낸다.
+<ul>
 <li>예약 가능 여부를 체크하고 form에 포함되어야 할 파라미터를 뽑는다.</li>
 </ul>
 </li>
-<li>어떤좌석을 예약했는지 나에게 알려준다.<ul>
+<li>어떤좌석을 예약했는지 나에게 알려준다.
+<ul>
 <li>python 내장 라이브러리인 smtplib와 구글의 smtp서버를 사용한다.</li>
 </ul>
 </li>
-<li>매일 반복한다.<ul>
+<li>매일 반복한다.
+<ul>
 <li>리눅스용 작업스케쥴러인 crontab을 이용한다.</li>
 </ul>
 </li>
 </ol>
-<h2 id="Seat-state-crawling"><a href="#Seat-state-crawling" class="headerlink" title="Seat state crawling"></a>Seat state crawling</h2><p>페이지를 뜯어 보면 iframe이 박혀있었다.</p>
-<p>가운데의 좌석정보를 알려주는 프레임은 ‘/Vorvertrag_Position.php’로 iframe링크가 걸려있다. 이곳에 파라미터를 넘기면 어떤 좌석이 비어있는지 보여주는 html이 온다.</p>
+<h2>Seat state crawling</h2>
+<p>페이지를 뜯어 보면 iframe이 박혀있었다.</p>
+<p>가운데의 좌석정보를 알려주는 프레임은 '/Vorvertrag_Position.php’로 iframe링크가 걸려있다. 이곳에 파라미터를 넘기면 어떤 좌석이 비어있는지 보여주는 html이 온다.</p>
 <p><img src="/images/2016-08-18-library-reservation/3.png" alt="3"></p>
 <p>페이지를 가져오기 위해 requests와 beautifulsoup4를 설치한다.</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> requests, beautifulsoup4
+<pre class=" language-language-bash"><code class="language-language-bash">npm install requests, beautifulsoup4
 </code></pre>
 <p>그리고 간단한 코드로 페이지를 파싱할 수 있다.</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf-8 -*-</span>
-<span class="token keyword">import</span> requests
-<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+<pre class=" language-language-python"><code class="language-language-python"># -*- coding: utf-8 -*-
+import requests
+from bs4 import BeautifulSoup
 
-seatNum <span class="token operator">=</span> <span class="token number">1</span>  <span class="token comment" spellcheck="true"># 가져오려는 좌석 아이디</span>
-page <span class="token operator">=</span> <span class="token keyword">lambda</span> seatId<span class="token punctuation">:</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://210.104.8.144:8800/Libmate3_web_hj/Vorvertrag_Position.php?id='</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>seatId<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'&amp;t=1&amp;s=1'</span><span class="token punctuation">)</span>
-soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>page<span class="token punctuation">(</span>seatNum<span class="token punctuation">)</span><span class="token punctuation">.</span>content<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+seatNum = 1  # 가져오려는 좌석 아이디
+page = lambda seatId: requests.get('http://210.104.8.144:8800/Libmate3_web_hj/Vorvertrag_Position.php?id=' + str(seatId) + '&t=1&s=1')
+soup = BeautifulSoup(page(seatNum).content, "html.parser")
+
 </code></pre>
 <p>이렇게 페이지를 가져오면 이제 해당 페이지의 DOM을 traversing 할 수 있다.</p>
-<p>만약 좌석이 비어있다면 초록색 막대 이미지인 /images/range/bar_green.gif로 이미지가 링크된다. 또한 고맙게도 이미지 태그에 alt값으로 ‘17:50’같이 해당하는 시간이 표시되어 있다. 덕분에 다시 상위 태그로가서 좌석의 id를 가져오는 수고를 하지 않아도 된다.</p>
-<pre class=" language-python"><code class="language-python">mySoup <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">"img"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">'./images/range/bar_green.gif'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<p>만약 좌석이 비어있다면 초록색 막대 이미지인 /images/range/bar_green.gif로 이미지가 링크된다. 또한 고맙게도 이미지 태그에 alt값으로 '17:50’같이 해당하는 시간이 표시되어 있다. 덕분에 다시 상위 태그로가서 좌석의 id를 가져오는 수고를 하지 않아도 된다.</p>
+<pre class=" language-language-python"><code class="language-language-python">mySoup = soup.find_all("img", {"src": './images/range/bar_green.gif'})
 </code></pre>
-<p>find_all 메소드를 통해서 원하는 attribute가 포함된 태그를 찾을 수 있다. 이 외에도 정규식을 포함한 다양한 기능을 지원한다.<br><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank">공식 도큐먼트</a>에 설명이 잘 되어있다.</p>
-<h2 id="Send-request-for-reservation"><a href="#Send-request-for-reservation" class="headerlink" title="Send request for reservation"></a>Send request for reservation</h2><p>원하는 좌석과 시간을 받아서 자리를 예약하는 요청을 보내준다. 매일 같은 자리면 식상하기 때문에 같은 타입의 좌석중 랜덤으로 선택한다.</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf-8 -*-</span>
-<span class="token keyword">import</span> requests
-<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
-<span class="token keyword">import</span> random
-<span class="token keyword">from</span> config <span class="token keyword">import</span> reservation_limit<span class="token punctuation">,</span> library_id1<span class="token punctuation">,</span> library_password1<span class="token punctuation">,</span> library_id1<span class="token punctuation">,</span> library_password1
+<p>find_all 메소드를 통해서 원하는 attribute가 포함된 태그를 찾을 수 있다. 이 외에도 정규식을 포함한 다양한 기능을 지원한다.<br>
+<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank">공식 도큐먼트</a>에 설명이 잘 되어있다.</p>
+<h2>Send request for reservation</h2>
+<p>원하는 좌석과 시간을 받아서 자리를 예약하는 요청을 보내준다. 매일 같은 자리면 식상하기 때문에 같은 타입의 좌석중 랜덤으로 선택한다.</p>
+<pre class=" language-language-python"><code class="language-language-python"># -*- coding: utf-8 -*-
+import requests
+from bs4 import BeautifulSoup
+import random
+from config import reservation_limit, library_id1, library_password1, library_id1, library_password1
 
 
-<span class="token comment" spellcheck="true"># 시간을 form에 포함할 파라미터로 바꿔줌</span>
-<span class="token keyword">def</span> <span class="token function">time_parser</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    divide <span class="token operator">=</span> map<span class="token punctuation">(</span>int<span class="token punctuation">,</span> time<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">':'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    minute <span class="token operator">=</span> divide<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token number">60</span> <span class="token operator">+</span> divide<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
-    <span class="token keyword">return</span> minute<span class="token operator">/</span><span class="token number">10</span> <span class="token operator">-</span> <span class="token number">35</span>
+# 시간을 form에 포함할 파라미터로 바꿔줌
+def time_parser(time):
+    divide = map(int, time.split(':'))
+    minute = divide[0]*60 + divide[1]
+    return minute/10 - 35
 
 
-<span class="token comment" spellcheck="true"># 비어있는 좌석 하나를 선택. time은 hour:minute 형태의 string</span>
-<span class="token keyword">def</span> <span class="token function">form_maker</span><span class="token punctuation">(</span>seatType<span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    result <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token keyword">while</span> seatType<span class="token punctuation">:</span>
-        <span class="token comment" spellcheck="true"># 자리 하나를 랜덤으로 선택</span>
-        seat_num_today <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>seatType<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+# 비어있는 좌석 하나를 선택. time은 hour:minute 형태의 string
+def form_maker(seatType, time):
+    result = {}
+    while seatType:
+        # 자리 하나를 랜덤으로 선택
+        seat_num_today = random.choice(seatType.keys())
 
-        extra_time <span class="token operator">=</span> map<span class="token punctuation">(</span>time_parser<span class="token punctuation">,</span> seatType<span class="token punctuation">.</span>pop<span class="token punctuation">(</span>seat_num_today<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        extra_time = map(time_parser, seatType.pop(seat_num_today))
 
-        <span class="token comment" spellcheck="true"># 3시간 예약이 가능한가?</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> reservation_limit<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> time_parser<span class="token punctuation">(</span>time<span class="token punctuation">)</span> <span class="token operator">+</span> i <span class="token operator">not</span> <span class="token keyword">in</span> extra_time<span class="token punctuation">:</span>
-                seat_num_today <span class="token operator">=</span> <span class="token boolean">False</span>
-                <span class="token keyword">break</span>
+        # 3시간 예약이 가능한가?
+        for i in range(0, reservation_limit):
+            if time_parser(time) + i not in extra_time:
+                seat_num_today = False
+                break
 
-        <span class="token keyword">if</span> seat_num_today<span class="token punctuation">:</span>
-            result<span class="token punctuation">[</span><span class="token string">'seat_id'</span><span class="token punctuation">]</span> <span class="token operator">=</span> seat_num_today
-            result<span class="token punctuation">[</span><span class="token string">'Hsvar'</span><span class="token punctuation">]</span> <span class="token operator">=</span> time_parser<span class="token punctuation">(</span>time<span class="token punctuation">)</span>
-            result<span class="token punctuation">[</span><span class="token string">'Hevar'</span><span class="token punctuation">]</span> <span class="token operator">=</span> result<span class="token punctuation">[</span><span class="token string">'Hsvar'</span><span class="token punctuation">]</span> <span class="token operator">+</span> reservation_limit
-            result<span class="token punctuation">[</span><span class="token string">'StimeVar'</span><span class="token punctuation">]</span> <span class="token operator">=</span> time<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">':'</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span>
-            result<span class="token punctuation">[</span><span class="token string">'EtimeVar'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'00'</span>
-            result<span class="token punctuation">[</span><span class="token string">'Userid'</span><span class="token punctuation">]</span> <span class="token operator">=</span> library_id1
-            result<span class="token punctuation">[</span><span class="token string">'Userpw'</span><span class="token punctuation">]</span> <span class="token operator">=</span> library_password1
-            result<span class="token punctuation">[</span><span class="token string">'bars'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'1700'</span>
-            <span class="token keyword">break</span>
+        if seat_num_today:
+            result['seat_id'] = seat_num_today
+            result['Hsvar'] = time_parser(time)
+            result['Hevar'] = result['Hsvar'] + reservation_limit
+            result['StimeVar'] = time.replace(':', "")
+            result['EtimeVar'] = '00'
+            result['Userid'] = library_id1
+            result['Userpw'] = library_password1
+            result['bars'] = '1700'
+            break
 
-    <span class="token keyword">return</span> result
+    return result
 
-<span class="token comment" spellcheck="true"># name : 원하는 좌석의 종류, time : 원하는 시간</span>
-<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true"># 좌석 초기화</span>
-    seatTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
-        <span class="token string">'searchInternet'</span><span class="token punctuation">:</span> dict<span class="token punctuation">(</span>zip<span class="token punctuation">(</span><span class="token punctuation">[</span>str<span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">''</span><span class="token punctuation">]</span> <span class="token operator">*</span> len<span class="token punctuation">(</span>range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        <span class="token string">'dvd'</span><span class="token punctuation">:</span> dict<span class="token punctuation">(</span>zip<span class="token punctuation">(</span><span class="token punctuation">[</span>str<span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">49</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">''</span><span class="token punctuation">]</span> <span class="token operator">*</span> len<span class="token punctuation">(</span>range<span class="token punctuation">(</span><span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">49</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        <span class="token string">'linguistics'</span><span class="token punctuation">:</span> dict<span class="token punctuation">(</span>zip<span class="token punctuation">(</span><span class="token punctuation">[</span>str<span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">54</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">''</span><span class="token punctuation">]</span> <span class="token operator">*</span> len<span class="token punctuation">(</span>range<span class="token punctuation">(</span><span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">54</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        <span class="token string">'notebook'</span><span class="token punctuation">:</span> dict<span class="token punctuation">(</span>zip<span class="token punctuation">(</span><span class="token punctuation">[</span>str<span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">67</span><span class="token punctuation">,</span> <span class="token number">72</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">''</span><span class="token punctuation">]</span> <span class="token operator">*</span> len<span class="token punctuation">(</span>range<span class="token punctuation">(</span><span class="token number">67</span><span class="token punctuation">,</span> <span class="token number">72</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
+# name : 원하는 좌석의 종류, time : 원하는 시간
+def main(name, time):
+    # 좌석 초기화
+    seatTypes = {
+        'searchInternet': dict(zip([str(i) for i in range(1, 31)], [''] * len(range(1, 31)))),
+        'dvd': dict(zip([str(i) for i in range(45, 49)], [''] * len(range(45, 49)))),
+        'linguistics': dict(zip([str(i) for i in range(52, 54)], [''] * len(range(52, 54)))),
+        'notebook': dict(zip([str(i) for i in range(67, 72)], [''] * len(range(67, 72))))
+    }
 
-    <span class="token comment" spellcheck="true"># 빈 좌석을 알아내기위한 url, 팝업에서 여기로 iframe이 걸려있음.</span>
-    page <span class="token operator">=</span> <span class="token keyword">lambda</span> seatId<span class="token punctuation">:</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://210.104.8.144:8800/Libmate3_web_hj/Vorvertrag_Position.php?id='</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>seatId<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'&amp;t=1&amp;s=1'</span><span class="token punctuation">)</span>
+    # 빈 좌석을 알아내기위한 url, 팝업에서 여기로 iframe이 걸려있음.
+    page = lambda seatId: requests.get('http://210.104.8.144:8800/Libmate3_web_hj/Vorvertrag_Position.php?id=' + str(seatId) + '&t=1&s=1')
 
-    <span class="token keyword">for</span> seatType <span class="token keyword">in</span> seatTypes<span class="token punctuation">:</span>
-        <span class="token keyword">for</span> seatNum <span class="token keyword">in</span> seatTypes<span class="token punctuation">[</span>seatType<span class="token punctuation">]</span><span class="token punctuation">:</span>
-            remain <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-            soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>page<span class="token punctuation">(</span>seatNum<span class="token punctuation">)</span><span class="token punctuation">.</span>content<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+    for seatType in seatTypes:
+        for seatNum in seatTypes[seatType]:
+            remain = []
+            soup = BeautifulSoup(page(seatNum).content, "html.parser")
 
-            <span class="token comment" spellcheck="true"># 빈좌석이라면 bar_green.gif 임. img 태그 객체를 return</span>
-            mySoup <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">"img"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">'./images/range/bar_green.gif'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
-            <span class="token keyword">for</span> imgObj <span class="token keyword">in</span> mySoup<span class="token punctuation">:</span>
-                <span class="token keyword">try</span><span class="token punctuation">:</span>
-                    remain<span class="token punctuation">.</span>append<span class="token punctuation">(</span>imgObj<span class="token punctuation">[</span><span class="token string">'alt'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                <span class="token keyword">except</span><span class="token punctuation">:</span>
-                    <span class="token keyword">print</span> <span class="token string">'occur parsing error where handling for '</span> <span class="token operator">+</span> imgObj<span class="token punctuation">[</span><span class="token string">'alt'</span><span class="token punctuation">]</span>
+            # 빈좌석이라면 bar_green.gif 임. img 태그 객체를 return
+            mySoup = soup.find_all("img", {"src": './images/range/bar_green.gif'})
+            for imgObj in mySoup:
+                try:
+                    remain.append(imgObj['alt'])
+                except:
+                    print 'occur parsing error where handling for ' + imgObj['alt']
 
-            currentType <span class="token operator">=</span> seatTypes<span class="token punctuation">[</span>seatType<span class="token punctuation">]</span>
-            currentType<span class="token punctuation">[</span>seatNum<span class="token punctuation">]</span> <span class="token operator">=</span> remain
+            currentType = seatTypes[seatType]
+            currentType[seatNum] = remain
 
-    formField <span class="token operator">=</span> form_maker<span class="token punctuation">(</span>seatTypes<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">,</span> time<span class="token punctuation">)</span>
+    formField = form_maker(seatTypes[name], time)
 
-    <span class="token keyword">if</span> formField<span class="token punctuation">:</span>
-        requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">"http://210.104.8.144:8800/Libmate3_web_hj/Vorvertrag_Sql.php"</span><span class="token punctuation">,</span> data<span class="token operator">=</span>formField<span class="token punctuation">)</span>
+    if formField:
+        requests.post("http://210.104.8.144:8800/Libmate3_web_hj/Vorvertrag_Sql.php", data=formField)
 
-    <span class="token keyword">return</span>
+    return
 
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
-    main<span class="token punctuation">(</span><span class="token string">'notebook'</span><span class="token punctuation">,</span> <span class="token string">'19:00'</span><span class="token punctuation">)</span>
+if __name__ == "__main__":
+    main('notebook', '19:00')
 </code></pre>
-<h2 id="Confirm-reservation"><a href="#Confirm-reservation" class="headerlink" title="Confirm reservation"></a>Confirm reservation</h2><p>어떤자리에 예약을 했는지 알아야 하기 때문에 예약을 한 결과를 내가 받아야 한다.</p>
+<h2>Confirm reservation</h2>
+<p>어떤자리에 예약을 했는지 알아야 하기 때문에 예약을 한 결과를 내가 받아야 한다.</p>
 <p>그런데 예약요청에 대한 응답또한 데이터만 오지않는다. 여기선 요청에 대한 response가 열려있던 예약팝업창에서 특정 태그의 내용을 바꿔주는 스크립트를 실행 시키는 방식으로 구현되어 있다. 동일한 방법으로 받은 데이터를 파싱 할 수 있지만 귀찮기 때문에 response body를 통째로 내 메일로 보내도록한다.</p>
 <p>구글의 SMTP서버를 사용하면 구글아이디와 비밀번호를 통해서 smtp서버에 로그인 할 수 있다. 또한 파이썬 내장라이브러리중 MIME과 관련된 라이브러리들을 사용하면 복잡한 메일관련 헤더설정을 편하게 할 수 있다.</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> smtplib
-<span class="token keyword">from</span> config <span class="token keyword">import</span> gmail_id<span class="token punctuation">,</span> gmail_password<span class="token punctuation">,</span> smtp_server<span class="token punctuation">,</span> smtp_port
-<span class="token keyword">from</span> email<span class="token punctuation">.</span>mime<span class="token punctuation">.</span>text <span class="token keyword">import</span> MIMEText
+<pre class=" language-language-python"><code class="language-language-python">import smtplib
+from config import gmail_id, gmail_password, smtp_server, smtp_port
+from email.mime.text import MIMEText
 
 
-<span class="token keyword">def</span> <span class="token function">email_myself</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">:</span>
+def email_myself(msg):
 
-    msg <span class="token operator">=</span> MIMEText<span class="token punctuation">(</span>str<span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    me <span class="token operator">=</span> <span class="token string">'ho1234c@gmail.com'</span>
+    msg = MIMEText(str(msg))
+    me = 'ho1234c@gmail.com'
 
-    msg<span class="token punctuation">[</span><span class="token string">'Subject'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'confirm reservation'</span>
-    msg<span class="token punctuation">[</span><span class="token string">'From'</span><span class="token punctuation">]</span> <span class="token operator">=</span> me
-    msg<span class="token punctuation">[</span><span class="token string">'To'</span><span class="token punctuation">]</span> <span class="token operator">=</span> me
+    msg['Subject'] = 'confirm reservation'
+    msg['From'] = me
+    msg['To'] = me
 
-    <span class="token comment" spellcheck="true"># smtp_server = mail.smtp2go.com</span>
-    <span class="token comment" spellcheck="true"># smtp_port = 2525</span>
-    session <span class="token operator">=</span> smtplib<span class="token punctuation">.</span>SMTP<span class="token punctuation">(</span>smtp_server<span class="token punctuation">,</span> smtp_port<span class="token punctuation">)</span>
-    session<span class="token punctuation">.</span>ehlo<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    session<span class="token punctuation">.</span>starttls<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    # smtp_server = mail.smtp2go.com
+    # smtp_port = 2525
+    session = smtplib.SMTP(smtp_server, smtp_port)
+    session.ehlo()
+    session.starttls()
 
-    session<span class="token punctuation">.</span>login<span class="token punctuation">(</span>gmail_id<span class="token punctuation">,</span> gmail_password<span class="token punctuation">)</span>
-    smtpresult <span class="token operator">=</span> session<span class="token punctuation">.</span>sendmail<span class="token punctuation">(</span>me<span class="token punctuation">,</span> <span class="token punctuation">[</span>me<span class="token punctuation">]</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>as_string<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    session<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    session.login(gmail_id, gmail_password)
+    smtpresult = session.sendmail(me, [me], msg.as_string())
+    session.quit()
 
-    <span class="token keyword">if</span> smtpresult<span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token boolean">False</span>
-    <span class="token keyword">else</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    if smtpresult:
+        return False
+    else:
+        return True
 </code></pre>
 <blockquote>
 <p>ehlo : 클라이언트가 SMTP서버에게 통신을 시작할 것임을 알리는 커맨드.</p>
+</blockquote>
+<blockquote>
 <p>starttls : 암호화되지 않은 plain text는 도청되기 쉽다. plain text의 커뮤니케이션에 사용되는 프로토콜을 확장해서 연결을 암호화시켜준다.</p>
 </blockquote>
-<h2 id="Run-regularly"><a href="#Run-regularly" class="headerlink" title="Run regularly"></a>Run regularly</h2><p>사실 처음엔 pythonAnywhere를 이용하려고 했으나 free tier에서는 자체적으로 정해놓은 whitelist에 포함되는 url에만 접근이 가능했고, 당연히 우리집앞 도서관은 whitelist에 등록되어있지 않기 때문에 접근이 제한되었다. 그래서 아깝지만 AWS의 EC2를 사용하기로 했다.</p>
+<h2>Run regularly</h2>
+<p>사실 처음엔 pythonAnywhere를 이용하려고 했으나 free tier에서는 자체적으로 정해놓은 whitelist에 포함되는 url에만 접근이 가능했고, 당연히 우리집앞 도서관은 whitelist에 등록되어있지 않기 때문에 접근이 제한되었다. 그래서 아깝지만 AWS의 EC2를 사용하기로 했다.</p>
 <p>리눅스 작업 스케쥴러인 crontab은 -l 옵션으로 현재 예약되어있는 스케쥴을 볼 수 있고 -e 옵션으로 스케쥴을 수정 할 수 있다. 아래와 같은 양식으로 지정해 줄 수 있다.</p>
-<pre class=" language-bash"><code class="language-bash">* * * * * path
+<pre class=" language-language-bash"><code class="language-language-bash">* * * * * path
 </code></pre>
 <table>
 <thead>
@@ -680,20 +695,22 @@ soup <span class="token operator">=</span> BeautifulSoup<span class="token punct
 <td style="text-align:center">1-31</td>
 <td style="text-align:center">1-12</td>
 <td style="text-align:center">0-6(0,6:일요일)</td>
+<td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>
 <p>작업 로그는 /var/log/cron 에 기록된다.</p>
 <p>주의할점은 crontab의 데몬은 기본 환경과 달라서 환경변수 경로를 지정해 줘야 한다.</p>
 <p>도서관 사서분께 문의한 결과 예약시스템은 당일 00시부터 가능하다고한다. EC2의 서버시간은 UTC기준으로 맞춰져 있다. UTC 시간은 영국 그리니치 천문대(경도 0)를 기준으로 하는 세계의 표준시간대로, 우리나라보다 9시간이 느리다. 수강신청처럼 촌각을 다투진 않을것 같기 때문에 우리나라 시간으로 00시 1분, 서버시간으로 15시 1분에 실행시키도록한다.</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># path</span>
-PATH<span class="token operator">=</span>/usr/local/bin/:/sbin:/bin:/usr/sbin:/usr/bin
+<pre class=" language-language-bash"><code class="language-language-bash"># path
+PATH=/usr/local/bin/:/sbin:/bin:/usr/sbin:/usr/bin
 
-<span class="token comment" spellcheck="true"># run</span>
+# run
 1 15 * * 0-4  python /home/ec2-user/request.py
 </code></pre>
 <hr>
-<h2 id="마치며…"><a href="#마치며…" class="headerlink" title="마치며…"></a>마치며…</h2><p>이로서 부지런한 도서관 피플들과 경쟁할 준비가 되었다. 사실 매일 들어가서 예약을 해도 되고 채 3분도 걸리지 않을거지만 그게 왜 이렇게 귀찮은지 모르겠다. 귀찮음이 프로그래밍의 가장 큰 동기인것같다.</p>
+<h2>마치며…</h2>
+<p>이로서 부지런한 도서관 피플들과 경쟁할 준비가 되었다. 사실 매일 들어가서 예약을 해도 되고 채 3분도 걸리지 않을거지만 그게 왜 이렇게 귀찮은지 모르겠다. 귀찮음이 프로그래밍의 가장 큰 동기인것같다.</p>
 
     
 
@@ -848,8 +865,8 @@ PATH<span class="token operator">=</span>/usr/local/bin/:/sbin:/bin:/usr/sbin:/u
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">September 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </ul>
         </li>
         
     
@@ -866,8 +883,8 @@ PATH<span class="token operator">=</span>/usr/local/bin/:/sbin:/bin:/usr/sbin:/u
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
+            </ul>
         </li>
         
     

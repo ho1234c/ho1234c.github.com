@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="en">
-    <head><meta name="generator" content="Hexo 3.8.0">
+    <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -35,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Jong-Ho Jeong">
-    <meta name="description" itemprop="description" content="">
+    <meta name="description" itemprop="description" content>
     <meta name="keywords" content="null,javascript,nodejs">
 
     <!-- Site Verification -->
@@ -67,7 +67,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="nodejs 시작하기 | Hojong blog">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="">
+    <meta property="og:description" content>
     <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="nodejs"> 
 
     
@@ -77,7 +77,7 @@
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="nodejs 시작하기 | Hojong blog">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content>
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="http://ho1234c.github.io">
@@ -320,13 +320,14 @@
     -->
 
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Nodejs란"><span class="post-toc-number">1.</span> <span class="post-toc-text">Nodejs란?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#어떤-기능이-필요한가"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">어떤 기능이 필요한가?</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#create-server"><span class="post-toc-number">2.</span> <span class="post-toc-text">create server</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#routing"><span class="post-toc-number">3.</span> <span class="post-toc-text">routing</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#view"><span class="post-toc-number">4.</span> <span class="post-toc-text">view</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#POST-request-handling"><span class="post-toc-number">5.</span> <span class="post-toc-text">POST request handling</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#마치며"><span class="post-toc-number">6.</span> <span class="post-toc-text">마치며..</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">1.</span> <span class="post-toc-text">Nodejs란?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#null"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">어떤 기능이 필요한가?</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">2.</span> <span class="post-toc-text">create server</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">3.</span> <span class="post-toc-text">routing</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">4.</span> <span class="post-toc-text">view</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">5.</span> <span class="post-toc-text">POST request handling</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">6.</span> <span class="post-toc-text">마치며…</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -369,7 +370,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar">
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -399,7 +400,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
         <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/nodejs/">nodejs</a>
-    </li></ul>
+    </ul>
     
 
     <!-- Share -->
@@ -453,19 +454,27 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>나는 여러가지 프레임워크로 간단하게 웹서버를 구축해보면서 공부를 하고있다.<br>아마 지금 웹 생태계는 춘추전국시대인것 같다. 다양한 언어와 환경에서 만들어진 라이브러리나 프레임워크, 그 속에 각각 담겨있는 철학, 테크닉등 공부할게 너무도 많다. 하지만 지금까지 ‘어떻게 하면 좀더 쉽게 개발 할 수 있을까?’를 고민해 온, <del>혹은 만사가 귀찮은</del> 선배 개발자분들 덕분에 이제 몇줄 안되는 코드로 서버를 띄울 수 있게 되었다.<br>내가 겉핥기로나마 공부를 하면서 발견한건 여러 언어와 프레임워크속에 담겨있는 생각은 모두 다르지만, GET과 POST, request와 response를 주고받으면서 클라이언트와 서버가 통신하는 방식으로 웹서버가 동작한다는 기본적인 틀은 변함이 없다는 것이다. expressJS, Django, Codeignitor등과 같은 메이저한 프레임워크는 어떻게든 end point를 나누고 마크업을 날려주는, 웹서버를 구축할 때 필수적으로 사용하는 기능들이 있다. 그래서 웹서버의 구조를 조금더 자세히 알고자 프레임워크를 사용하지않고 Nodejs기반의 클라이언트의 요청에 응답을 보내주는 간단한 웹서버를 만들어보려고 한다.</p>
+        <p>나는 여러가지 프레임워크로 간단하게 웹서버를 구축해보면서 공부를 하고있다.<br>
+아마 지금 웹 생태계는 춘추전국시대인것 같다. 다양한 언어와 환경에서 만들어진 라이브러리나 프레임워크, 그 속에 각각 담겨있는 철학, 테크닉등 공부할게 너무도 많다. 하지만 지금까지 '어떻게 하면 좀더 쉽게 개발 할 수 있을까?'를 고민해 온, <s>혹은 만사가 귀찮은</s> 선배 개발자분들 덕분에 이제 몇줄 안되는 코드로 서버를 띄울 수 있게 되었다.<br>
+내가 겉핥기로나마 공부를 하면서 발견한건 여러 언어와 프레임워크속에 담겨있는 생각은 모두 다르지만, GET과 POST, request와 response를 주고받으면서 클라이언트와 서버가 통신하는 방식으로 웹서버가 동작한다는 기본적인 틀은 변함이 없다는 것이다. expressJS, Django, Codeignitor등과 같은 메이저한 프레임워크는 어떻게든 end point를 나누고 마크업을 날려주는, 웹서버를 구축할 때 필수적으로 사용하는 기능들이 있다. 그래서 웹서버의 구조를 조금더 자세히 알고자 프레임워크를 사용하지않고 Nodejs기반의 클라이언트의 요청에 응답을 보내주는 간단한 웹서버를 만들어보려고 한다.</p>
 <p><strong>이 포스트는 스스로 학습하면서 정리하는 것을 일차적인 목적으로 제작했기 때문에 문맥과 상관없는 말이나 사족이 들어갈 수 있습니다.</strong></p>
 <hr>
-<h2 id="Nodejs란"><a href="#Nodejs란" class="headerlink" title="Nodejs란?"></a>Nodejs란?</h2><p>대부분이 language를 처음 배울 때 변수와 함수를 선언하고 반복문을 사용하는 법을 학습하곤 한다. 하지만 Nodejs는 그것과는 좀 다르다.</p>
+<h2>Nodejs란?</h2>
+<p>대부분이 language를 처음 배울 때 변수와 함수를 선언하고 반복문을 사용하는 법을 학습하곤 한다. 하지만 Nodejs는 그것과는 좀 다르다.</p>
 <blockquote>
-<p>In software development, Node.js is an open-source, cross-platform runtime environment for developing server-side Web applications.<br>Although Node.js is not a JavaScript framework, many of its basic modules are written in JavaScript, and developers can write<br>new modules in JavaScript. The runtime environment interprets JavaScript using Google’s V8 JavaScript engine.</p>
+<p>In software development, Node.js is an open-source, cross-platform runtime environment for developing server-side Web applications.<br>
+Although Node.js is not a JavaScript framework, many of its basic modules are written in JavaScript, and developers can write<br>
+new modules in JavaScript. The runtime environment interprets JavaScript using Google’s V8 JavaScript engine.</p>
+</blockquote>
+<blockquote>
 <p>파이썬으로 만든 트위스티드, 펄로 만든 펄 객체 환경, 루비로 만든 이벤트머신과 용도가 비슷하다.</p>
 </blockquote>
 <p>위키피디아에서는 이렇게 설명을 하고있는데, 트위스티드, 펄 객체 환경, 이벤트머신을 사용해본 적이 없어서 잘 모르겠다.</p>
 <p>위의 정의에서 runtime이란 프로그램이 동작하는 환경을 일컫는다. javascript를 통해서 클라이언트단의 웹브라우저를 조작할 수 있는 동시에 서버사이드의 Nodejs를 조작할 수 있다. 여기서 Nodejs와 웹브라우저가 runtime이 된다. V8 엔진은 구글에서 C++로 개발한 매우 빠른 엔진이다. 이 엔진 덕분에 초기의 Nodejs가 유명해 졌다.</p>
 <p>Nodejs의 가장 큰 특징은 <strong>single thread, non-blocking I/O</strong>라는 것이다. 이 모델에 대해서는 깊게 들어가면 끝이 없기 때문에 간단하게 요약한다. 하지만 웹서버 디자인에서 매우 중요한 모델이다.</p>
 <blockquote>
-<p>서버가 요청을 처리할 때 하나의 요청마다 thread를 하나씩 발생시켜 처리하는것을 Multi-thread 방식이라고 하는데, 동기방식으로 요청을 처리한다. 동기방식이란 하나의 요청이 처리되는 동안 다른 요청이 처리되지 못하고 요청을 완료한 후 다음 처리를 하는 방식이기 때문에 I/O처리 요청을 blocking한다. 하지만 single thread인 Nodejs는 비동기방식을 지원해서 <strong>요청을 처리하면서 완료여부에 관계없이 다음 요청을 받을 수 있다.</strong> 따라서 non-blocking으로 I/O를 처리 할 수 있다.<br><a href="http://www.nextree.co.kr/p7292/" target="_blank">[더 자세한 내용]</a></p>
+<p>서버가 요청을 처리할 때 하나의 요청마다 thread를 하나씩 발생시켜 처리하는것을 Multi-thread 방식이라고 하는데, 동기방식으로 요청을 처리한다. 동기방식이란 하나의 요청이 처리되는 동안 다른 요청이 처리되지 못하고 요청을 완료한 후 다음 처리를 하는 방식이기 때문에 I/O처리 요청을 blocking한다. 하지만 single thread인 Nodejs는 비동기방식을 지원해서 <strong>요청을 처리하면서 완료여부에 관계없이 다음 요청을 받을 수 있다.</strong> 따라서 non-blocking으로 I/O를 처리 할 수 있다.<br>
+<a href="http://www.nextree.co.kr/p7292/" target="_blank">[더 자세한 내용]</a></p>
 </blockquote>
 <p>싱글쓰레드는 장단점이 있기 때문에 흔히 양날의 검이라고 불린다.</p>
 <p>Nodejs의 <strong>장점</strong></p>
@@ -476,21 +485,25 @@
 </ul>
 <p>Nodejs의 <strong>단점</strong></p>
 <ul>
-<li>high cost의 작업에 취약하다.<ul>
+<li>high cost의 작업에 취약하다.
+<ul>
 <li>high cost를 많이 처리해야하는 경우에 Nodejs는 적합하지 않다.</li>
 </ul>
 </li>
-<li>콜백 중첩으로 인해 가독성이 떨어 질 수 있다.<ul>
+<li>콜백 중첩으로 인해 가독성이 떨어 질 수 있다.
+<ul>
 <li>Promise나 Async와 같은 라이브러리를 사용하여 가독성을 높일 수 있다.</li>
 </ul>
 </li>
-<li>에러가 발생하면 프로세스가 종료되서, 서버가 자주 죽는다.<ul>
+<li>에러가 발생하면 프로세스가 종료되서, 서버가 자주 죽는다.
+<ul>
 <li>watch dog 을 사용한다.</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h3 id="어떤-기능이-필요한가"><a href="#어떤-기능이-필요한가" class="headerlink" title="어떤 기능이 필요한가?"></a>어떤 기능이 필요한가?</h3><p>간단한 웹어플리케이션을 제작하려한다. 이를 위해 지금까지 공부했던 프레임워크를 참고해서 클라이언트의 응답에 필요한 최소한의 것들을 정리해 보면 아래와 같다.</p>
+<h3>어떤 기능이 필요한가?</h3>
+<p>간단한 웹어플리케이션을 제작하려한다. 이를 위해 지금까지 공부했던 프레임워크를 참고해서 클라이언트의 응답에 필요한 최소한의 것들을 정리해 보면 아래와 같다.</p>
 <ul>
 <li>create server</li>
 <li>routing</li>
@@ -498,18 +511,20 @@
 <li>view logic</li>
 </ul>
 <p>프레임워크를 개발한 개발자들은 이렇게 공통적으로 필요한 기능들을 어떻게 제공할지, 어떤 세부적인 기능을 통해 사용자가 편하게 사용할지를 계속해서 고민 했을 것 같다.</p>
-<h2 id="create-server"><a href="#create-server" class="headerlink" title="create server"></a>create server</h2><p>Nodejs를 설치하고 우선 ‘Hello world!’를 띄워 보도록 한다. 운영체제에 관계없이 <a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a>에서 쉽게 다운로드 받을 수 있다. 또한 공식 홈페이지에서 서버를 띄우는 기초코드를 쉽게 찾을 수 있다.</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2>create server</h2>
+<p>Nodejs를 설치하고 우선 'Hello world!'를 띄워 보도록 한다. 운영체제에 관계없이 <a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a>에서 쉽게 다운로드 받을 수 있다. 또한 공식 홈페이지에서 서버를 띄우는 기초코드를 쉽게 찾을 수 있다.</p>
+<pre class=" language-language-javascript"><code class="language-language-javascript">const http = require('http');
 
-http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-  response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'Content-Type'</span><span class="token punctuation">:</span> <span class="token string">'text/plain'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'Hello World\n'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+http.createServer( (request, response) => {
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  response.end('Hello World\n');
+}).listen(8000);
 
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Server running at http://127.0.0.1:8000/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console.log('Server running at http://127.0.0.1:8000/');
 </code></pre>
-<p>위의 코드는 Nodejs 서버를 만드는 코드이다. javascript에 익숙하다면 이해하기 쉽다. 익숙하지 않을 수 있는 ES6부분은<br> <a href="https://github.com/lukehoban/es6features#let--const" target="_blank">const</a>와 <a href="https://github.com/lukehoban/es6features#arrows" target="_blank">arrow function</a>인데 링크에서 예시와 함께 설명이 잘 나와있다.</p>
-<pre class=" language-sh"><code class="language-sh">node server.js
+<p>위의 코드는 Nodejs 서버를 만드는 코드이다. javascript에 익숙하다면 이해하기 쉽다. 익숙하지 않을 수 있는 ES6부분은<br>
+<a href="https://github.com/lukehoban/es6features#let--const" target="_blank">const</a>와 <a href="https://github.com/lukehoban/es6features#arrows" target="_blank">arrow function</a>인데 링크에서 예시와 함께 설명이 잘 나와있다.</p>
+<pre class=" language-language-sh"><code class="language-language-sh">node server.js
 </code></pre>
 <p>server.js라는 파일을 만들고 실행하면 <a href="http://127.0.0.1:8000" target="_blank" rel="noopener">http://127.0.0.1:8000</a> 에서 Hello World를 볼 수 있다.</p>
 <table>
@@ -532,163 +547,171 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </table>
 <p>end 메소드는 response header와 body가 모두 보내졌다는 신호이다. 관련 메소드에 대해서는 <a href="https://nodejs.org/docs/latest/api/http.html#http_response_end_data_encoding_callback" target="_blank">공식 api</a>에 자세히 나와 있다.</p>
 <blockquote>
-<p><strong>127.0.0.1 과 198.168.x.y에 대해서</strong><br><br>평소에 로컬테스트를 할 때 127.0.0.1:port 를 사용하는데 이는 loopback address이다. 라우팅, 데이터스트림을 어떠한 가공없이 원래의 디바이스로 다시 돌려보내주는 기능을 한다. 반면 198.168.x.y는 디바이스의 로컬주소로, 같은 네트워크상의 다른 기기와 통신하는데 사용할 수 있다.</p>
+<p><strong>127.0.0.1 과 198.168.x.y에 대해서</strong><br><br>
+평소에 로컬테스트를 할 때 127.0.0.1:port 를 사용하는데 이는 loopback address이다. 라우팅, 데이터스트림을 어떠한 가공없이 원래의 디바이스로 다시 돌려보내주는 기능을 한다. 반면 198.168.x.y는 디바이스의 로컬주소로, 같은 네트워크상의 다른 기기와 통신하는데 사용할 수 있다.</p>
 </blockquote>
-<h2 id="routing"><a href="#routing" class="headerlink" title="routing"></a>routing</h2><p>기본 내장 모듈인 url모듈은 request객체에서 url을 파싱해준다. 라우팅 인터페이스를 만들기 위해 router를 만들고 실질적인 기능을 위해 routeHandler를 만든다. 물론 router에 직접 뭔가를 하는 기능을 추가할 수도 있겠지만 의존관계를 주입하는 패턴으로 제작하는 것이 OOP적인 관점에서 좋다고 할 수 있다. 그리고 설계를 위해 직관적으로 생각할 수 있는 방법으로는 server에서 route를 호출하고 route는 outeHandler에서 적절한 기능을 실행시켜주면 routeHandler는 어떤 output을 리턴하고, 리턴받은 서버는 리턴받은 데이터를 클라이언트에게 넘겨주는 방식이 있다. 그런데 여기서 blocking과 non-blocking에 대해 생각해야한다. 만약 서버가 동기적으로 동작한다면 어떤 cost가 큰 작업이 큐에 들어오는 순간 그 작업을 위해 다른 작업을 할 수 없게 될것이다.</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// router.js</span>
-exports<span class="token punctuation">.</span>router <span class="token operator">=</span> <span class="token punctuation">(</span>pathname<span class="token punctuation">,</span> handler<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">try</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> handler<span class="token punctuation">[</span>pathname<span class="token punctuation">]</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// server로 리턴</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token string">"error"</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h2>routing</h2>
+<p>기본 내장 모듈인 url모듈은 request객체에서 url을 파싱해준다. 라우팅 인터페이스를 만들기 위해 router를 만들고 실질적인 기능을 위해 routeHandler를 만든다. 물론 router에 직접 뭔가를 하는 기능을 추가할 수도 있겠지만 의존관계를 주입하는 패턴으로 제작하는 것이 OOP적인 관점에서 좋다고 할 수 있다. 그리고 설계를 위해 직관적으로 생각할 수 있는 방법으로는 server에서 route를 호출하고 route는 outeHandler에서 적절한 기능을 실행시켜주면 routeHandler는 어떤 output을 리턴하고, 리턴받은 서버는 리턴받은 데이터를 클라이언트에게 넘겨주는 방식이 있다. 그런데 여기서 blocking과 non-blocking에 대해 생각해야한다. 만약 서버가 동기적으로 동작한다면 어떤 cost가 큰 작업이 큐에 들어오는 순간 그 작업을 위해 다른 작업을 할 수 없게 될것이다.</p>
+<pre class=" language-language-js"><code class="language-language-js">// router.js
+exports.router = (pathname, handler) => {
+    try {
+        return handler[pathname](response); // server로 리턴
+    }
+    catch(e) {
+        console.log(e.message);
+        return "error"
+    }
+};
 </code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// routeHandler.js</span>
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token punctuation">{</span>
-        <span class="token string">'/data'</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-                <span class="token operator">...</span><span class="token punctuation">.</span>
-                <span class="token string">"기다리세요"</span>
-                <span class="token operator">...</span><span class="token punctuation">.</span>
-                <span class="token keyword">return</span> <span class="token string">"success"</span>    <span class="token comment" spellcheck="true">// router로 리턴</span>
-        <span class="token punctuation">}</span>
-        <span class="token string">'/index'</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-                    <span class="token keyword">return</span> <span class="token string">"It is index page"</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">// routeHandler.js
+module.exports = (() => {
+    return {
+        '/data' : () => {
+                ....
+                "기다리세요"
+                ....
+                return "success"    // router로 리턴
+        }
+        '/index' : () => {
+                    return "It is index page";
+                }
+    };
+})();
 </code></pre>
-<p>예를 들어 위와같은 방식이라면 먼저 ‘/data’에 요청을 보낸 후 ‘/index’에 요청을 보냈을 때 ‘/data’에서 뭔가 기다리는 로직이 수행되는 동안 ‘/index’로의 요청이 처리되지 않는다. 서버는 단일 쓰레드 이기 때문이다. 따라서 response객체를 주입시켜주어 각각 response를 보낼 수 있게 한다. 이러면 더이상 데이터가 routeHandler에서 server로는 올라오지 않고 server에서 routeHanlder로만 흐르게 된다. server.js는 클라이언트에게 응답을 보내주는것이 아니라 객체를 전달해주는 로직만 수행한다.</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// router.js</span>
-exports<span class="token punctuation">.</span>router <span class="token operator">=</span> <span class="token punctuation">(</span>pathname<span class="token punctuation">,</span> handler<span class="token punctuation">,</span> response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">try</span> <span class="token punctuation">{</span>
-        handler<span class="token punctuation">[</span>pathname<span class="token punctuation">]</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"text/plain"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">"404 Not found"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<p>예를 들어 위와같은 방식이라면 먼저 '/data’에 요청을 보낸 후 '/index’에 요청을 보냈을 때 '/data’에서 뭔가 기다리는 로직이 수행되는 동안 '/index’로의 요청이 처리되지 않는다. 서버는 단일 쓰레드 이기 때문이다. 따라서 response객체를 주입시켜주어 각각 response를 보낼 수 있게 한다. 이러면 더이상 데이터가 routeHandler에서 server로는 올라오지 않고 server에서 routeHanlder로만 흐르게 된다. server.js는 클라이언트에게 응답을 보내주는것이 아니라 객체를 전달해주는 로직만 수행한다.</p>
+<pre class=" language-language-js"><code class="language-language-js">// router.js
+exports.router = (pathname, handler, response) => {
+    try {
+        handler[pathname](response);
+    }
+    catch(e) {
+        console.log(e.message);
+        response.writeHead(404, {"Content-Type": "text/plain"});
+        response.end("404 Not found");
+    }
+};
 </code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// routeHandler.js</span>
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token punctuation">{</span>
-        <span class="token string">'/index'</span> <span class="token punctuation">:</span> response <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-            response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"text/plain"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'It is index page'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token string">'/signin'</span> <span class="token punctuation">:</span> response <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-            response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"text/plain"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'It is signin page'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">// routeHandler.js
+module.exports = (() => {
+    return {
+        '/index' : response => {
+            response.writeHead(200,{"Content-Type": "text/plain"});
+            response.end('It is index page');
+        },
+        '/signin' : response =>{
+            response.writeHead(200,{"Content-Type": "text/plain"});
+            response.end('It is signin page');
+        }
+    };
+})();
 </code></pre>
-<h2 id="view"><a href="#view" class="headerlink" title="view"></a>view</h2><p>서버에서 html을 response로 보내줄 때, 마크업을 서버에 직접 하드코딩하는것 보다 따로 모듈화를 시키는것이 효율적이다. 여기선 노드가 제공하는 기본 내장모듈을 사용해서 파일을 읽어온다.</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// view.js</span>
-<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2>view</h2>
+<p>서버에서 html을 response로 보내줄 때, 마크업을 서버에 직접 하드코딩하는것 보다 따로 모듈화를 시키는것이 효율적이다. 여기선 노드가 제공하는 기본 내장모듈을 사용해서 파일을 읽어온다.</p>
+<pre class=" language-language-js"><code class="language-language-js">// view.js
+const fs = require('fs');
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> filename <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> filePath <span class="token operator">=</span> <span class="token string">'./'</span> <span class="token operator">+</span> filename <span class="token operator">+</span> <span class="token string">'.html'</span><span class="token punctuation">;</span>
-    fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'readFile err : '</span><span class="token operator">+</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> data<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// 서버로 리턴</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+module.exports = filename => {
+    var filePath = './' + filename + '.html';
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.log('readFile err : '+ err);
+        }
+        return data;    // 서버로 리턴
+    });
+};
 </code></pre>
 <p>하지만 여기서도 비동기방식의 특징으로, 서버로 data를 직접 리턴해주는 방식은 읽어 온 data를 사용할 수 있음을 보장할 수 없다. 따라서 요청을 던져놓고 작업이 끝나면 등록 해 놓은 콜백 함수를 호출하는 방식이 필요하다.</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// view.js</span>
-<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">// view.js
+const fs = require('fs');
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> callback<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> filePath <span class="token operator">=</span> <span class="token string">'./'</span> <span class="token operator">+</span> filename <span class="token operator">+</span> <span class="token string">'.html'</span><span class="token punctuation">;</span>
-    fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'readFile err : '</span><span class="token operator">+</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token function">callback</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module.exports = ((filename, callback) => {
+    var filePath = './' + filename + '.html';
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.log('readFile err : '+ err);
+        }
+        callback(data);
+    });
+});
 </code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// routeHandler.js</span>
-<span class="token keyword">const</span> view <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./view'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">// routeHandler.js
+const view = require('./view');
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token punctuation">{</span>
-        <span class="token string">'/index'</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>response<span class="token punctuation">,</span> pathname<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-            response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"text/html"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token function">view</span><span class="token punctuation">(</span>pathname<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// 콜백을 통해 호출함.</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token string">'/signin'</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>response<span class="token punctuation">,</span> pathname<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-            response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"text/text"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'It is signin page'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module.exports = (() => {
+    return {
+        '/index' : (response, pathname) => {
+            response.writeHead(200,{"Content-Type": "text/html"});
+            view(pathname.replace('/', ''), function(data){
+                response.end(data);     // 콜백을 통해 호출함.
+            });
+        },
+        '/signin' : (response, pathname) =>{
+            response.writeHead(200,{"Content-Type": "text/text"});
+            response.end('It is signin page');
+        }
+    };
+})();
 </code></pre>
-<h2 id="POST-request-handling"><a href="#POST-request-handling" class="headerlink" title="POST request handling"></a>POST request handling</h2><p>http 프로토콜에는 여러가지 종류가 있는데, 그중 가장 많이 사용되는것이 GET 과 POST이다. 둘다 서버에 요청을 보내는 건 같지만 GET은 대놓고 보내지만 POST는 숨겨서 보내고 비교적 많은 양의 데이터를 보내는데 적합하다. Nodejs에서도 querystring 모듈을 이용하면 클라이언트가 보낸 POST데이터를 파싱 할 수 있다.</p>
+<h2>POST request handling</h2>
+<p>http 프로토콜에는 여러가지 종류가 있는데, 그중 가장 많이 사용되는것이 GET 과 POST이다. 둘다 서버에 요청을 보내는 건 같지만 GET은 대놓고 보내지만 POST는 숨겨서 보내고 비교적 많은 양의 데이터를 보내는데 적합하다. Nodejs에서도 querystring 모듈을 이용하면 클라이언트가 보낸 POST데이터를 파싱 할 수 있다.</p>
 <blockquote>
-<p><strong>google Accelerator 사건</strong><br><br>구글은 쿠키가 남아있는 페이지가 더 빠르게 로딩이 된다는 점을 이용해서 미리 페이지를 탐색하고 static한 데이터를 로딩해 놓는 방식으로 체감속도를 높이는 방식의 유틸리티인 google Accelerator 개발했다. Accelerator bot은 GET요청만 탐색해서 기계적으로 요청을 보내는데, POST나 DELETE 메소드를 써야 할 곳에 GET을 쓴 경우가 많아서 생각지도 못한 게시물이나 데이터가 지워졌다고 한다. 목적에 맞는 적절한 프로토콜을 썼다면 더 좋은 웹 환경이 되었을 것이다.</p>
+<p><strong>google Accelerator 사건</strong><br><br>
+구글은 쿠키가 남아있는 페이지가 더 빠르게 로딩이 된다는 점을 이용해서 미리 페이지를 탐색하고 static한 데이터를 로딩해 놓는 방식으로 체감속도를 높이는 방식의 유틸리티인 google Accelerator 개발했다. Accelerator bot은 GET요청만 탐색해서 기계적으로 요청을 보내는데, POST나 DELETE 메소드를 써야 할 곳에 GET을 쓴 경우가 많아서 생각지도 못한 게시물이나 데이터가 지워졌다고 한다. 목적에 맞는 적절한 프로토콜을 썼다면 더 좋은 웹 환경이 되었을 것이다.</p>
 </blockquote>
 <p>데이터가 들어 올때마다 저장하고 더이상 저장할 데이터가 없으면 end를 통해 종료를 알린다. request 객체또한 이벤트를 붙일 수 있기 때문에 data 이벤트를 추가하면 데이터가 들어올 때마다 이벤트가 발생한다.</p>
 <blockquote>
-<p><strong>Event Emitter</strong><br><br>많은 Nodejs api들은 emitters라는 객체가 내장되어 있다. 이 객체는 정기적으로 listeners 함수를 호출하는 이벤트 이름을 뱉는다. 예를 들면 fs.ReadStream 은 파일이 열릴때 stream이 이벤트를 발생시킨다. 모든 이벤트는 EventEmitter 클래스의 인스턴스이다. eventEmitter.on()을 통해 오브젝트에 이벤트를 붙일 수 있고 eventEmitter.emit()를 통해 이벤트를 발생 시킬 수 있다.</p>
+<p><strong>Event Emitter</strong><br><br>
+많은 Nodejs api들은 emitters라는 객체가 내장되어 있다. 이 객체는 정기적으로 listeners 함수를 호출하는 이벤트 이름을 뱉는다. 예를 들면 fs.ReadStream 은 파일이 열릴때 stream이 이벤트를 발생시킨다. 모든 이벤트는 EventEmitter 클래스의 인스턴스이다. eventEmitter.on()을 통해 오브젝트에 이벤트를 붙일 수 있고 eventEmitter.emit()를 통해 이벤트를 발생 시킬 수 있다.</p>
 </blockquote>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// server.js</span>
-<span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">// server.js
+const http = require('http');
+const url = require('url');
 
-<span class="token keyword">function</span> <span class="token function">runServer</span><span class="token punctuation">(</span>router<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">var</span> pathname <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span>pathname<span class="token punctuation">;</span>
-        <span class="token keyword">var</span> postBody <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
-        request<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'data'</span><span class="token punctuation">,</span> data <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-            postBody <span class="token operator">+</span><span class="token operator">=</span> data<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        request<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'end'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-            <span class="token function">router</span><span class="token punctuation">(</span>pathname<span class="token punctuation">,</span> handler<span class="token punctuation">,</span> response<span class="token punctuation">,</span> postBody<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Server running at http://127.0.0.1:8000/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+function runServer(router, handler){
+    http.createServer((request, response) => {
+        var pathname = url.parse(request.url).pathname;
+        var postBody = "";
+        request.on('data', data => {
+            postBody += data;
+        });
+        request.on('end', () => {
+            router(pathname, handler, response, postBody);
+        });
+    }).listen(8000);
+    console.log('Server running at http://127.0.0.1:8000/');
+}
 
-exports<span class="token punctuation">.</span>runServer <span class="token operator">=</span> runServer<span class="token punctuation">;</span>
+exports.runServer = runServer;
 </code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// routeHandler.js</span>
-<span class="token keyword">const</span> view <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./view'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> querystring <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'querystring'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">// routeHandler.js
+const view = require('./view');
+const querystring = require('querystring');
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token punctuation">{</span>
-        <span class="token string">'/index'</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>response<span class="token punctuation">,</span> pathname<span class="token punctuation">,</span> postBody<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-            response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"text/html"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token function">view</span><span class="token punctuation">(</span>pathname<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">,</span> data <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-                response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token string">'/signin'</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>response<span class="token punctuation">,</span> pathname<span class="token punctuation">,</span> postBody<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-            <span class="token keyword">var</span> postData <span class="token operator">=</span> querystring<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>postBody<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>postData<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"text/html"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token function">view</span><span class="token punctuation">(</span>pathname<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">,</span> data <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-                response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module.exports = (() => {
+    return {
+        '/index' : (response, pathname, postBody) => {
+            response.writeHead(200,{"Content-Type": "text/html"});
+            view(pathname.replace('/', ''), data => {
+                response.end(data);
+            });
+        },
+        '/signin' : (response, pathname, postBody) =>{
+            var postData = querystring.parse(postBody);
+            console.log(postData);
+            response.writeHead(200,{"Content-Type": "text/html"});
+            view(pathname.replace('/', ''), data => {
+                response.end(data);
+            });
+        }
+    };
+})();
 </code></pre>
 <p>POST요청을 파싱할 수 있다.</p>
-<p><img src="/images/2016-07-26-nodejs-make-webserver/1.png" alt="1"><br><img src="/images/2016-07-26-nodejs-make-webserver/2.png" alt="2"></p>
-<p><br></p>
-<h2 id="마치며"><a href="#마치며" class="headerlink" title="마치며.."></a>마치며..</h2><p>Nodejs를 통해 클라이언트의 요청에 응답을 보내주는 간단한 웹서버를 만들었다. 기본적으로 서버를 위해 설계되어서 그런지 프레임워크를 사용하지 않더라도 자동화 되어있는 함수들이 많고 가볍다. Nodejs의 가장 대중적인 프레임워크인 express가 가벼운건 아마 이런이유 때문인것 같다. 반면 Python의 Django와 같은 프레임워크는 무겁지만 견고하고 강력하다는 느낌을 준다. (Django는 expressJS 용량에 약 20배) 아무래도 비교적 직관적이지 못한 Nodejs의 비동기 event driven에 익숙해 지기 위해서는 자주 사용해 보는 수 밖에 없는 것 같다.</p>
+<p><img src="/images/2016-07-26-nodejs-make-webserver/1.png" alt="1"><br>
+<img src="/images/2016-07-26-nodejs-make-webserver/2.png" alt="2"></p>
+<br>
+<h2>마치며…</h2>
+<p>Nodejs를 통해 클라이언트의 요청에 응답을 보내주는 간단한 웹서버를 만들었다. 기본적으로 서버를 위해 설계되어서 그런지 프레임워크를 사용하지 않더라도 자동화 되어있는 함수들이 많고 가볍다. Nodejs의 가장 대중적인 프레임워크인 express가 가벼운건 아마 이런이유 때문인것 같다. 반면 Python의 Django와 같은 프레임워크는 무겁지만 견고하고 강력하다는 느낌을 준다. (Django는 expressJS 용량에 약 20배) 아무래도 비교적 직관적이지 못한 Nodejs의 비동기 event driven에 익숙해 지기 위해서는 자주 사용해 보는 수 밖에 없는 것 같다.</p>
 
     
 
@@ -835,8 +858,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">September 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </ul>
         </li>
         
     
@@ -853,8 +876,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
+            </ul>
         </li>
         
     

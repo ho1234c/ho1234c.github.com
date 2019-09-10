@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="en">
-    <head><meta name="generator" content="Hexo 3.8.0">
+    <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -320,13 +320,14 @@
     -->
 
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Feature"><span class="post-toc-number">1.</span> <span class="post-toc-text">Feature</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Install"><span class="post-toc-number">2.</span> <span class="post-toc-text">Install</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Connect"><span class="post-toc-number">3.</span> <span class="post-toc-text">Connect</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Define-model"><span class="post-toc-number">4.</span> <span class="post-toc-text">Define model</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Promise"><span class="post-toc-number">5.</span> <span class="post-toc-text">Promise</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Relations-Associations"><span class="post-toc-number">6.</span> <span class="post-toc-text">Relations/Associations</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Usage"><span class="post-toc-number">7.</span> <span class="post-toc-text">Usage</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">1.</span> <span class="post-toc-text">Feature</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">2.</span> <span class="post-toc-text">Install</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">3.</span> <span class="post-toc-text">Connect</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">4.</span> <span class="post-toc-text">Define model</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">5.</span> <span class="post-toc-text">Promise</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">6.</span> <span class="post-toc-text">Relations/Associations</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">7.</span> <span class="post-toc-text">Usage</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -369,7 +370,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar">
+        <img src="/img/cat.gif" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -399,7 +400,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
         <a class="post_tag-link" href="/tags/orm/">orm</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/sequelize/">sequelize</a>
-    </li></ul>
+    </ul>
     
 
     <!-- Share -->
@@ -453,11 +454,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>javascript의 ORM, Sequelize<br><a id="more"></a> </p>
+        <p>javascript의 ORM, Sequelize</p>
+<a id="more"></a> 
 <style>
 img{ margin: 0 auto; display: block;}
 </style>
-
 <p>Nodejs라고 하면 MongoDB로 대표되는 NoSQL을 떠올리기 마련이다. 하지만 대규모 요청로 인한 성능이 저하되는 문제를 겪는 경우가 아니면 굳이 익숙하지 않은 NoSQL을 사용할 필요가 없다. Nodejs에서도 당연히 RDB가 필요한 경우가 많다. 이때 쿼리를 직접 코드에 사용할 수도 있지만 여러가지 불편한 점이 많기 ORM(Object Relational Mapping)을 사용하면 편리하다.</p>
 <p>처음 배울 때부터 DB에 접근하려면 당연히 SQL 질의문을 사용해야한다는 것에 익숙하다보니 ORM이 뭔지 잘 이해하지 못했다. ORM의 뜻을 정확하게 이해하는 것이 왜 편한지를 이해하는데 도움이 많이 되는것 같다.</p>
 <blockquote>
@@ -465,7 +466,8 @@ img{ margin: 0 auto; display: block;}
 </blockquote>
 <p>위키피디아에선 위와같이 정의하고 있는데, 쉽게 말해서 ORM은 OOP와 RDB사이를 중재해주는 역할이다. class로 대표되는 OOP의 구조와 table간의 관계를 매핑시켜주는 것이다. ORM이 내가 사용하는 언어를 쿼리로 번역해 주기 때문에 쿼리문을 한줄도 쓰지 않아도 데이터베이스에 접근 할 수 있다.</p>
 <p>Nodejs에는 sequelize, bookshelf, node-orm등 여러 ORM이 있다. 그중 가장 메이저한 것은 Sequelize이다. 공식문서가 상당히 잘되어있지만 포스팅해 놓는것이 여러모로 도움이 될것 같아서 Sequelize의 사용법을 간단하게 옮긴다.</p>
-<h2 id="Feature"><a href="#Feature" class="headerlink" title="Feature"></a>Feature</h2><p>Sequelize는 공식적으로 PostgreSQL, MySQL, MariaDB, SQLite and MSSQL를 지원하는 promise기반의 ORM이다.</p>
+<h2>Feature</h2>
+<p>Sequelize는 공식적으로 PostgreSQL, MySQL, MariaDB, SQLite and MSSQL를 지원하는 promise기반의 ORM이다.</p>
 <ul>
 <li>Schema definition</li>
 <li>Schema synchronization/dropping</li>
@@ -478,135 +480,150 @@ img{ margin: 0 auto; display: block;}
 <li>Migrations</li>
 <li>CLI (sequelize-cli)</li>
 </ul>
-<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>sequelize는 DB를 내장하고 있지 않기 때문에 사용하고자하는 DB도 따로 설치해 주어야한다. 여기서는 postgreSQL을 사용한다.</p>
-<pre class=" language-sh"><code class="language-sh">npm install pg sequelize
+<h2>Install</h2>
+<p>sequelize는 DB를 내장하고 있지 않기 때문에 사용하고자하는 DB도 따로 설치해 주어야한다. 여기서는 postgreSQL을 사용한다.</p>
+<pre class=" language-language-sh"><code class="language-language-sh">npm install pg sequelize
 </code></pre>
-<h2 id="Connect"><a href="#Connect" class="headerlink" title="Connect"></a>Connect</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> sequelize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sequelize</span><span class="token punctuation">(</span>
-    <span class="token string">'database'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 데이터베이스 이름</span>
-    <span class="token string">'username'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 유저네임</span>
-    <span class="token string">'password'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 유저 패스워드</span>
-    <span class="token punctuation">{</span>
-    host<span class="token punctuation">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>      <span class="token comment" spellcheck="true">// 호스트</span>
-    dialect<span class="token punctuation">:</span> <span class="token string">'postgres'</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">// DB종류</span>
-    pool<span class="token punctuation">:</span> <span class="token punctuation">{</span>                 <span class="token comment" spellcheck="true">// connection pool</span>
-            max<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-            min<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-            idle<span class="token punctuation">:</span> <span class="token number">10000</span>
-          <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2>Connect</h2>
+<pre class=" language-language-js"><code class="language-language-js">var sequelize = new Sequelize(
+    'database', // 데이터베이스 이름
+    'username', // 유저네임
+    'password', // 유저 패스워드
+    {
+    host: 'localhost',      // 호스트
+    dialect: 'postgres',    // DB종류
+    pool: {                 // connection pool
+            max: 5,
+            min: 0,
+            idle: 10000
+          },
+    }
+);
 </code></pre>
 <p>혹은 url로 접속하는 shortcut도 제공한다.</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> sequelize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sequelize</span><span class="token punctuation">(</span><span class="token string">'postgres://username:password@host.com:5432/dbname'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">var sequelize = new Sequelize('postgres://username:password@host.com:5432/dbname');
 </code></pre>
-<h2 id="Define-model"><a href="#Define-model" class="headerlink" title="Define model"></a>Define model</h2><pre class=" language-js"><code class="language-js">sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>attributes<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>options<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<h2>Define model</h2>
+<pre class=" language-language-js"><code class="language-language-js">sequelize.define('name', {attributes}, {options})
 </code></pre>
 <p>의 형태로 semantic하게 선언할 수 있다.</p>
-<pre class=" language-js"><code class="language-js">sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">"User"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-            user_id<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                type<span class="token punctuation">:</span> DataTypes<span class="token punctuation">.</span>INTEGER<span class="token punctuation">,</span> primaryKey<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> autoIncrement<span class="token punctuation">:</span> <span class="token boolean">true</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            user_email<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                type<span class="token punctuation">:</span> DataTypes<span class="token punctuation">.</span><span class="token function">STRING</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">,</span> allowNull<span class="token punctuation">:</span> <span class="token boolean">false</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-            tableName<span class="token punctuation">:</span> <span class="token string">'users'</span><span class="token punctuation">,</span>
-            freezeTableName<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-            underscored<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-            timestamps<span class="token punctuation">:</span> <span class="token boolean">false</span>       <span class="token comment" spellcheck="true">// default is true</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<pre class=" language-language-js"><code class="language-language-js">sequelize.define("User", {
+            user_id: {
+                type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true
+            },
+            user_email: {
+                type: DataTypes.STRING(32), allowNull: false
+            }
+        },
+        {
+            tableName: 'users',
+            freezeTableName: true,
+            underscored: true,
+            timestamps: false       // default is true
+        })
 </code></pre>
 <p>추가로, options에는 hook과 custom method를 정의 할 수 있다.</p>
-<pre class=" language-js"><code class="language-js">sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token operator">...</span>
+<pre class=" language-language-js"><code class="language-language-js">sequelize.define(...
 
-<span class="token operator">...</span>
-    <span class="token punctuation">{</span>
-        hooks<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            beforeCreate<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> options<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'beforeCreate'</span><span class="token punctuation">)</span>
-              <span class="token function">fn</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> user<span class="token punctuation">)</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            beforeUpdate<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> options<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'beforeUpdate'</span><span class="token punctuation">)</span>
-              <span class="token function">fn</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> user<span class="token punctuation">)</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">)</span>
+...
+    {
+        hooks: {
+            beforeCreate: function(user, options, fn) {
+              console.log('beforeCreate')
+              fn(null, user)
+            },
+            beforeUpdate: function(user, options, fn) {
+              console.log('beforeUpdate')
+              fn(null, user)
+            }
+        }
+    }
+)
 </code></pre>
 <p>위와 같이 사용할 경우 모델이 만들어지기 전에 beforeCreate가 실행되고 모델이 업데이트 되기 전에 beforeUpdate가 실행된다.</p>
-<pre class=" language-js"><code class="language-js">sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token operator">...</span>
+<pre class=" language-language-js"><code class="language-language-js">sequelize.define(...
 
-<span class="token operator">...</span>
-    <span class="token punctuation">{</span>
-        classMethods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            method1<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>user_id <span class="token punctuation">}</span>
-          <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        instanceMethods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            method2<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>user_email <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">)</span>
+...
+    {
+        classMethods: {
+            method1: function(){ return this.user_id }
+          },
+        instanceMethods: {
+            method2: function() { return this.user_email }
+        }
+    }
+)
 </code></pre>
 <p>또한 custom method를 정의해서 사용 할 수 있다. class method와 instance method의 호출시점은 자바의 그것과 비슷하다.</p>
 <p>이 메소드들 안에서는 this를 통해 멤버변수에 접근 할 수 있는데, es6환경이라면 주의해야한다.</p>
 <blockquote>
 <p>sequelize를 es6환경에서 사용하기 위해서 babel로 컴파일 한다면 custom method을 arrow function 문법을 통해 정의 할때 this를 사용할 수 없다. 전역scope에 정의 된 메소드 속의 this의 경우 window객체와 같기 때문에 babel은 메소드속의 this는 할당 되지 않았다고 판단하고 undefined로 컴파일해버린다. (여기서는 sequelize 3.24, babel 6.14 를 사용했다.)</p>
 </blockquote>
-<p><strong>더 많은 attribute에 대해서는<br><a href="http://docs.sequelizejs.com/en/latest/docs/models-definition" target="_blank">공식도큐먼트</a>에서 확인할 수 있다.</strong></p>
-<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><p>sequelize는 소개했다시피 Promise기반의 ORM이다. Promise를 통해 async한 흐름을 제어한다. 데이터를 다 가져왔음을 보장할 수 없기 때문에 Promise객체를 통해 비동기적인 방법을 사용해야 한다.</p>
-<pre class=" language-js"><code class="language-js">
-user <span class="token operator">=</span> User<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<p><strong>더 많은 attribute에 대해서는<br>
+<a href="http://docs.sequelizejs.com/en/latest/docs/models-definition" target="_blank">공식도큐먼트</a>에서 확인할 수 있다.</strong></p>
+<h2>Promise</h2>
+<p>sequelize는 소개했다시피 Promise기반의 ORM이다. Promise를 통해 async한 흐름을 제어한다. 데이터를 다 가져왔음을 보장할 수 없기 때문에 Promise객체를 통해 비동기적인 방법을 사용해야 한다.</p>
+<pre class=" language-language-js"><code class="language-language-js">
+user = User.findOne()
 
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'firstName'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console.log(user.get('firstName'));
+
 </code></pre>
 <p>공식 도큐먼트에서는 <strong>위와 같은 방법을 사용하면 안된다</strong>고 나와있다. 대신,</p>
-<pre class=" language-js"><code class="language-js">User<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'firstName'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-language-js"><code class="language-language-js">User.findOne().then(function (user) {
+    console.log(user.get('firstName'));
+});
 </code></pre>
-<p>위와 같은 방법으로 호출되어야 한다. sequelize는 bluebird기반의 promise를 사용한다. promise의사용법에 대해서는<br><a href="http://bluebirdjs.com/docs/api-reference.html" target="_black">bluebird API reference</a>에 나와있다.</p>
-<h2 id="Relations-Associations"><a href="#Relations-Associations" class="headerlink" title="Relations/Associations"></a>Relations/Associations</h2><pre class=" language-js"><code class="language-js">User<span class="token punctuation">.</span><span class="token function">hasOne</span><span class="token punctuation">(</span>Song<span class="token punctuation">)</span>
-Song<span class="token punctuation">.</span><span class="token function">belongTo</span><span class="token punctuation">(</span>User<span class="token punctuation">)</span>
+<p>위와 같은 방법으로 호출되어야 한다. sequelize는 bluebird기반의 promise를 사용한다. promise의사용법에 대해서는<br>
+<a href="http://bluebirdjs.com/docs/api-reference.html" target="_black">bluebird API reference</a>에 나와있다.</p>
+<h2>Relations/Associations</h2>
+<pre class=" language-language-js"><code class="language-language-js">User.hasOne(Song)
+Song.belongTo(User)
 </code></pre>
 <ul>
-<li>Source.hasOne(target, [options])<br>  소스와 타겟간에 관계를 정의해준다. forienkey는 타겟에 만들어진다.</li>
-<li>Source.belongsTo(target, [options])<br>  소스와 타겟간에 관계를 정의해준다. forienkey는 소스에 만들어진다.</li>
-<li>Source.hasMany(target, [options])<br>  1:m 혹은 n:m 관계를 정의한다. join되는 테이블의 이름은 “source + target”이 default지만 through 옵션을 통해 지정해 줄 수도 있다.</li>
-<li>Source.belongsToMany(target, [options])<br>  hasMany와 마찬가지로 1:m 혹은 n:m 관계를 정의한다.</li>
+<li>Source.hasOne(target, [options])<br>
+소스와 타겟간에 관계를 정의해준다. forienkey는 타겟에 만들어진다.</li>
+<li>Source.belongsTo(target, [options])<br>
+소스와 타겟간에 관계를 정의해준다. forienkey는 소스에 만들어진다.</li>
+<li>Source.hasMany(target, [options])<br>
+1:m 혹은 n:m 관계를 정의한다. join되는 테이블의 이름은 &quot;source + target&quot;이 default지만 through 옵션을 통해 지정해 줄 수도 있다.</li>
+<li>Source.belongsToMany(target, [options])<br>
+hasMany와 마찬가지로 1:m 혹은 n:m 관계를 정의한다.</li>
 </ul>
 <p>관계를 통해서 source와 target을 inject시키면 관련 method를 사용 할 수 있게 되는데 get[target]의 형태로 호출 할 수 있다.</p>
-<pre class=" language-js"><code class="language-js">User<span class="token punctuation">.</span><span class="token function">hasMany</span><span class="token punctuation">(</span>Song<span class="token punctuation">)</span>
+<pre class=" language-language-js"><code class="language-language-js">User.hasMany(Song)
 
-<span class="token keyword">var</span> mySongList <span class="token operator">=</span> User<span class="token punctuation">.</span><span class="token function">getSong</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// gets you all song</span>
+var mySongList = User.getSong()  // gets you all song
 </code></pre>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>레코드의 조회를 위해서 find 를 사용한다.</p>
+<h2>Usage</h2>
+<p>레코드의 조회를 위해서 find 를 사용한다.</p>
 <ul>
-<li>Source.findOne(…)<br>  조건에 일치하는 엘리먼트 하나를 반환한다.</li>
+<li>Source.findOne(…)<br>
+조건에 일치하는 엘리먼트 하나를 반환한다.</li>
 </ul>
-<pre class=" language-js"><code class="language-js">User<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> where <span class="token punctuation">:</span> <span class="token punctuation">{</span> email <span class="token punctuation">:</span> <span class="token string">'ho1234c@gmail.com'</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
-        <span class="token operator">...</span>
-    <span class="token punctuation">)</span>
+<pre class=" language-language-js"><code class="language-language-js">User.findOne({ where : { email : 'ho1234c@gmail.com' } })
+    .then(
+        ...
+    )
 </code></pre>
 <ul>
-<li>Source.findAll(…)<br>  조건에 일치하는 엘리먼트 모두를 반환한다.</li>
+<li>Source.findAll(…)<br>
+조건에 일치하는 엘리먼트 모두를 반환한다.</li>
 </ul>
-<pre class=" language-js"><code class="language-js">User<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span> where <span class="token punctuation">:</span> <span class="token punctuation">{</span> sex <span class="token punctuation">:</span> <span class="token string">'male'</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
-        <span class="token operator">...</span>
-    <span class="token punctuation">)</span>
+<pre class=" language-language-js"><code class="language-language-js">User.findAll({ where : { sex : 'male' } })
+    .then(
+        ...
+    )
 </code></pre>
 <ul>
 <li>자주 사용되는 find 옵션</li>
 </ul>
-<pre class=" language-js"><code class="language-js">User<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-            where<span class="token punctuation">:</span> <span class="token punctuation">{</span> key<span class="token punctuation">:</span> value <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            attributes<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token operator">...</span>얻고자하는 attribute <span class="token punctuation">]</span><span class="token punctuation">,</span>
-            offset<span class="token punctuation">:</span> count<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 어디서부터</span>
-            limit<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// 몇개</span>
-            include<span class="token punctuation">:</span> <span class="token punctuation">{</span> model<span class="token punctuation">:</span> 다른 모델<span class="token punctuation">,</span> where<span class="token punctuation">:</span> <span class="token punctuation">{</span> key<span class="token punctuation">:</span> value <span class="token punctuation">}</span><span class="token punctuation">,</span> attributes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// associate된 다른 모델을 포함시킴</span>
+<pre class=" language-language-js"><code class="language-language-js">User.findAll({
+            where: { key: value },
+            attributes: [ ...얻고자하는 attribute ],
+            offset: count, // 어디서부터
+            limit: 10,  // 몇개
+            include: { model: 다른 모델, where: { key: value }, attributes: [...] } // associate된 다른 모델을 포함시킴
 </code></pre>
 <blockquote>
 <p>sequelize는 promise객체로 DAO를 반환한다. 하지만 raw한 데이터만 받고 싶은경우, {…, raw : true} 옵션을 사용할 수 있다.</p>
@@ -766,8 +783,8 @@ Song<span class="token punctuation">.</span><span class="token function">belongT
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">September 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">February 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">January 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">October 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">2</span></a>
+            </ul>
         </li>
         
     
@@ -784,8 +801,8 @@ Song<span class="token punctuation">.</span><span class="token function">belongT
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
-            </li></ul>
+                <a class="sidebar_archives-link" href="/categories/etc/">etc<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/travel/">travel<span class="sidebar_archives-count">5</span></a>
+            </ul>
         </li>
         
     
